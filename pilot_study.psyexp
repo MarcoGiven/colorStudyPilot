@@ -253,7 +253,6 @@
   </Routines>
   <Flow>
     <Routine name="WelcomeScreen"/>
-    <Routine name="Test"/>
     <Routine name="EndScreen"/>
   </Flow>
 </PsychoPy2experiment>

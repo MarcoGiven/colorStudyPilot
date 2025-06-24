@@ -42,9 +42,6 @@ flowScheduler.add(experimentInit);
 flowScheduler.add(WelcomeScreenRoutineBegin());
 flowScheduler.add(WelcomeScreenRoutineEachFrame());
 flowScheduler.add(WelcomeScreenRoutineEnd());
-flowScheduler.add(TestRoutineBegin());
-flowScheduler.add(TestRoutineEachFrame());
-flowScheduler.add(TestRoutineEnd());
 flowScheduler.add(EndScreenRoutineBegin());
 flowScheduler.add(EndScreenRoutineEachFrame());
 flowScheduler.add(EndScreenRoutineEnd());
@@ -97,8 +94,6 @@ async function updateInfo() {
 var WelcomeScreenClock;
 var welcome_message;
 var next_key;
-var TestClock;
-var text_countdown;
 var EndScreenClock;
 var end_message;
 var globalClock;
@@ -119,20 +114,6 @@ async function experimentInit() {
   });
   
   next_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
-  
-  // Initialize components for Routine "Test"
-  TestClock = new util.Clock();
-  text_countdown = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'text_countdown',
-    text: '',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, 0], draggable: false, height: 0.1,  wrapWidth: undefined, ori: 0.0,
-    languageStyle: 'LTR',
-    color: new util.Color('white'),  opacity: undefined,
-    depth: 0.0 
-  });
   
   // Initialize components for Routine "EndScreen"
   EndScreenClock = new util.Clock();
@@ -283,125 +264,6 @@ function WelcomeScreenRoutineEnd(snapshot) {
     // the Routine "WelcomeScreen" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
-    // Routines running outside a loop should always advance the datafile row
-    if (currentLoop === psychoJS.experiment) {
-      psychoJS.experiment.nextEntry(snapshot);
-    }
-    return Scheduler.Event.NEXT;
-  }
-}
-
-
-var TestMaxDurationReached;
-var TestMaxDuration;
-var TestComponents;
-function TestRoutineBegin(snapshot) {
-  return async function () {
-    TrialHandler.fromSnapshot(snapshot); // ensure that .thisN vals are up to date
-    
-    //--- Prepare to start Routine 'Test' ---
-    t = 0;
-    frameN = -1;
-    continueRoutine = true; // until we're told otherwise
-    // keep track of whether this Routine was forcibly ended
-    routineForceEnded = false;
-    TestClock.reset(routineTimer.getTime());
-    routineTimer.add(10.000000);
-    TestMaxDurationReached = false;
-    // update component parameters for each repeat
-    TestMaxDuration = null
-    // keep track of which components have finished
-    TestComponents = [];
-    TestComponents.push(text_countdown);
-    
-    TestComponents.forEach( function(thisComponent) {
-      if ('status' in thisComponent)
-        thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
-    return Scheduler.Event.NEXT;
-  }
-}
-
-
-var frameRemains;
-function TestRoutineEachFrame() {
-  return async function () {
-    //--- Loop for each frame of Routine 'Test' ---
-    // get current time
-    t = TestClock.getTime();
-    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
-    // update/draw components on each frame
-    
-    // *text_countdown* updates
-    if (t >= 0.0 && text_countdown.status === PsychoJS.Status.NOT_STARTED) {
-      // update params
-      text_countdown.setText((10 - Number.parseInt(t)).toString(), false);
-      // keep track of start time/frame for later
-      text_countdown.tStart = t;  // (not accounting for frame time here)
-      text_countdown.frameNStart = frameN;  // exact frame index
-      
-      text_countdown.setAutoDraw(true);
-    }
-    
-    
-    // if text_countdown is active this frame...
-    if (text_countdown.status === PsychoJS.Status.STARTED) {
-      // update params
-      text_countdown.setText((10 - Number.parseInt(t)).toString(), false);
-    }
-    
-    frameRemains = 0.0 + 10 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
-    if (text_countdown.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      // keep track of stop time/frame for later
-      text_countdown.tStop = t;  // not accounting for scr refresh
-      text_countdown.frameNStop = frameN;  // exact frame index
-      // update status
-      text_countdown.status = PsychoJS.Status.FINISHED;
-      text_countdown.setAutoDraw(false);
-    }
-    
-    // check for quit (typically the Esc key)
-    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
-      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
-    }
-    
-    // check if the Routine should terminate
-    if (!continueRoutine) {  // a component has requested a forced-end of Routine
-      routineForceEnded = true;
-      return Scheduler.Event.NEXT;
-    }
-    
-    continueRoutine = false;  // reverts to True if at least one component still running
-    TestComponents.forEach( function(thisComponent) {
-      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
-        continueRoutine = true;
-      }
-    });
-    
-    // refresh the screen if continuing
-    if (continueRoutine && routineTimer.getTime() > 0) {
-      return Scheduler.Event.FLIP_REPEAT;
-    } else {
-      return Scheduler.Event.NEXT;
-    }
-  };
-}
-
-
-function TestRoutineEnd(snapshot) {
-  return async function () {
-    //--- Ending Routine 'Test' ---
-    TestComponents.forEach( function(thisComponent) {
-      if (typeof thisComponent.setAutoDraw === 'function') {
-        thisComponent.setAutoDraw(false);
-      }
-    });
-    if (routineForceEnded) {
-        routineTimer.reset();} else if (TestMaxDurationReached) {
-        TestClock.add(TestMaxDuration);
-    } else {
-        TestClock.add(10.000000);
-    }
     // Routines running outside a loop should always advance the datafile row
     if (currentLoop === psychoJS.experiment) {
       psychoJS.experiment.nextEntry(snapshot);
