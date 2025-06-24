@@ -1,0 +1,78 @@
+17.3089 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+17.4173 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+19.5565 	INFO 	Loaded monitor calibration from ['2025_06_12 14:42']
+19.7044 	INFO 	Using renderer 'Apple M1 Pro' for graphics
+19.7044 	INFO 	OpenGL version supported by driver is 2..
+19.7376 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x155cd7e80>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x155cd7e20>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x155cf90c0>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(500.0), np.float64(284.5)], screen=0, size=array([1600, 1200]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+19.7376 	EXP 	window1: backgroundImage = ''
+19.7376 	EXP 	window1: backgroundFit = 'none'
+19.7609 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+19.7738 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+19.7867 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+19.7997 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+19.8126 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+19.8251 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+19.8379 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+19.8508 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+19.8632 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+19.8756 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+19.8883 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+19.9011 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+19.9138 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+19.9265 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+19.9392 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+19.9520 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+19.9648 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+19.9773 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+19.9898 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.0028 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.0153 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.0157 	DEBUG 	Uploading Texture Font fontname to graphics card
+20.0200 	DEBUG 	Upload of Texture Font fontname complete
+20.0378 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.0506 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.0633 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.0635 	DEBUG 	Uploading Texture Font fontname to graphics card
+20.0656 	DEBUG 	Upload of Texture Font fontname complete
+20.0671 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+20.0671 	EXP 	window1: recordFrameIntervals = False
+20.1872 	EXP 	window1: recordFrameIntervals = True
+21.0212 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+21.0468 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.0622 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.0761 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.0894 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.1023 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.1151 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.1274 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.1401 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.1529 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.1656 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.1659 	DEBUG 	Uploading Texture Font fontname to graphics card
+21.1682 	DEBUG 	Upload of Texture Font fontname complete
+21.7560 	INFO 	keyboard.Keyboard is using ptb backend.
+21.8322 	INFO 	keyboard.Keyboard is using ptb backend.
+21.8322 	EXP 	pilot_study: status = STARTED
+21.8743 	EXP 	Created welcome_message = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='welcome_message', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+21.8750 	EXP 	Created text_countdown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_countdown', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+21.8797 	EXP 	Created end_message = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='end_message', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+0.0131 	EXP 	welcome_message: autoDraw = True
+4.4367 	EXP 	Device response: <KeyPress from None: t=4.254943292005919, value=space, duration=None>
+4.4369 	EXP 	Device response: <KeyPress from None: t=4.254943292005919, value=space, duration=0.06732458306942135>
+4.4517 	WARNING 	t of last frame was 196.88ms (=1/5)
+4.4517 	EXP 	welcome_message: autoDraw = False
+4.4517 	EXP 	text_countdown: autoDraw = True
+6.4324 	EXP 	Device response: <KeyPress from None: t=6.424905500025488, value=escape, duration=None>
+6.4541 	WARNING 	t of last frame was 24.24ms (=1/41)
+6.4815 	EXP 	Device response: <KeyPress from None: t=6.424905500025488, value=escape, duration=0.05197391705587506>
+6.4816 	EXP 	pilot_study: status = STOPPED
+6.4846 	EXP 	text_countdown: autoDraw = False
+6.4860 	EXP 	pilot_study: status = STOPPED
+6.4872 	INFO 	saved data to '/Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/pilot_pilot_study_2025-06-24_15h10.58.905.csv'
+6.4874 	INFO 	saved data to /Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/pilot_pilot_study_2025-06-24_15h10.58.905.psydat
+6.6090 	DEBUG 	Saving data for pilot_study ExperimentHandler
+6.6118 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+6.6118 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

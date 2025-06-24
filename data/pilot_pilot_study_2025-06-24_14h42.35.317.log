@@ -1,0 +1,52 @@
+17.3830 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+17.4897 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+19.8388 	INFO 	Loaded monitor calibration from ['2025_06_12 14:42']
+20.0008 	INFO 	Using renderer 'Apple M1 Pro' for graphics
+20.0008 	INFO 	OpenGL version supported by driver is 2..
+20.0470 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x155b7dbd0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x155b7dc30>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x155bb6cb0>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(500.0), np.float64(284.5)], screen=0, size=array([1600, 1200]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+20.0471 	EXP 	window1: backgroundImage = ''
+20.0471 	EXP 	window1: backgroundFit = 'none'
+20.0722 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.0848 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.0975 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.1104 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.1231 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.1359 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.1487 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.1610 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.1731 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.1853 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.1980 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.2107 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.2231 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.2358 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.2485 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.2612 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.2738 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.2862 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.2988 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.3114 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.3241 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.3368 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.3499 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.3631 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.3758 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.3883 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.4011 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.4133 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.4151 	DEBUG 	Uploading Texture Font fontname to graphics card
+20.4195 	DEBUG 	Upload of Texture Font fontname complete
+20.4375 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.4502 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.4504 	DEBUG 	Uploading Texture Font fontname to graphics card
+20.4525 	DEBUG 	Upload of Texture Font fontname complete
+21.3047 	INFO 	keyboard.Keyboard is using ptb backend.
+21.3047 	EXP 	pilot_study: status = STARTED
+21.3129 	EXP 	Created text_countdown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_countdown', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+0.1020 	EXP 	text_countdown: autoDraw = True
+10.0438 	EXP 	text_countdown: autoDraw = False
+10.0456 	EXP 	pilot_study: status = STOPPED
+10.0477 	INFO 	saved data to '/Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/pilot_pilot_study_2025-06-24_14h42.35.317.csv'
+10.0492 	INFO 	saved data to /Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/pilot_pilot_study_2025-06-24_14h42.35.317.psydat
+10.2398 	DEBUG 	Saving data for pilot_study ExperimentHandler
+10.2434 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
