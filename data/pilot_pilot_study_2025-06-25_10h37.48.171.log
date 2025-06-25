@@ -1,0 +1,101 @@
+17.3413 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+17.5077 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+21.1597 	INFO 	Loaded monitor calibration from ['2025_06_12 14:42']
+21.2998 	INFO 	Using renderer 'Apple M1 Pro' for graphics
+21.2998 	INFO 	OpenGL version supported by driver is 2..
+21.3329 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x1563bc400>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x1563bc3a0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x1560a66b0>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(500.0), np.float64(284.5)], screen=0, size=array([1600, 1200]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+21.3330 	EXP 	window1: backgroundImage = ''
+21.3330 	EXP 	window1: backgroundFit = 'none'
+21.3538 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.3664 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.3790 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.3920 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.4051 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.4182 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.4312 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.4437 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.4562 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.4690 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.4821 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.4953 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.5079 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.5207 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.5335 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.5464 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.5593 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.5720 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.5848 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.5978 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.6108 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.6239 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.6367 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.6497 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.6625 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.6752 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.6883 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.7007 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.7011 	DEBUG 	Uploading Texture Font fontname to graphics card
+21.7051 	DEBUG 	Upload of Texture Font fontname complete
+21.7235 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.7368 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.7370 	DEBUG 	Uploading Texture Font fontname to graphics card
+21.7391 	DEBUG 	Upload of Texture Font fontname complete
+22.3050 	INFO 	keyboard.Keyboard is using ptb backend.
+22.4693 	INFO 	keyboard.Keyboard is using ptb backend.
+22.5462 	INFO 	keyboard.Keyboard is using ptb backend.
+22.5463 	EXP 	pilot_study: status = STARTED
+22.5887 	EXP 	Created welcome_message = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='welcome_message', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+22.5939 	EXP 	Created ask_consent = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='ask_consent', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+22.6104 	EXP 	Created top_left_img = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='resources/images/image_1.png', interpolate=True, mask=None, maskParams=None, name='top_left_img', opacity=1, ori=0.0, pos=array([-0.3,  0. ]), size=array([0.28, 0.2 ]), texRes=128.0, units='height', win=Window(...))
+22.6127 	EXP 	Created top_mid_img = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='resources/images/image_2.png', interpolate=True, mask=None, maskParams=None, name='top_mid_img', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.3, 0.2]), texRes=128.0, units='height', win=Window(...))
+22.6149 	EXP 	Created top_right_img = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='resources/images/image_3.png', interpolate=True, mask=None, maskParams=None, name='top_right_img', opacity=1, ori=0.0, pos=array([0.3, 0. ]), size=array([0.28      , 0.18666667]), texRes=128.0, units='height', win=Window(...))
+22.6169 	EXP 	Created bott_right_img = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='resources/images/image_4.png', interpolate=True, mask=None, maskParams=None, name='bott_right_img', opacity=1, ori=0.0, pos=array([ 0.3 , -0.25]), size=array([0.28      , 0.18666667]), texRes=128.0, units='height', win=Window(...))
+22.6187 	EXP 	Created bott_mid_img = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='resources/images/image_5.png', interpolate=True, mask=None, maskParams=None, name='bott_mid_img', opacity=1, ori=0.0, pos=array([ 0.  , -0.25]), size=array([0.28      , 0.18666667]), texRes=128.0, units='height', win=Window(...))
+22.6206 	EXP 	Created bott_left_img = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='resources/images/image_6.png', interpolate=True, mask=None, maskParams=None, name='bott_left_img', opacity=1, ori=0.0, pos=array([-0.3 , -0.25]), size=array([0.28      , 0.18666667]), texRes=128.0, units='height', win=Window(...))
+22.6224 	EXP 	Created ref_img = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-7.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='resources/images/image_7.png', interpolate=True, mask=None, maskParams=None, name='ref_img', opacity=1, ori=0.0, pos=array([0. , 0.3]), size=array([0.28      , 0.18666667]), texRes=128.0, units='height', win=Window(...))
+22.6264 	EXP 	Created end_message = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='end_message', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+0.1381 	EXP 	welcome_message: autoDraw = True
+1.9148 	EXP 	Device response: <KeyPress from None: t=1.7251318340422586, value=space, duration=None>
+1.9150 	EXP 	Device response: <KeyPress from None: t=1.7251318340422586, value=space, duration=0.1321338750422001>
+1.9218 	DATA 	Keypress: space
+1.9267 	INFO 	Keyboard events cleared
+1.9267 	EXP 	welcome_message: autoDraw = False
+1.9267 	EXP 	ask_consent: autoDraw = True
+3.0543 	EXP 	Device response: <KeyPress from None: t=3.0534417090239003, value=7, duration=None>
+3.0688 	DATA 	Keypress: 7
+3.0793 	EXP 	Device response: <KeyPress from None: t=3.0534417090239003, value=7, duration=0.024136333027854562>
+3.6362 	EXP 	Device response: <KeyPress from None: t=3.6299653759924695, value=y, duration=None>
+3.6398 	DATA 	Keypress: y
+3.6572 	EXP 	ask_consent: autoDraw = False
+3.6572 	EXP 	top_left_img: autoDraw = True
+3.6572 	EXP 	top_mid_img: autoDraw = True
+3.6572 	EXP 	top_right_img: autoDraw = True
+3.6572 	EXP 	bott_right_img: autoDraw = True
+3.6572 	EXP 	bott_mid_img: autoDraw = True
+3.6572 	EXP 	bott_left_img: autoDraw = True
+3.6572 	EXP 	ref_img: autoDraw = True
+3.7024 	EXP 	Device response: <KeyPress from None: t=3.6299653759924695, value=y, duration=0.059926707996055484>
+5.8722 	DATA 	Mouse: Left button down, pos=(413,294)
+5.8788 	EXP 	top_left_img: autoDraw = False
+5.8788 	EXP 	top_mid_img: autoDraw = False
+5.8788 	EXP 	top_right_img: autoDraw = False
+5.8788 	EXP 	bott_right_img: autoDraw = False
+5.8788 	EXP 	bott_mid_img: autoDraw = False
+5.8788 	EXP 	bott_left_img: autoDraw = False
+5.8788 	EXP 	ref_img: autoDraw = False
+5.8788 	EXP 	end_message: autoDraw = True
+5.9692 	DATA 	Mouse:  Left button up, pos=(413,294)
+13.2889 	DATA 	Mouse: Left button down, pos=(624,370)
+13.3898 	DATA 	Mouse:  Left button up, pos=(624,370)
+13.9395 	EXP 	Device response: <KeyPress from None: t=13.93634875107091, value=escape, duration=None>
+13.9635 	DATA 	Keypress: escape
+14.0105 	EXP 	Device response: <KeyPress from None: t=13.93634875107091, value=escape, duration=0.07186770800035447>
+14.0105 	EXP 	pilot_study: status = STOPPED
+14.0162 	EXP 	end_message: autoDraw = False
+14.0178 	EXP 	pilot_study: status = STOPPED
+14.0196 	INFO 	saved data to '/Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/pilot_pilot_study_2025-06-25_10h37.48.171.csv'
+14.0199 	INFO 	saved data to /Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/pilot_pilot_study_2025-06-25_10h37.48.171.psydat
+14.1460 	DEBUG 	Saving data for pilot_study ExperimentHandler
+14.1497 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+14.1498 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+14.1498 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

@@ -42,6 +42,12 @@ flowScheduler.add(experimentInit);
 flowScheduler.add(WelcomeScreenRoutineBegin());
 flowScheduler.add(WelcomeScreenRoutineEachFrame());
 flowScheduler.add(WelcomeScreenRoutineEnd());
+flowScheduler.add(consentRoutineBegin());
+flowScheduler.add(consentRoutineEachFrame());
+flowScheduler.add(consentRoutineEnd());
+flowScheduler.add(stealing_its_code_1RoutineBegin());
+flowScheduler.add(stealing_its_code_1RoutineEachFrame());
+flowScheduler.add(stealing_its_code_1RoutineEnd());
 flowScheduler.add(EndScreenRoutineBegin());
 flowScheduler.add(EndScreenRoutineEachFrame());
 flowScheduler.add(EndScreenRoutineEnd());
@@ -55,6 +61,13 @@ psychoJS.start({
   expInfo: expInfo,
   resources: [
     // resources:
+    {'name': 'resources/images/image_1.png', 'path': 'resources/images/image_1.png'},
+    {'name': 'resources/images/image_2.png', 'path': 'resources/images/image_2.png'},
+    {'name': 'resources/images/image_3.png', 'path': 'resources/images/image_3.png'},
+    {'name': 'resources/images/image_4.png', 'path': 'resources/images/image_4.png'},
+    {'name': 'resources/images/image_5.png', 'path': 'resources/images/image_5.png'},
+    {'name': 'resources/images/image_6.png', 'path': 'resources/images/image_6.png'},
+    {'name': 'resources/images/image_7.png', 'path': 'resources/images/image_7.png'},
   ]
 });
 
@@ -94,6 +107,18 @@ async function updateInfo() {
 var WelcomeScreenClock;
 var welcome_message;
 var next_key;
+var consentClock;
+var ask_consent;
+var consent_key;
+var stealing_its_code_1Clock;
+var top_left_img;
+var top_mid_img;
+var top_right_img;
+var bott_right_img;
+var bott_mid_img;
+var bott_left_img;
+var selecting_img_mouse;
+var ref_img;
 var EndScreenClock;
 var end_message;
 var globalClock;
@@ -115,6 +140,119 @@ async function experimentInit() {
   
   next_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  // Initialize components for Routine "consent"
+  consentClock = new util.Clock();
+  ask_consent = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'ask_consent',
+    text: 'Now that you understand what will be expected from you as well as what data will be collected, do you consent? (y/n)',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    languageStyle: 'LTR',
+    color: new util.Color('white'),  opacity: undefined,
+    depth: 0.0 
+  });
+  
+  consent_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "stealing_its_code_1"
+  stealing_its_code_1Clock = new util.Clock();
+  top_left_img = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'top_left_img', units : 'height', 
+    image : 'resources/images/image_1.png', mask : undefined,
+    anchor : 'center',
+    ori : 0.0, 
+    pos : [(- 0.3), 0], 
+    draggable: false,
+    size : undefined,
+    color : new util.Color([1,1,1]), opacity : undefined,
+    flipHoriz : false, flipVert : false,
+    texRes : 128.0, interpolate : true, depth : 0.0 
+  });
+  top_mid_img = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'top_mid_img', units : 'height', 
+    image : 'resources/images/image_2.png', mask : undefined,
+    anchor : 'center',
+    ori : 0.0, 
+    pos : [0, 0], 
+    draggable: false,
+    size : undefined,
+    color : new util.Color([1,1,1]), opacity : undefined,
+    flipHoriz : false, flipVert : false,
+    texRes : 128.0, interpolate : true, depth : -1.0 
+  });
+  top_right_img = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'top_right_img', units : 'height', 
+    image : 'resources/images/image_3.png', mask : undefined,
+    anchor : 'center',
+    ori : 0.0, 
+    pos : [0.3, 0], 
+    draggable: false,
+    size : undefined,
+    color : new util.Color([1,1,1]), opacity : undefined,
+    flipHoriz : false, flipVert : false,
+    texRes : 128.0, interpolate : true, depth : -2.0 
+  });
+  bott_right_img = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'bott_right_img', units : 'height', 
+    image : 'resources/images/image_4.png', mask : undefined,
+    anchor : 'center',
+    ori : 0.0, 
+    pos : [0.3, (- 0.25)], 
+    draggable: false,
+    size : undefined,
+    color : new util.Color([1,1,1]), opacity : undefined,
+    flipHoriz : false, flipVert : false,
+    texRes : 128.0, interpolate : true, depth : -3.0 
+  });
+  bott_mid_img = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'bott_mid_img', units : 'height', 
+    image : 'resources/images/image_5.png', mask : undefined,
+    anchor : 'center',
+    ori : 0.0, 
+    pos : [0, (- 0.25)], 
+    draggable: false,
+    size : undefined,
+    color : new util.Color([1,1,1]), opacity : undefined,
+    flipHoriz : false, flipVert : false,
+    texRes : 128.0, interpolate : true, depth : -4.0 
+  });
+  bott_left_img = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'bott_left_img', units : 'height', 
+    image : 'resources/images/image_6.png', mask : undefined,
+    anchor : 'center',
+    ori : 0.0, 
+    pos : [(- 0.3), (- 0.25)], 
+    draggable: false,
+    size : undefined,
+    color : new util.Color([1,1,1]), opacity : undefined,
+    flipHoriz : false, flipVert : false,
+    texRes : 128.0, interpolate : true, depth : -5.0 
+  });
+  selecting_img_mouse = new core.Mouse({
+    win: psychoJS.window,
+  });
+  selecting_img_mouse.mouseClock = new util.Clock();
+  ref_img = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'ref_img', units : undefined, 
+    image : 'resources/images/image_7.png', mask : undefined,
+    anchor : 'center',
+    ori : 0.0, 
+    pos : [0, 0.3], 
+    draggable: false,
+    size : undefined,
+    color : new util.Color([1,1,1]), opacity : undefined,
+    flipHoriz : false, flipVert : false,
+    texRes : 128.0, interpolate : true, depth : -7.0 
+  });
   // Initialize components for Routine "EndScreen"
   EndScreenClock = new util.Clock();
   end_message = new visual.TextStim({
@@ -262,6 +400,442 @@ function WelcomeScreenRoutineEnd(snapshot) {
     });
     next_key.stop();
     // the Routine "WelcomeScreen" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    // Routines running outside a loop should always advance the datafile row
+    if (currentLoop === psychoJS.experiment) {
+      psychoJS.experiment.nextEntry(snapshot);
+    }
+    return Scheduler.Event.NEXT;
+  }
+}
+
+
+var consentMaxDurationReached;
+var _consent_key_allKeys;
+var consentMaxDuration;
+var consentComponents;
+function consentRoutineBegin(snapshot) {
+  return async function () {
+    TrialHandler.fromSnapshot(snapshot); // ensure that .thisN vals are up to date
+    
+    //--- Prepare to start Routine 'consent' ---
+    t = 0;
+    frameN = -1;
+    continueRoutine = true; // until we're told otherwise
+    // keep track of whether this Routine was forcibly ended
+    routineForceEnded = false;
+    consentClock.reset();
+    routineTimer.reset();
+    consentMaxDurationReached = false;
+    // update component parameters for each repeat
+    consent_key.keys = undefined;
+    consent_key.rt = undefined;
+    _consent_key_allKeys = [];
+    psychoJS.experiment.addData('consent.started', globalClock.getTime());
+    consentMaxDuration = null
+    // keep track of which components have finished
+    consentComponents = [];
+    consentComponents.push(ask_consent);
+    consentComponents.push(consent_key);
+    
+    consentComponents.forEach( function(thisComponent) {
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
+    return Scheduler.Event.NEXT;
+  }
+}
+
+
+function consentRoutineEachFrame() {
+  return async function () {
+    //--- Loop for each frame of Routine 'consent' ---
+    // get current time
+    t = consentClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *ask_consent* updates
+    if (t >= 0.0 && ask_consent.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      ask_consent.tStart = t;  // (not accounting for frame time here)
+      ask_consent.frameNStart = frameN;  // exact frame index
+      
+      ask_consent.setAutoDraw(true);
+    }
+    
+    
+    // if ask_consent is active this frame...
+    if (ask_consent.status === PsychoJS.Status.STARTED) {
+    }
+    
+    
+    // *consent_key* updates
+    if (t >= 0.0 && consent_key.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      consent_key.tStart = t;  // (not accounting for frame time here)
+      consent_key.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { consent_key.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { consent_key.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { consent_key.clearEvents(); });
+    }
+    
+    // if consent_key is active this frame...
+    if (consent_key.status === PsychoJS.Status.STARTED) {
+      let theseKeys = consent_key.getKeys({keyList: ['y','n'], waitRelease: false});
+      _consent_key_allKeys = _consent_key_allKeys.concat(theseKeys);
+      if (_consent_key_allKeys.length > 0) {
+        consent_key.keys = _consent_key_allKeys[_consent_key_allKeys.length - 1].name;  // just the last key pressed
+        consent_key.rt = _consent_key_allKeys[_consent_key_allKeys.length - 1].rt;
+        consent_key.duration = _consent_key_allKeys[_consent_key_allKeys.length - 1].duration;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
+    // Run 'Each Frame' code from code
+    //check if unconsented
+    if(consent_key.keys === 'n' || consent_key.keys === String("n")){
+      return quitPsychoJS('Unconsented through pressing the [n] key. Goodbye!', false);
+    }
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      routineForceEnded = true;
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    consentComponents.forEach( function(thisComponent) {
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+      }
+    });
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function consentRoutineEnd(snapshot) {
+  return async function () {
+    //--- Ending Routine 'consent' ---
+    consentComponents.forEach( function(thisComponent) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    });
+    psychoJS.experiment.addData('consent.stopped', globalClock.getTime());
+    // update the trial handler
+    if (currentLoop instanceof MultiStairHandler) {
+      currentLoop.addResponse(consent_key.corr, level);
+    }
+    psychoJS.experiment.addData('consent_key.keys', consent_key.keys);
+    if (typeof consent_key.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('consent_key.rt', consent_key.rt);
+        psychoJS.experiment.addData('consent_key.duration', consent_key.duration);
+        routineTimer.reset();
+        }
+    
+    consent_key.stop();
+    // the Routine "consent" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    // Routines running outside a loop should always advance the datafile row
+    if (currentLoop === psychoJS.experiment) {
+      psychoJS.experiment.nextEntry(snapshot);
+    }
+    return Scheduler.Event.NEXT;
+  }
+}
+
+
+var stealing_its_code_1MaxDurationReached;
+var gotValidClick;
+var stealing_its_code_1MaxDuration;
+var stealing_its_code_1Components;
+function stealing_its_code_1RoutineBegin(snapshot) {
+  return async function () {
+    TrialHandler.fromSnapshot(snapshot); // ensure that .thisN vals are up to date
+    
+    //--- Prepare to start Routine 'stealing_its_code_1' ---
+    t = 0;
+    frameN = -1;
+    continueRoutine = true; // until we're told otherwise
+    // keep track of whether this Routine was forcibly ended
+    routineForceEnded = false;
+    stealing_its_code_1Clock.reset();
+    routineTimer.reset();
+    stealing_its_code_1MaxDurationReached = false;
+    // update component parameters for each repeat
+    // setup some python lists for storing info about the selecting_img_mouse
+    // current position of the mouse:
+    selecting_img_mouse.x = [];
+    selecting_img_mouse.y = [];
+    selecting_img_mouse.leftButton = [];
+    selecting_img_mouse.midButton = [];
+    selecting_img_mouse.rightButton = [];
+    selecting_img_mouse.time = [];
+    selecting_img_mouse.corr = [];
+    selecting_img_mouse.clicked_name = [];
+    gotValidClick = false; // until a click is received
+    psychoJS.experiment.addData('stealing_its_code_1.started', globalClock.getTime());
+    stealing_its_code_1MaxDuration = null
+    // keep track of which components have finished
+    stealing_its_code_1Components = [];
+    stealing_its_code_1Components.push(top_left_img);
+    stealing_its_code_1Components.push(top_mid_img);
+    stealing_its_code_1Components.push(top_right_img);
+    stealing_its_code_1Components.push(bott_right_img);
+    stealing_its_code_1Components.push(bott_mid_img);
+    stealing_its_code_1Components.push(bott_left_img);
+    stealing_its_code_1Components.push(selecting_img_mouse);
+    stealing_its_code_1Components.push(ref_img);
+    
+    stealing_its_code_1Components.forEach( function(thisComponent) {
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
+    return Scheduler.Event.NEXT;
+  }
+}
+
+
+var prevButtonState;
+var _mouseButtons;
+var corr;
+var corrAns;
+var _mouseXYs;
+function stealing_its_code_1RoutineEachFrame() {
+  return async function () {
+    //--- Loop for each frame of Routine 'stealing_its_code_1' ---
+    // get current time
+    t = stealing_its_code_1Clock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *top_left_img* updates
+    if (t >= 0 && top_left_img.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      top_left_img.tStart = t;  // (not accounting for frame time here)
+      top_left_img.frameNStart = frameN;  // exact frame index
+      
+      top_left_img.setAutoDraw(true);
+    }
+    
+    
+    // if top_left_img is active this frame...
+    if (top_left_img.status === PsychoJS.Status.STARTED) {
+    }
+    
+    
+    // *top_mid_img* updates
+    if (t >= 0 && top_mid_img.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      top_mid_img.tStart = t;  // (not accounting for frame time here)
+      top_mid_img.frameNStart = frameN;  // exact frame index
+      
+      top_mid_img.setAutoDraw(true);
+    }
+    
+    
+    // if top_mid_img is active this frame...
+    if (top_mid_img.status === PsychoJS.Status.STARTED) {
+    }
+    
+    
+    // *top_right_img* updates
+    if (t >= 0 && top_right_img.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      top_right_img.tStart = t;  // (not accounting for frame time here)
+      top_right_img.frameNStart = frameN;  // exact frame index
+      
+      top_right_img.setAutoDraw(true);
+    }
+    
+    
+    // if top_right_img is active this frame...
+    if (top_right_img.status === PsychoJS.Status.STARTED) {
+    }
+    
+    
+    // *bott_right_img* updates
+    if (t >= 0 && bott_right_img.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      bott_right_img.tStart = t;  // (not accounting for frame time here)
+      bott_right_img.frameNStart = frameN;  // exact frame index
+      
+      bott_right_img.setAutoDraw(true);
+    }
+    
+    
+    // if bott_right_img is active this frame...
+    if (bott_right_img.status === PsychoJS.Status.STARTED) {
+    }
+    
+    
+    // *bott_mid_img* updates
+    if (t >= 0 && bott_mid_img.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      bott_mid_img.tStart = t;  // (not accounting for frame time here)
+      bott_mid_img.frameNStart = frameN;  // exact frame index
+      
+      bott_mid_img.setAutoDraw(true);
+    }
+    
+    
+    // if bott_mid_img is active this frame...
+    if (bott_mid_img.status === PsychoJS.Status.STARTED) {
+    }
+    
+    
+    // *bott_left_img* updates
+    if (t >= 0 && bott_left_img.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      bott_left_img.tStart = t;  // (not accounting for frame time here)
+      bott_left_img.frameNStart = frameN;  // exact frame index
+      
+      bott_left_img.setAutoDraw(true);
+    }
+    
+    
+    // if bott_left_img is active this frame...
+    if (bott_left_img.status === PsychoJS.Status.STARTED) {
+    }
+    
+    // *selecting_img_mouse* updates
+    if (t >= 0 && selecting_img_mouse.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      selecting_img_mouse.tStart = t;  // (not accounting for frame time here)
+      selecting_img_mouse.frameNStart = frameN;  // exact frame index
+      
+      selecting_img_mouse.status = PsychoJS.Status.STARTED;
+      selecting_img_mouse.mouseClock.reset();
+      prevButtonState = selecting_img_mouse.getPressed();  // if button is down already this ISN'T a new click
+    }
+    
+    // if selecting_img_mouse is active this frame...
+    if (selecting_img_mouse.status === PsychoJS.Status.STARTED) {
+      _mouseButtons = selecting_img_mouse.getPressed();
+      if (!_mouseButtons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
+        prevButtonState = _mouseButtons;
+        if (_mouseButtons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
+          // check if the mouse was inside our 'clickable' objects
+          gotValidClick = false;
+          selecting_img_mouse.clickableObjects = eval([top_left_img, top_mid_img, top_right_img, bott_right_img, bott_mid_img, bott_left_img])
+          ;// make sure the mouse's clickable objects are an array
+          if (!Array.isArray(selecting_img_mouse.clickableObjects)) {
+              selecting_img_mouse.clickableObjects = [selecting_img_mouse.clickableObjects];
+          }
+          // iterate through clickable objects and check each
+          for (const obj of selecting_img_mouse.clickableObjects) {
+              if (obj.contains(selecting_img_mouse)) {
+                  gotValidClick = true;
+                  selecting_img_mouse.clicked_name.push(obj.name);
+              }
+          }
+          if (!gotValidClick) {
+              selecting_img_mouse.clicked_name.push(null);
+          }
+          // check whether click was in correct object
+          if (gotValidClick) {
+              corr = 0;
+              corrAns = eval( bott_left_img);
+              for (let obj of [corrAns]) {
+                  if (obj.contains(selecting_img_mouse)) {
+                      corr = 1;
+                  };
+              };
+              selecting_img_mouse.corr.push(corr);
+          };
+          _mouseXYs = selecting_img_mouse.getPos();
+          selecting_img_mouse.x.push(_mouseXYs[0]);
+          selecting_img_mouse.y.push(_mouseXYs[1]);
+          selecting_img_mouse.leftButton.push(_mouseButtons[0]);
+          selecting_img_mouse.midButton.push(_mouseButtons[1]);
+          selecting_img_mouse.rightButton.push(_mouseButtons[2]);
+          selecting_img_mouse.time.push(selecting_img_mouse.mouseClock.getTime());
+          if (gotValidClick === true) { // end routine on response
+            continueRoutine = false;
+          }
+        }
+      }
+    }
+    
+    // *ref_img* updates
+    if (t >= 0 && ref_img.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      ref_img.tStart = t;  // (not accounting for frame time here)
+      ref_img.frameNStart = frameN;  // exact frame index
+      
+      ref_img.setAutoDraw(true);
+    }
+    
+    
+    // if ref_img is active this frame...
+    if (ref_img.status === PsychoJS.Status.STARTED) {
+    }
+    
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      routineForceEnded = true;
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    stealing_its_code_1Components.forEach( function(thisComponent) {
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+      }
+    });
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function stealing_its_code_1RoutineEnd(snapshot) {
+  return async function () {
+    //--- Ending Routine 'stealing_its_code_1' ---
+    stealing_its_code_1Components.forEach( function(thisComponent) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    });
+    psychoJS.experiment.addData('stealing_its_code_1.stopped', globalClock.getTime());
+    // store data for psychoJS.experiment (ExperimentHandler)
+    psychoJS.experiment.addData('selecting_img_mouse.x', selecting_img_mouse.x);
+    psychoJS.experiment.addData('selecting_img_mouse.y', selecting_img_mouse.y);
+    psychoJS.experiment.addData('selecting_img_mouse.leftButton', selecting_img_mouse.leftButton);
+    psychoJS.experiment.addData('selecting_img_mouse.midButton', selecting_img_mouse.midButton);
+    psychoJS.experiment.addData('selecting_img_mouse.rightButton', selecting_img_mouse.rightButton);
+    psychoJS.experiment.addData('selecting_img_mouse.time', selecting_img_mouse.time);
+    psychoJS.experiment.addData('selecting_img_mouse.corr', selecting_img_mouse.corr);
+    psychoJS.experiment.addData('selecting_img_mouse.clicked_name', selecting_img_mouse.clicked_name);
+    
+    // the Routine "stealing_its_code_1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
     // Routines running outside a loop should always advance the datafile row
