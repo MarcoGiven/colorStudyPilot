@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2025.1.1),
-    on Tue Jun 24 15:10:41 2025
+    on Wed Jun 25 10:37:30 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -212,11 +212,6 @@ def setupWindow(expInfo=None, win=None):
         win.backgroundImage = ''
         win.backgroundFit = 'none'
         win.units = 'height'
-    if expInfo is not None:
-        # get/measure frame rate if not already in expInfo
-        if win._monitorFrameRate is None:
-            win._monitorFrameRate = win.getActualFrameRate(infoMsg='Attempting to measure frame rate of screen, please wait...')
-        expInfo['frameRate'] = win._monitorFrameRate
     win.hideMessage()
     if PILOTING:
         # show a visual indicator if we're in piloting mode
@@ -265,6 +260,12 @@ def setupDevices(expInfo, thisExp, win):
         next_key = deviceManager.addDevice(
             deviceClass='keyboard',
             deviceName='next_key',
+        )
+    if deviceManager.getDevice('consent_key') is None:
+        # initialise consent_key
+        consent_key = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='consent_key',
         )
     # return True if completed successfully
     return True
@@ -383,14 +384,76 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=0.0);
     next_key = keyboard.Keyboard(deviceName='next_key')
     
-    # --- Initialize components for Routine "Test" ---
-    text_countdown = visual.TextStim(win=win, name='text_countdown',
-        text='',
+    # --- Initialize components for Routine "consent" ---
+    ask_consent = visual.TextStim(win=win, name='ask_consent',
+        text='Now that you understand what will be expected from you as well as what data will be collected, do you consent? (y/n)',
         font='Arial',
-        pos=(0, 0), draggable=False, height=0.1, wrapWidth=None, ori=0.0, 
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
+    consent_key = keyboard.Keyboard(deviceName='consent_key')
+    
+    # --- Initialize components for Routine "stealing_its_code_1" ---
+    top_left_img = visual.ImageStim(
+        win=win,
+        name='top_left_img', units='height', 
+        image='resources/images/image_1.png', mask=None, anchor='center',
+        ori=0.0, pos=(-0.3, 0), draggable=False, size=None,
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=0.0)
+    top_mid_img = visual.ImageStim(
+        win=win,
+        name='top_mid_img', units='height', 
+        image='resources/images/image_2.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=None,
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-1.0)
+    top_right_img = visual.ImageStim(
+        win=win,
+        name='top_right_img', units='height', 
+        image='resources/images/image_3.png', mask=None, anchor='center',
+        ori=0.0, pos=(0.3, 0), draggable=False, size=None,
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-2.0)
+    bott_right_img = visual.ImageStim(
+        win=win,
+        name='bott_right_img', units='height', 
+        image='resources/images/image_4.png', mask=None, anchor='center',
+        ori=0.0, pos=(0.3, -0.25), draggable=False, size=None,
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-3.0)
+    bott_mid_img = visual.ImageStim(
+        win=win,
+        name='bott_mid_img', units='height', 
+        image='resources/images/image_5.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, -0.25), draggable=False, size=None,
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-4.0)
+    bott_left_img = visual.ImageStim(
+        win=win,
+        name='bott_left_img', units='height', 
+        image='resources/images/image_6.png', mask=None, anchor='center',
+        ori=0.0, pos=(-0.3, -0.25), draggable=False, size=None,
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-5.0)
+    selecting_img_mouse = event.Mouse(win=win)
+    x, y = [None, None]
+    selecting_img_mouse.mouseClock = core.Clock()
+    ref_img = visual.ImageStim(
+        win=win,
+        name='ref_img', 
+        image='resources/images/image_7.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0.3), draggable=False, size=None,
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-7.0)
     
     # --- Initialize components for Routine "EndScreen" ---
     end_message = visual.TextStim(win=win, name='end_message',
@@ -554,23 +617,28 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # the Routine "WelcomeScreen" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
-    # --- Prepare to start Routine "Test" ---
-    # create an object to store info about Routine Test
-    Test = data.Routine(
-        name='Test',
-        components=[text_countdown],
+    # --- Prepare to start Routine "consent" ---
+    # create an object to store info about Routine consent
+    consent = data.Routine(
+        name='consent',
+        components=[ask_consent, consent_key],
     )
-    Test.status = NOT_STARTED
+    consent.status = NOT_STARTED
     continueRoutine = True
     # update component parameters for each repeat
-    # store start times for Test
-    Test.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-    Test.tStart = globalClock.getTime(format='float')
-    Test.status = STARTED
-    Test.maxDuration = None
+    # create starting attributes for consent_key
+    consent_key.keys = []
+    consent_key.rt = []
+    _consent_key_allKeys = []
+    # store start times for consent
+    consent.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+    consent.tStart = globalClock.getTime(format='float')
+    consent.status = STARTED
+    thisExp.addData('consent.started', consent.tStart)
+    consent.maxDuration = None
     # keep track of which components have finished
-    TestComponents = Test.components
-    for thisComponent in Test.components:
+    consentComponents = consent.components
+    for thisComponent in consent.components:
         thisComponent.tStart = None
         thisComponent.tStop = None
         thisComponent.tStartRefresh = None
@@ -582,9 +650,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     _timeToFirstFrame = win.getFutureFlipTime(clock="now")
     frameN = -1
     
-    # --- Run Routine "Test" ---
-    Test.forceEnded = routineForceEnded = not continueRoutine
-    while continueRoutine and routineTimer.getTime() < 10.0:
+    # --- Run Routine "consent" ---
+    consent.forceEnded = routineForceEnded = not continueRoutine
+    while continueRoutine:
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -592,35 +660,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *text_countdown* updates
+        # *ask_consent* updates
         
-        # if text_countdown is starting this frame...
-        if text_countdown.status == NOT_STARTED and t >= 0.0-frameTolerance:
+        # if ask_consent is starting this frame...
+        if ask_consent.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_countdown.frameNStart = frameN  # exact frame index
-            text_countdown.tStart = t  # local t and not account for scr refresh
-            text_countdown.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(text_countdown, 'tStartRefresh')  # time at next scr refresh
+            ask_consent.frameNStart = frameN  # exact frame index
+            ask_consent.tStart = t  # local t and not account for scr refresh
+            ask_consent.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(ask_consent, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'ask_consent.started')
             # update status
-            text_countdown.status = STARTED
-            text_countdown.setAutoDraw(True)
+            ask_consent.status = STARTED
+            ask_consent.setAutoDraw(True)
         
-        # if text_countdown is active this frame...
-        if text_countdown.status == STARTED:
+        # if ask_consent is active this frame...
+        if ask_consent.status == STARTED:
             # update params
-            text_countdown.setText(str(10-int(t)), log=False)
+            pass
         
-        # if text_countdown is stopping this frame...
-        if text_countdown.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > text_countdown.tStartRefresh + 10-frameTolerance:
-                # keep track of stop time/frame for later
-                text_countdown.tStop = t  # not accounting for scr refresh
-                text_countdown.tStopRefresh = tThisFlipGlobal  # on global time
-                text_countdown.frameNStop = frameN  # exact frame index
-                # update status
-                text_countdown.status = FINISHED
-                text_countdown.setAutoDraw(False)
+        # *consent_key* updates
+        waitOnFlip = False
+        
+        # if consent_key is starting this frame...
+        if consent_key.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            consent_key.frameNStart = frameN  # exact frame index
+            consent_key.tStart = t  # local t and not account for scr refresh
+            consent_key.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(consent_key, 'tStartRefresh')  # time at next scr refresh
+            # update status
+            consent_key.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(consent_key.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(consent_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if consent_key.status == STARTED and not waitOnFlip:
+            theseKeys = consent_key.getKeys(keyList=['y','n'], ignoreKeys=["escape"], waitRelease=False)
+            _consent_key_allKeys.extend(theseKeys)
+            if len(_consent_key_allKeys):
+                consent_key.keys = _consent_key_allKeys[-1].name  # just the last key pressed
+                consent_key.rt = _consent_key_allKeys[-1].rt
+                consent_key.duration = _consent_key_allKeys[-1].duration
+                # a response ends the routine
+                continueRoutine = False
+        # Run 'Each Frame' code from code
+        if(consent_key.keys == 'n' or consent_key.keys == str('n')):
+            return quit
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -634,17 +721,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 thisExp=thisExp, 
                 win=win, 
                 timers=[routineTimer, globalClock], 
-                currentRoutine=Test,
+                currentRoutine=consent,
             )
             # skip the frame we paused on
             continue
         
         # check if all components have finished
         if not continueRoutine:  # a component has requested a forced-end of Routine
-            Test.forceEnded = routineForceEnded = True
+            consent.forceEnded = routineForceEnded = True
             break
         continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in Test.components:
+        for thisComponent in consent.components:
             if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                 continueRoutine = True
                 break  # at least one component has not yet finished
@@ -653,21 +740,312 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
             win.flip()
     
-    # --- Ending Routine "Test" ---
-    for thisComponent in Test.components:
+    # --- Ending Routine "consent" ---
+    for thisComponent in consent.components:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    # store stop times for Test
-    Test.tStop = globalClock.getTime(format='float')
-    Test.tStopRefresh = tThisFlipGlobal
-    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-    if Test.maxDurationReached:
-        routineTimer.addTime(-Test.maxDuration)
-    elif Test.forceEnded:
-        routineTimer.reset()
-    else:
-        routineTimer.addTime(-10.000000)
+    # store stop times for consent
+    consent.tStop = globalClock.getTime(format='float')
+    consent.tStopRefresh = tThisFlipGlobal
+    thisExp.addData('consent.stopped', consent.tStop)
+    # check responses
+    if consent_key.keys in ['', [], None]:  # No response was made
+        consent_key.keys = None
+    thisExp.addData('consent_key.keys',consent_key.keys)
+    if consent_key.keys != None:  # we had a response
+        thisExp.addData('consent_key.rt', consent_key.rt)
+        thisExp.addData('consent_key.duration', consent_key.duration)
     thisExp.nextEntry()
+    # the Routine "consent" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
+    # --- Prepare to start Routine "stealing_its_code_1" ---
+    # create an object to store info about Routine stealing_its_code_1
+    stealing_its_code_1 = data.Routine(
+        name='stealing_its_code_1',
+        components=[top_left_img, top_mid_img, top_right_img, bott_right_img, bott_mid_img, bott_left_img, selecting_img_mouse, ref_img],
+    )
+    stealing_its_code_1.status = NOT_STARTED
+    continueRoutine = True
+    # update component parameters for each repeat
+    # setup some python lists for storing info about the selecting_img_mouse
+    selecting_img_mouse.x = []
+    selecting_img_mouse.y = []
+    selecting_img_mouse.leftButton = []
+    selecting_img_mouse.midButton = []
+    selecting_img_mouse.rightButton = []
+    selecting_img_mouse.time = []
+    selecting_img_mouse.corr = []
+    selecting_img_mouse.clicked_name = []
+    gotValidClick = False  # until a click is received
+    # store start times for stealing_its_code_1
+    stealing_its_code_1.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+    stealing_its_code_1.tStart = globalClock.getTime(format='float')
+    stealing_its_code_1.status = STARTED
+    thisExp.addData('stealing_its_code_1.started', stealing_its_code_1.tStart)
+    stealing_its_code_1.maxDuration = None
+    # keep track of which components have finished
+    stealing_its_code_1Components = stealing_its_code_1.components
+    for thisComponent in stealing_its_code_1.components:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "stealing_its_code_1" ---
+    stealing_its_code_1.forceEnded = routineForceEnded = not continueRoutine
+    while continueRoutine:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *top_left_img* updates
+        
+        # if top_left_img is starting this frame...
+        if top_left_img.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # keep track of start time/frame for later
+            top_left_img.frameNStart = frameN  # exact frame index
+            top_left_img.tStart = t  # local t and not account for scr refresh
+            top_left_img.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(top_left_img, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'top_left_img.started')
+            # update status
+            top_left_img.status = STARTED
+            top_left_img.setAutoDraw(True)
+        
+        # if top_left_img is active this frame...
+        if top_left_img.status == STARTED:
+            # update params
+            pass
+        
+        # *top_mid_img* updates
+        
+        # if top_mid_img is starting this frame...
+        if top_mid_img.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # keep track of start time/frame for later
+            top_mid_img.frameNStart = frameN  # exact frame index
+            top_mid_img.tStart = t  # local t and not account for scr refresh
+            top_mid_img.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(top_mid_img, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'top_mid_img.started')
+            # update status
+            top_mid_img.status = STARTED
+            top_mid_img.setAutoDraw(True)
+        
+        # if top_mid_img is active this frame...
+        if top_mid_img.status == STARTED:
+            # update params
+            pass
+        
+        # *top_right_img* updates
+        
+        # if top_right_img is starting this frame...
+        if top_right_img.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # keep track of start time/frame for later
+            top_right_img.frameNStart = frameN  # exact frame index
+            top_right_img.tStart = t  # local t and not account for scr refresh
+            top_right_img.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(top_right_img, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'top_right_img.started')
+            # update status
+            top_right_img.status = STARTED
+            top_right_img.setAutoDraw(True)
+        
+        # if top_right_img is active this frame...
+        if top_right_img.status == STARTED:
+            # update params
+            pass
+        
+        # *bott_right_img* updates
+        
+        # if bott_right_img is starting this frame...
+        if bott_right_img.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # keep track of start time/frame for later
+            bott_right_img.frameNStart = frameN  # exact frame index
+            bott_right_img.tStart = t  # local t and not account for scr refresh
+            bott_right_img.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(bott_right_img, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'bott_right_img.started')
+            # update status
+            bott_right_img.status = STARTED
+            bott_right_img.setAutoDraw(True)
+        
+        # if bott_right_img is active this frame...
+        if bott_right_img.status == STARTED:
+            # update params
+            pass
+        
+        # *bott_mid_img* updates
+        
+        # if bott_mid_img is starting this frame...
+        if bott_mid_img.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # keep track of start time/frame for later
+            bott_mid_img.frameNStart = frameN  # exact frame index
+            bott_mid_img.tStart = t  # local t and not account for scr refresh
+            bott_mid_img.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(bott_mid_img, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'bott_mid_img.started')
+            # update status
+            bott_mid_img.status = STARTED
+            bott_mid_img.setAutoDraw(True)
+        
+        # if bott_mid_img is active this frame...
+        if bott_mid_img.status == STARTED:
+            # update params
+            pass
+        
+        # *bott_left_img* updates
+        
+        # if bott_left_img is starting this frame...
+        if bott_left_img.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # keep track of start time/frame for later
+            bott_left_img.frameNStart = frameN  # exact frame index
+            bott_left_img.tStart = t  # local t and not account for scr refresh
+            bott_left_img.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(bott_left_img, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'bott_left_img.started')
+            # update status
+            bott_left_img.status = STARTED
+            bott_left_img.setAutoDraw(True)
+        
+        # if bott_left_img is active this frame...
+        if bott_left_img.status == STARTED:
+            # update params
+            pass
+        # *selecting_img_mouse* updates
+        
+        # if selecting_img_mouse is starting this frame...
+        if selecting_img_mouse.status == NOT_STARTED and t >= 0-frameTolerance:
+            # keep track of start time/frame for later
+            selecting_img_mouse.frameNStart = frameN  # exact frame index
+            selecting_img_mouse.tStart = t  # local t and not account for scr refresh
+            selecting_img_mouse.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(selecting_img_mouse, 'tStartRefresh')  # time at next scr refresh
+            # update status
+            selecting_img_mouse.status = STARTED
+            selecting_img_mouse.mouseClock.reset()
+            prevButtonState = selecting_img_mouse.getPressed()  # if button is down already this ISN'T a new click
+        if selecting_img_mouse.status == STARTED:  # only update if started and not finished!
+            buttons = selecting_img_mouse.getPressed()
+            if buttons != prevButtonState:  # button state changed?
+                prevButtonState = buttons
+                if sum(buttons) > 0:  # state changed to a new click
+                    # check if the mouse was inside our 'clickable' objects
+                    gotValidClick = False
+                    clickableList = environmenttools.getFromNames([top_left_img, top_mid_img, top_right_img, bott_right_img, bott_mid_img, bott_left_img], namespace=locals())
+                    for obj in clickableList:
+                        # is this object clicked on?
+                        if obj.contains(selecting_img_mouse):
+                            gotValidClick = True
+                            selecting_img_mouse.clicked_name.append(obj.name)
+                    if not gotValidClick:
+                        selecting_img_mouse.clicked_name.append(None)
+                    # check whether click was in correct object
+                    if gotValidClick:
+                        _corr = 0
+                        _corrAns = environmenttools.getFromNames(bott_left_img, namespace=locals())
+                        for obj in _corrAns:
+                            # is this object clicked on?
+                            if obj.contains(selecting_img_mouse):
+                                _corr = 1
+                        selecting_img_mouse.corr.append(_corr)
+                    x, y = selecting_img_mouse.getPos()
+                    selecting_img_mouse.x.append(x)
+                    selecting_img_mouse.y.append(y)
+                    buttons = selecting_img_mouse.getPressed()
+                    selecting_img_mouse.leftButton.append(buttons[0])
+                    selecting_img_mouse.midButton.append(buttons[1])
+                    selecting_img_mouse.rightButton.append(buttons[2])
+                    selecting_img_mouse.time.append(selecting_img_mouse.mouseClock.getTime())
+                    if gotValidClick:
+                        continueRoutine = False  # end routine on response
+        
+        # *ref_img* updates
+        
+        # if ref_img is starting this frame...
+        if ref_img.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # keep track of start time/frame for later
+            ref_img.frameNStart = frameN  # exact frame index
+            ref_img.tStart = t  # local t and not account for scr refresh
+            ref_img.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(ref_img, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'ref_img.started')
+            # update status
+            ref_img.status = STARTED
+            ref_img.setAutoDraw(True)
+        
+        # if ref_img is active this frame...
+        if ref_img.status == STARTED:
+            # update params
+            pass
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, win=win)
+            return
+        # pause experiment here if requested
+        if thisExp.status == PAUSED:
+            pauseExperiment(
+                thisExp=thisExp, 
+                win=win, 
+                timers=[routineTimer, globalClock], 
+                currentRoutine=stealing_its_code_1,
+            )
+            # skip the frame we paused on
+            continue
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            stealing_its_code_1.forceEnded = routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in stealing_its_code_1.components:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "stealing_its_code_1" ---
+    for thisComponent in stealing_its_code_1.components:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    # store stop times for stealing_its_code_1
+    stealing_its_code_1.tStop = globalClock.getTime(format='float')
+    stealing_its_code_1.tStopRefresh = tThisFlipGlobal
+    thisExp.addData('stealing_its_code_1.stopped', stealing_its_code_1.tStop)
+    # store data for thisExp (ExperimentHandler)
+    thisExp.addData('selecting_img_mouse.x', selecting_img_mouse.x)
+    thisExp.addData('selecting_img_mouse.y', selecting_img_mouse.y)
+    thisExp.addData('selecting_img_mouse.leftButton', selecting_img_mouse.leftButton)
+    thisExp.addData('selecting_img_mouse.midButton', selecting_img_mouse.midButton)
+    thisExp.addData('selecting_img_mouse.rightButton', selecting_img_mouse.rightButton)
+    thisExp.addData('selecting_img_mouse.time', selecting_img_mouse.time)
+    thisExp.addData('selecting_img_mouse.corr', selecting_img_mouse.corr)
+    thisExp.addData('selecting_img_mouse.clicked_name', selecting_img_mouse.clicked_name)
+    thisExp.nextEntry()
+    # the Routine "stealing_its_code_1" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
     
     # --- Prepare to start Routine "EndScreen" ---
     # create an object to store info about Routine EndScreen
