@@ -1077,10 +1077,10 @@ function load_pilot_images() {
 	let yPos = 0;
 
 
-	for (let num_img_created = 0; num_img_created < imgs_to_create; num_img_created++) {
+	for (let num_img_created = 1; num_img_created <= imgs_to_create; num_img_created++) {
 		//create dynamically named variables of image stimuli
-		xPos = centerDist - (num_img_created * .25);
-		if (num_img_created < (imgs_to_create / 2)) {
+		xPos = centerDist - ((num_img_created-1) * .25);
+		if (num_img_created <= (imgs_to_create / 2)) {
 			//so if it's the first half images, display them above bc when odd, the odd index will be below
 			//like 3 images above and 2 on the second row.
 			yPos = -0.25;
