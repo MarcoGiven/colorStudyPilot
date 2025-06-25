@@ -94,13 +94,7 @@ psychoJS.start({
   expInfo: expInfo,
   resources: [
     // resources:
-      'resources/image_1.png',
-      'resources/image_2.png',
-      'resources/image_3.png',
-      'resources/image_4.png',
-      'resources/image_5.png',
-      'resources/image_6.png',
-      'resources/image_7.png'
+      
   ]
 });
 
