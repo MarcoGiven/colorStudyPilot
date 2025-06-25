@@ -1095,7 +1095,7 @@ function load_pilot_images() {
 
 		this[`image_created_` + num_img_created] = new visual.ImageStim({
 			win: psychoJS.window,
-			name: this[`img_` + num_img_created], units: 'height',
+			name: `img_` + num_img_created, units: 'height',
 			image: 'image_' + num_img_created + '.png', mask: undefined,
 			anchor: 'center',
 			ori: 0.0,
