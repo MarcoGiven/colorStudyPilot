@@ -780,6 +780,8 @@ function image_matching_1RoutineEachFrame() {
 			prevButtonState = selecting_img_mouse.getPressed();  // if button is down already this ISN'T a new click
 		}
 
+		//the below is commented out for debugging: ctrl+f DEBUG to see all comments
+		//will need to change the clickable objects to all the pilot ones
 		// if selecting_img_mouse is active this frame...
 		if (selecting_img_mouse.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
 			_mouseButtons = selecting_img_mouse.getPressed();
