@@ -14,7 +14,7 @@ const {round} = util;
 //Prolific's default one is:
 //?PROLIFIC_PID={{%PROLIFIC_PID%}}&STUDY_ID={{%STUDY_ID%}}&SESSION_ID={{%SESSION_ID%}}
 const query_str = new URLSearchParams(window.location.search);
-//we will also expect &NUM_IMAGES, &NUM_SETS, &DIFFICULTY
+//we will also expect &NUM_IMAGES={NUM_IMAGES}, &NUM_SETS={NUM_SETS}, &DIFFICULTY={DIFFICULTY
 var pilot_study_or_not = false;
 
 // store info about the experiment session:
@@ -41,7 +41,7 @@ let expInfo = {
 if (pilotInfo.image_matching_difficulty != null || pilotInfo.number_of_sets_shown != null
 	|| pilotInfo.number_of_images_shown != null) {
 	//the url search parameters for the pilot aren't empty
-
+    console.log(pilotInfo.image_matching_difficulty);
 	pilot_study_or_not = true;
 
 	Object.assign(expInfo, pilotInfo);
@@ -64,6 +64,11 @@ psychoJS.openWindow({
 	backgroundImage: '',
 	backgroundFit: 'none',
 });
+
+//the below is commented out for debugging: ctrl+f DEBUG to see all comments
+//a lot of below can be removed. This schedule() is what calls DlgFromDict() to create a confirmation thing from user
+//the scheduleCondition() can also be removed. psychoJS.schedule(flowScheduler) is sufficient
+
 // schedule the experiment:
 psychoJS.schedule(psychoJS.gui.DlgFromDict({
 	dictionary: expInfo,
@@ -1099,6 +1104,7 @@ function load_pilot_images() {
 			flipHoriz: false, flipVert: false,
 			texRes: 128.0, interpolate: true, depth: -5.0
 		});
+        console.log((this[`image_created_` + num_img_created]).image);
 
 		//add the dynamically named image stimuli to the array for returning
 		pilot_imgs.push(this['image_created_' + num_img_created]);
