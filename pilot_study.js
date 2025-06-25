@@ -44,6 +44,9 @@ if (pilotInfo.image_matching_difficulty != null || pilotInfo.number_of_sets_show
     console.log(pilotInfo.image_matching_difficulty);
 	pilot_study_or_not = true;
 
+    pilotInfo.number_of_images_shown = Number(pilotInfo.number_of_images_shown);
+    pilotInfo.number_of_sets_shown = Number(pilotInfo.number_of_sets_shown);
+
 	Object.assign(expInfo, pilotInfo);
 	console.log(expInfo);
 	//merge the pilot info to the experiment info for logging and print to console
