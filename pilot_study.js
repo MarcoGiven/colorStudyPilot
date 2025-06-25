@@ -94,7 +94,13 @@ psychoJS.start({
   expInfo: expInfo,
   resources: [
     // resources:
-      
+    {name: 'image_1.png', path: './resources/image_1.png'},
+    {name: 'image_2.png', path: './resources/image_2.png'},
+    {name: 'image_3.png', path: './resources/image_3.png'},
+    {name: 'image_4.png', path: './resources/image_4.png'},
+    {name: 'image_5.png', path: './resources/image_5.png'},
+    {name: 'image_6.png', path: './resources/image_6.png'},
+    {name: 'image_7.png', path: './resources/image_7.png'},
   ]
 });
 
@@ -192,7 +198,7 @@ async function experimentInit() {
   top_left_img = new visual.ImageStim({
     win : psychoJS.window,
     name : 'top_left_img', units : 'height',
-    image : 'resources/image_1.png', mask : undefined,
+    image : 'image_1.png', mask : undefined,
     anchor : 'center',
     ori : 0.0,
     pos : [(- 0.3), 0],
@@ -211,7 +217,7 @@ async function experimentInit() {
   top_mid_img = new visual.ImageStim({
     win : psychoJS.window,
     name : 'top_mid_img', units : 'height',
-    image : 'resources/image_2.png', mask : undefined,
+    image : 'image_2.png', mask : undefined,
     anchor : 'center',
     ori : 0.0,
     pos : [0, 0],
@@ -224,7 +230,7 @@ async function experimentInit() {
   top_right_img = new visual.ImageStim({
     win : psychoJS.window,
     name : 'top_right_img', units : 'height',
-    image : 'resources/image_3.png', mask : undefined,
+    image : 'image_3.png', mask : undefined,
     anchor : 'center',
     ori : 0.0,
     pos : [0.3, 0],
@@ -237,7 +243,7 @@ async function experimentInit() {
   bott_right_img = new visual.ImageStim({
     win : psychoJS.window,
     name : 'bott_right_img', units : 'height',
-    image : 'resources/image_4.png', mask : undefined,
+    image : 'image_4.png', mask : undefined,
     anchor : 'center',
     ori : 0.0,
     pos : [0.3, (- 0.25)],
@@ -250,7 +256,7 @@ async function experimentInit() {
   bott_mid_img = new visual.ImageStim({
     win : psychoJS.window,
     name : 'bott_mid_img', units : 'height',
-    image : 'resources/image_5.png', mask : undefined,
+    image : 'image_5.png', mask : undefined,
     anchor : 'center',
     ori : 0.0,
     pos : [0, (- 0.25)],
@@ -263,7 +269,7 @@ async function experimentInit() {
   bott_left_img = new visual.ImageStim({
     win : psychoJS.window,
     name : 'bott_left_img', units : 'height',
-    image : 'resources/image_6.png', mask : undefined,
+    image : 'image_6.png', mask : undefined,
     anchor : 'center',
     ori : 0.0,
     pos : [(- 0.3), (- 0.25)],
@@ -280,7 +286,7 @@ async function experimentInit() {
   ref_img = new visual.ImageStim({
     win : psychoJS.window,
     name : 'ref_img', units : undefined,
-    image : 'resources/image_7.png', mask : undefined,
+    image : 'image_7.png', mask : undefined,
     anchor : 'center',
     ori : 0.0,
     pos : [0, 0.3],
