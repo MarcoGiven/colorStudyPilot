@@ -41,7 +41,6 @@ let expInfo = {
 if (pilotInfo.image_matching_difficulty != null || pilotInfo.number_of_sets_shown != null
 	|| pilotInfo.number_of_images_shown != null) {
 	//the url search parameters for the pilot aren't empty
-    console.log(pilotInfo.image_matching_difficulty);
 	pilot_study_or_not = true;
 
     pilotInfo.number_of_images_shown = Number(pilotInfo.number_of_images_shown);
@@ -1107,7 +1106,7 @@ function load_pilot_images() {
 			flipHoriz: false, flipVert: false,
 			texRes: 128.0, interpolate: true, depth: -5.0
 		});
-        console.log((this[`image_created_` + num_img_created]).image);
+        console.log(this[`image_created_` + num_img_created]);
 
 		//add the dynamically named image stimuli to the array for returning
 		pilot_imgs.push(this['image_created_' + num_img_created]);
@@ -1122,7 +1121,7 @@ function testingLoad(numImages) {
 
 	let tempArr = load_pilot_images();
 
-	console.log(testingLoad());
+	console.log(tempArr);
 }
 
 testingLoad(5);
