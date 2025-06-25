@@ -14,6 +14,7 @@ const { round } = util;
 //?PROLIFIC_PID={{%PROLIFIC_PID%}}&STUDY_ID={{%STUDY_ID%}}&SESSION_ID={{%SESSION_ID%}}
 const query_str = new URLSearchParams(window.location.search);
 //we will also expect &NUM_IMAGES, &NUM_SETS, &DIFFICULTY
+var pilot_study_or_not = false;
 
 // store info about the experiment session:
 let expName = 'pilot_study';  // from the Builder filename that created this script
@@ -38,10 +39,13 @@ let expInfo = {
 
 if(pilotInfo.image_matching_difficulty != null || pilotInfo.number_of_sets_shown != null
     || pilotInfo.number_of_images_shown != null){
-    //it's a pilot! add all of this to expInfo above
+    //the url search parameters for the pilot aren't empty
+
+    pilot_study_or_not = true;
 
     Object.assign(expInfo, pilotInfo);
     console.log(expInfo);
+    //merge the pilot info to the experiment info for logging and print to console
 }
 
 // Start code blocks for 'Before Experiment'
@@ -151,6 +155,7 @@ var top_right_img;
 var bott_right_img;
 var bott_mid_img;
 var bott_left_img;
+var pilot_images_created;
 var selecting_img_mouse;
 var ref_img;
 var WelcomeScreenClock;
@@ -195,94 +200,104 @@ async function experimentInit() {
 
   // Initialize components for Routine "image_matching_1"
   image_matching_1Clock = new util.Clock();
-  top_left_img = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'top_left_img', units : 'height',
-    image : 'image_1.png', mask : undefined,
-    anchor : 'center',
-    ori : 0.0,
-    pos : [(- 0.3), 0],
-    draggable: false,
-    size : undefined,
-    color : new util.Color([1,1,1]), opacity : undefined,
-    flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : 0.0
-  });
+
   ISI_load_images_2 = new core.MinimalStim({
-    name: "ISI_load_images_2",
-    win: psychoJS.window,
-    autoDraw: false,
-    autoLog: true,
+      name: "ISI_load_images_2",
+      win: psychoJS.window,
+      autoDraw: false,
+      autoLog: true,
   });
-  top_mid_img = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'top_mid_img', units : 'height',
-    image : 'image_2.png', mask : undefined,
-    anchor : 'center',
-    ori : 0.0,
-    pos : [0, 0],
-    draggable: false,
-    size : undefined,
-    color : new util.Color([1,1,1]), opacity : undefined,
-    flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -2.0
-  });
-  top_right_img = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'top_right_img', units : 'height',
-    image : 'image_3.png', mask : undefined,
-    anchor : 'center',
-    ori : 0.0,
-    pos : [0.3, 0],
-    draggable: false,
-    size : undefined,
-    color : new util.Color([1,1,1]), opacity : undefined,
-    flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -3.0
-  });
-  bott_right_img = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'bott_right_img', units : 'height',
-    image : 'image_4.png', mask : undefined,
-    anchor : 'center',
-    ori : 0.0,
-    pos : [0.3, (- 0.25)],
-    draggable: false,
-    size : undefined,
-    color : new util.Color([1,1,1]), opacity : undefined,
-    flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -4.0
-  });
-  bott_mid_img = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'bott_mid_img', units : 'height',
-    image : 'image_5.png', mask : undefined,
-    anchor : 'center',
-    ori : 0.0,
-    pos : [0, (- 0.25)],
-    draggable: false,
-    size : undefined,
-    color : new util.Color([1,1,1]), opacity : undefined,
-    flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -5.0
-  });
-  bott_left_img = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'bott_left_img', units : 'height',
-    image : 'image_6.png', mask : undefined,
-    anchor : 'center',
-    ori : 0.0,
-    pos : [(- 0.3), (- 0.25)],
-    draggable: false,
-    size : undefined,
-    color : new util.Color([1,1,1]), opacity : undefined,
-    flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -6.0
-  });
+
+  if (pilot_study_or_not){
+      //if it's a pilot, load all the images into an array, otherwise, use the default arrangement
+      pilot_images_created = load_pilot_images();
+  }
+  else{
+      top_left_img = new visual.ImageStim({
+          win : psychoJS.window,
+          name : 'top_left_img', units : 'height',
+          image : 'image_1.png', mask : undefined,
+          anchor : 'center',
+          ori : 0.0,
+          pos : [(- 0.3), 0],
+          draggable: false,
+          size : undefined,
+          color : new util.Color([1,1,1]), opacity : undefined,
+          flipHoriz : false, flipVert : false,
+          texRes : 128.0, interpolate : true, depth : 0.0
+      });
+      top_mid_img = new visual.ImageStim({
+          win : psychoJS.window,
+          name : 'top_mid_img', units : 'height',
+          image : 'image_2.png', mask : undefined,
+          anchor : 'center',
+          ori : 0.0,
+          pos : [0, 0],
+          draggable: false,
+          size : undefined,
+          color : new util.Color([1,1,1]), opacity : undefined,
+          flipHoriz : false, flipVert : false,
+          texRes : 128.0, interpolate : true, depth : -2.0
+      });
+      top_right_img = new visual.ImageStim({
+          win : psychoJS.window,
+          name : 'top_right_img', units : 'height',
+          image : 'image_3.png', mask : undefined,
+          anchor : 'center',
+          ori : 0.0,
+          pos : [0.3, 0],
+          draggable: false,
+          size : undefined,
+          color : new util.Color([1,1,1]), opacity : undefined,
+          flipHoriz : false, flipVert : false,
+          texRes : 128.0, interpolate : true, depth : -3.0
+      });
+      bott_right_img = new visual.ImageStim({
+          win : psychoJS.window,
+          name : 'bott_right_img', units : 'height',
+          image : 'image_4.png', mask : undefined,
+          anchor : 'center',
+          ori : 0.0,
+          pos : [0.3, (- 0.25)],
+          draggable: false,
+          size : undefined,
+          color : new util.Color([1,1,1]), opacity : undefined,
+          flipHoriz : false, flipVert : false,
+          texRes : 128.0, interpolate : true, depth : -4.0
+      });
+      bott_mid_img = new visual.ImageStim({
+          win : psychoJS.window,
+          name : 'bott_mid_img', units : 'height',
+          image : 'image_5.png', mask : undefined,
+          anchor : 'center',
+          ori : 0.0,
+          pos : [0, (- 0.25)],
+          draggable: false,
+          size : undefined,
+          color : new util.Color([1,1,1]), opacity : undefined,
+          flipHoriz : false, flipVert : false,
+          texRes : 128.0, interpolate : true, depth : -5.0
+      });
+      bott_left_img = new visual.ImageStim({
+          win : psychoJS.window,
+          name : 'bott_left_img', units : 'height',
+          image : 'image_6.png', mask : undefined,
+          anchor : 'center',
+          ori : 0.0,
+          pos : [(- 0.3), (- 0.25)],
+          draggable: false,
+          size : undefined,
+          color : new util.Color([1,1,1]), opacity : undefined,
+          flipHoriz : false, flipVert : false,
+          texRes : 128.0, interpolate : true, depth : -6.0
+      });
+  }
+
   selecting_img_mouse = new core.Mouse({
     win: psychoJS.window,
   });
   selecting_img_mouse.mouseClock = new util.Clock();
+
   ref_img = new visual.ImageStim({
     win : psychoJS.window,
     name : 'ref_img', units : undefined,
@@ -627,15 +642,24 @@ function image_matching_1RoutineBegin(snapshot) {
     image_matching_1MaxDuration = null
     // keep track of which components have finished
     image_matching_1Components = [];
-    image_matching_1Components.push(top_left_img);
+
     image_matching_1Components.push(ISI_load_images_2);
-    image_matching_1Components.push(top_mid_img);
-    image_matching_1Components.push(top_right_img);
-    image_matching_1Components.push(bott_right_img);
-    image_matching_1Components.push(bott_mid_img);
-    image_matching_1Components.push(bott_left_img);
     image_matching_1Components.push(selecting_img_mouse);
     image_matching_1Components.push(ref_img);
+
+    if(pilot_study_or_not){
+        //if it's a pilot study, only push the images you've created for it.
+        image_matching_1Components.push(pilot_images_created);
+    }
+    else{
+        //otherwise, push the default images
+        image_matching_1Components.push(top_left_img);
+        image_matching_1Components.push(top_mid_img);
+        image_matching_1Components.push(top_right_img);
+        image_matching_1Components.push(bott_right_img);
+        image_matching_1Components.push(bott_mid_img);
+        image_matching_1Components.push(bott_left_img);
+    }
 
     for (const thisComponent of image_matching_1Components)
       if ('status' in thisComponent)
@@ -659,65 +683,78 @@ function image_matching_1RoutineEachFrame() {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
 
-    // *top_left_img* updates
-    if (t >= 0.5 && top_left_img.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      top_left_img.tStart = t;  // (not accounting for frame time here)
-      top_left_img.frameNStart = frameN;  // exact frame index
+    if(pilot_study_or_not){
+        //if it's a pilot, update all the images in it
+        for(let update_pilot_img_num = 0; update_pilot_img_num < pilot_images_created.length(); update_pilot_img_num++){
+            let curr_img = pilot_images_created[update_pilot_img_num];
 
-      top_left_img.setAutoDraw(true);
+            if (t >= 0.5 && curr_img.status === PsychoJS.Status.NOT_STARTED) {
+                // keep track of start time/frame for later
+                curr_img.tStart = t;  // (not accounting for frame time here)
+                curr_img.frameNStart = frameN;  // exact frame index
+
+                curr_img.setAutoDraw(true);
+            }
+        }
+    }
+    else{
+        //let the default images update in a default way
+        // *top_left_img* updates
+        if (t >= 0.5 && top_left_img.status === PsychoJS.Status.NOT_STARTED) {
+            // keep track of start time/frame for later
+            top_left_img.tStart = t;  // (not accounting for frame time here)
+            top_left_img.frameNStart = frameN;  // exact frame index
+
+            top_left_img.setAutoDraw(true);
+        }
+
+        // *top_mid_img* updates
+        if (t >= 0.5 && top_mid_img.status === PsychoJS.Status.NOT_STARTED) {
+            // keep track of start time/frame for later
+            top_mid_img.tStart = t;  // (not accounting for frame time here)
+            top_mid_img.frameNStart = frameN;  // exact frame index
+
+            top_mid_img.setAutoDraw(true);
+        }
+
+        // *top_right_img* updates
+        if (t >= 0.5 && top_right_img.status === PsychoJS.Status.NOT_STARTED) {
+            // keep track of start time/frame for later
+            top_right_img.tStart = t;  // (not accounting for frame time here)
+            top_right_img.frameNStart = frameN;  // exact frame index
+
+            top_right_img.setAutoDraw(true);
+        }
+
+        // *bott_right_img* updates
+        if (t >= 0.5 && bott_right_img.status === PsychoJS.Status.NOT_STARTED) {
+            // keep track of start time/frame for later
+            bott_right_img.tStart = t;  // (not accounting for frame time here)
+            bott_right_img.frameNStart = frameN;  // exact frame index
+
+            bott_right_img.setAutoDraw(true);
+        }
+
+        // *bott_mid_img* updates
+        if (t >= 0.5 && bott_mid_img.status === PsychoJS.Status.NOT_STARTED) {
+            // keep track of start time/frame for later
+            bott_mid_img.tStart = t;  // (not accounting for frame time here)
+            bott_mid_img.frameNStart = frameN;  // exact frame index
+
+            bott_mid_img.setAutoDraw(true);
+        }
+
+        // *bott_left_img* updates
+        if (t >= 0.5 && bott_left_img.status === PsychoJS.Status.NOT_STARTED) {
+            // keep track of start time/frame for later
+            bott_left_img.tStart = t;  // (not accounting for frame time here)
+            bott_left_img.frameNStart = frameN;  // exact frame index
+
+            bott_left_img.setAutoDraw(true);
+        }
     }
 
-
-    // *top_mid_img* updates
-    if (t >= 0.5 && top_mid_img.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      top_mid_img.tStart = t;  // (not accounting for frame time here)
-      top_mid_img.frameNStart = frameN;  // exact frame index
-
-      top_mid_img.setAutoDraw(true);
-    }
-
-
-    // *top_right_img* updates
-    if (t >= 0.5 && top_right_img.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      top_right_img.tStart = t;  // (not accounting for frame time here)
-      top_right_img.frameNStart = frameN;  // exact frame index
-
-      top_right_img.setAutoDraw(true);
-    }
-
-
-    // *bott_right_img* updates
-    if (t >= 0.5 && bott_right_img.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      bott_right_img.tStart = t;  // (not accounting for frame time here)
-      bott_right_img.frameNStart = frameN;  // exact frame index
-
-      bott_right_img.setAutoDraw(true);
-    }
-
-
-    // *bott_mid_img* updates
-    if (t >= 0.5 && bott_mid_img.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      bott_mid_img.tStart = t;  // (not accounting for frame time here)
-      bott_mid_img.frameNStart = frameN;  // exact frame index
-
-      bott_mid_img.setAutoDraw(true);
-    }
-
-
-    // *bott_left_img* updates
-    if (t >= 0.5 && bott_left_img.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      bott_left_img.tStart = t;  // (not accounting for frame time here)
-      bott_left_img.frameNStart = frameN;  // exact frame index
-
-      bott_left_img.setAutoDraw(true);
-    }
-
+    //the mouse, reference image, and weird ISI load thing will happen regardless of pilot or not
     // *selecting_img_mouse* updates
     if (t >= 0.5 && selecting_img_mouse.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -826,6 +863,7 @@ function image_matching_1RoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'image_matching_1' ---
     for (const thisComponent of image_matching_1Components) {
+      //since the pilot images would have been pushed to this, the rest of this function is unchanged
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
@@ -1002,3 +1040,57 @@ async function quitPsychoJS(message, isCompleted) {
   
   return Scheduler.Event.QUIT;
 }
+
+function load_pilot_images(){
+    let imgs_to_create = pilotInfo.number_of_images_shown;
+    //assume the number of images shown is [5, 8]
+    //for 5, 3 above 2 under, for 6 3 and 3, for 7 4 and 3, for 8 4 and 4.
+    //or 2 and 3, 3 and 3, 3 2 2/3 4, and 3 3 2/2 2 3
+    let pilot_imgs = [];
+    //default is rn [.3, -.3] and [-.25, 0] where each image is [.3, .25] apart
+    //will change to .25 since .25*8 is perfectly 2. -1 -> 0 -> 1
+    let leftDist = imgs_to_create*.25; //total amount of space needed for these images
+    let centerDist = leftDist/2;
+    let xPos = 0;
+    let yPos = 0;
+
+
+    for (let num_img_created = 0; num_img_created < imgs_to_create; num_img_created++){
+        //create dynamically named variables of image stimuli
+        xPos = centerDist - (num_img_created*.25);
+        if (num_img_created < (imgs_to_create/2)){
+            //so if it's the first half images, display them above bc when odd, the odd index will be below
+            //like 3 images above and 2 on the second row.
+            yPos = -0.25;
+        }
+
+        this[`image_created_` + num_img_created] = new visual.ImageStim({
+            win : psychoJS.window,
+            name : this[`img_` + num_img_created], units : 'height',
+            image : 'image_' + num_img_created + '.png', mask : undefined,
+            anchor : 'center',
+            ori : 0.0,
+            pos : [xPos, yPos],
+            draggable: false,
+            size : undefined,
+            color : new util.Color([1,1,1]), opacity : undefined,
+            flipHoriz : false, flipVert : false,
+            texRes : 128.0, interpolate : true, depth : -5.0
+        });
+
+        //add the dynamically named image stimuli to the array for returning
+        pilot_imgs.push(this['image_created_' + num_img_created]);
+    }
+
+    return pilot_imgs;
+}
+
+
+function testingLoad(numImages){
+    pilotInfo.number_of_images_shown = numImages;
+
+    let tempArr = load_pilot_images();
+
+    console.log(testingLoad());
+}
+testingLoad(5);
