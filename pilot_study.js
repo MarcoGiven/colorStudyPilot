@@ -672,6 +672,7 @@ var _mouseButtons;
 var corr;
 var corrAns;
 var _mouseXYs;
+var array_to_eval = [];
 function image_matching_1RoutineEachFrame() {
 	return async function () {
 		//--- Loop for each frame of Routine 'image_matching_1' ---
@@ -780,8 +781,6 @@ function image_matching_1RoutineEachFrame() {
 			prevButtonState = selecting_img_mouse.getPressed();  // if button is down already this ISN'T a new click
 		}
 
-		//the below is commented out for debugging: ctrl+f DEBUG to see all comments
-		//will need to change the clickable objects to all the pilot ones
 		// if selecting_img_mouse is active this frame...
 		if (selecting_img_mouse.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
 			_mouseButtons = selecting_img_mouse.getPressed();
@@ -790,8 +789,16 @@ function image_matching_1RoutineEachFrame() {
 				if (_mouseButtons.reduce((e, acc) => (e + acc)) > 0) { // state changed to a new click
 					// check if the mouse was inside our 'clickable' objects
 					gotValidClick = false;
-					selecting_img_mouse.clickableObjects = eval([top_left_img, top_mid_img, top_right_img, bott_right_img, bott_mid_img, bott_left_img])
-					;// make sure the mouse's clickable objects are an array
+
+					if (pilot_study_or_not){
+						array_to_eval.push(pilot_images_created);
+					}
+					else{
+						array_to_eval.push(top_left_img, top_mid_img, top_right_img, bott_right_img, bott_mid_img, bott_left_img);
+					}
+					selecting_img_mouse.clickableObjects = eval(array_to_eval);
+
+					// make sure the mouse's clickable objects are an array
 					if (!Array.isArray(selecting_img_mouse.clickableObjects)) {
 						selecting_img_mouse.clickableObjects = [selecting_img_mouse.clickableObjects];
 					}
@@ -806,6 +813,8 @@ function image_matching_1RoutineEachFrame() {
 						selecting_img_mouse.clicked_name.push(null);
 					}
 					// check whether click was in correct object
+					//the below is commented out for debugging: ctrl+f DEBUG to see all comments
+					//selecting_img_mouse will need to be changed, again.
 					if (gotValidClick) {
 						corr = 0;
 						corrAns = eval(bott_left_img);
@@ -1082,7 +1091,7 @@ function load_pilot_images() {
 		this[`image_created_` + num_img_created] = new visual.ImageStim({
 			win: psychoJS.window,
 			name: `img_` + num_img_created, units: 'height',
-			image: 'image_' + num_img_created + '.png', mask: undefined,
+			image: 'resources/images/image_' + num_img_created + '.png', mask: undefined,
 			anchor: 'center',
 			ori: 0.0,
 			pos: [xPos, yPos],
