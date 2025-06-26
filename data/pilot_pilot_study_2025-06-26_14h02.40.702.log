@@ -1,0 +1,206 @@
+17.3606 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+17.5675 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+21.1193 	INFO 	Loaded monitor calibration from ['2025_06_12 14:42']
+21.2537 	INFO 	Using renderer 'Apple M1 Pro' for graphics
+21.2537 	INFO 	OpenGL version supported by driver is 2..
+21.2863 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x15a4bd690>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x15a4bd630>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x15a677100>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(500.0), np.float64(284.5)], screen=0, size=array([1600, 1200]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+21.2864 	EXP 	window1: backgroundImage = ''
+21.2864 	EXP 	window1: backgroundFit = 'none'
+21.3080 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.3205 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.3332 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.3460 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.3587 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.3715 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.3842 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.3965 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.4086 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.4216 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.4343 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.4470 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.4593 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.4718 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.4843 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.4970 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.5096 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.5221 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.5350 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.5478 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.5610 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.5742 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.5870 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.6003 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.6132 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.6261 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.6392 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.6516 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.6520 	DEBUG 	Uploading Texture Font fontname to graphics card
+21.6562 	DEBUG 	Upload of Texture Font fontname complete
+21.6745 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.6877 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+21.6879 	DEBUG 	Uploading Texture Font fontname to graphics card
+21.6900 	DEBUG 	Upload of Texture Font fontname complete
+22.2524 	INFO 	keyboard.Keyboard is using ptb backend.
+22.4200 	INFO 	keyboard.Keyboard is using ptb backend.
+22.4201 	EXP 	pilot_study: status = STARTED
+22.4636 	EXP 	Created welcome_message = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='welcome_message', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+22.4898 	EXP 	Created M_query = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='M_query', opacity=1, ori=0.0, pos=array([0. , 0.3]), size=array([0.5, 0.5]), texRes=128.0, units='height', win=Window(...))
+22.4932 	EXP 	Created M_top_left = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='M_top_left', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128.0, units='height', win=Window(...))
+22.4963 	EXP 	Created M_top_mid = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='M_top_mid', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128.0, units='height', win=Window(...))
+22.4994 	EXP 	Created M_top_right = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='M_top_right', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128.0, units='height', win=Window(...))
+22.5025 	EXP 	Created M_bot_left = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='M_bot_left', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128.0, units='height', win=Window(...))
+22.5056 	EXP 	Created M_bot_mid = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='M_bot_mid', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128.0, units='height', win=Window(...))
+22.5087 	EXP 	Created M_bot_right = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-6.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='M_bot_right', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128.0, units='height', win=Window(...))
+22.5130 	EXP 	Created end_message = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='end_message', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+0.0656 	EXP 	welcome_message: autoDraw = True
+1.1476 	DATA 	Mouse: Left button down, pos=(466,444)
+1.2219 	DATA 	Mouse:  Left button up, pos=(466,444)
+2.0740 	EXP 	Device response: <KeyPress from None: t=1.8548355410021031, value=space, duration=None>
+2.0743 	EXP 	Device response: <KeyPress from None: t=1.8548355410021031, value=space, duration=0.06811541700153612>
+2.0769 	DEBUG 	Read csv file with pandas: resources/midLoop.csv
+2.0780 	DEBUG 	Clearing unnamed columns from resources/midLoop.csv
+2.0785 	EXP 	Imported resources/midLoop.csv as conditions, 5 conditions, 7 params
+2.0795 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'img_query': 'resources/images/medium/med_Q3.jpg', 'sam_1': 'resources/images/medium/med_S1_3.jpg', 'sam_2': 'resources/images/medium/med_S2_3.jpg', 'sam_3': 'resources/images/medium/med_S3_3.jpg', 'sam_4': 'resources/images/medium/med_S4_3.jpg', 'sam_5': 'resources/images/medium/med_S5_3.jpg', 'img_targ': 'resources/images/medium/med_T3.jpg', 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+2.4851 	DATA 	Keypress: space
+2.4885 	EXP 	welcome_message: autoDraw = False
+2.4885 	EXP 	M_query: image = 'resources/images/medium/med_Q3.jpg'
+2.4885 	EXP 	M_top_left: image = 'resources/images/medium/med_S1_3.jpg'
+2.4885 	EXP 	M_top_mid: image = 'resources/images/medium/med_S2_3.jpg'
+2.4885 	EXP 	M_top_right: image = 'resources/images/medium/med_S3_3.jpg'
+2.4885 	EXP 	M_bot_left: image = 'resources/images/medium/med_S4_3.jpg'
+2.4885 	EXP 	M_bot_mid: image = 'resources/images/medium/med_S5_3.jpg'
+2.4885 	EXP 	M_bot_right: image = 'resources/images/medium/med_T3.jpg'
+2.4885 	EXP 	M_query: autoDraw = True
+2.4885 	EXP 	M_top_left: autoDraw = True
+2.4885 	EXP 	M_top_mid: autoDraw = True
+2.4885 	EXP 	M_top_right: autoDraw = True
+2.4885 	EXP 	M_bot_left: autoDraw = True
+2.4885 	EXP 	M_bot_mid: autoDraw = True
+2.4885 	EXP 	M_bot_right: autoDraw = True
+4.8473 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+4.8490 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+4.8592 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+4.8715 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+4.8798 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+4.8846 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+4.8971 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+4.9049 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+4.9098 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+4.9215 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+4.9294 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+4.9334 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+4.9460 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+4.9544 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+4.9584 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+4.9710 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+4.9793 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+4.9833 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+4.9959 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.0043 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.0083 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.0210 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.0293 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.0340 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.0459 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.0461 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.0465 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.0544 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.0712 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.0795 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.0967 	DATA 	Mouse: wheel shift=(0,-1), pos=(496,338)
+5.1049 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.1216 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.1296 	DATA 	Mouse: wheel shift=(0,-1), pos=(496,338)
+5.1462 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.1547 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.1717 	DATA 	Mouse: wheel shift=(0,-1), pos=(496,338)
+5.1803 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.1964 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.1967 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.2546 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.2588 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.2712 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.2796 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.2842 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.2962 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.3046 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.3091 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.3214 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.3297 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.3342 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.3464 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.3547 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.3592 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.3712 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.3795 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.3843 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.3968 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.4011 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.4127 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.4186 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.4233 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.4235 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.4380 	DATA 	Mouse: wheel shift=(0,1), pos=(496,338)
+5.4460 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.4499 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.4624 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.4747 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.4880 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.4998 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.5130 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.5209 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.5247 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.5375 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.5460 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.5505 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.5625 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.5708 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.5745 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.5876 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.5959 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.5998 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.6000 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.6126 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.6128 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.6245 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.6376 	DATA 	Mouse: wheel shift=(0,1), pos=(496,338)
+5.6495 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.6626 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.6746 	DATA 	Mouse: wheel shift=(0,1), pos=(496,338)
+5.6878 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.7004 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.7127 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.7249 	DATA 	Mouse: wheel shift=(0,1), pos=(496,338)
+5.7378 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.7500 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.7631 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.7752 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.7878 	DATA 	Mouse: wheel shift=(0,1), pos=(496,338)
+5.7963 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.8132 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.8217 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.8386 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.8510 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.8713 	DATA 	Mouse: wheel shift=(0,1), pos=(496,338)
+5.8878 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.9008 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.9213 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.9380 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+5.9383 	DATA 	Mouse: wheel shift=(0,0), pos=(496,338)
+8.3049 	EXP 	Device response: <KeyPress from None: t=8.302155375000439, value=escape, duration=None>
+8.3388 	DATA 	Keypress: escape
+8.3830 	EXP 	Device response: <KeyPress from None: t=8.302155375000439, value=escape, duration=0.07987845800380455>
+8.3830 	EXP 	pilot_study: status = STOPPED
+8.3940 	EXP 	M_query: autoDraw = False
+8.3940 	EXP 	M_top_left: autoDraw = False
+8.3940 	EXP 	M_top_mid: autoDraw = False
+8.3940 	EXP 	M_top_right: autoDraw = False
+8.3940 	EXP 	M_bot_left: autoDraw = False
+8.3940 	EXP 	M_bot_mid: autoDraw = False
+8.3940 	EXP 	M_bot_right: autoDraw = False
+8.3954 	EXP 	pilot_study: status = STOPPED
+8.3977 	INFO 	saved data to '/Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/pilot_pilot_study_2025-06-26_14h02.40.702.csv'
+8.3983 	INFO 	saved data to /Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/pilot_pilot_study_2025-06-26_14h02.40.702.psydat
+8.5502 	DEBUG 	Saving data for pilot_study ExperimentHandler
+8.5522 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+8.5522 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

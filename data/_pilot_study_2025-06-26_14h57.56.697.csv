@@ -1,0 +1,3 @@
+﻿img_query,img_query_w,img_query_h,img_query_disp_w,img_query_disp_h,sam_1,sam_2,sam_3,sam_4,sam_5,img_targ,thisN,thisTrialN,thisRepN,medTrial.thisRepN,medTrial.thisTrialN,medTrial.thisN,medTrial.thisIndex,thisRow.t,notes,participant,session,date,expName,expVersion,psychopyVersion,expStart,
+,,,,,,,,,,,,,,,,,,,,,001,2025-06-26_14h57.56.697,pilot_study,,2025.1.1,2025-06-26 14h57.59.693951 -0400,
+resources/images/medium/med_Q3.jpg,1024,768,0.25,0.1875,resources/images/medium/med_S1_3.jpg,resources/images/medium/med_S2_3.jpg,resources/images/medium/med_S3_3.jpg,resources/images/medium/med_S4_3.jpg,resources/images/medium/med_S5_3.jpg,resources/images/medium/med_T3.jpg,0,0,0,0,0,0,2,1.5365277919991058,,,,,,,,,
