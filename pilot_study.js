@@ -9,15 +9,46 @@ const { Scheduler } = util;
 //some handy aliases as in the psychopy scripts;
 const { abs, sin, cos, PI: pi, sqrt } = Math;
 const { round } = util;
-
+//below gets the query string from the search bar of the current window
+//Prolific's default one is:
+//?PROLIFIC_PID={{%PROLIFIC_PID%}}&STUDY_ID={{%STUDY_ID%}}&SESSION_ID={{%SESSION_ID%}}
+const query_str = new URLSearchParams(window.location.search);
+//we will also expect &NUM_IMAGES={NUM_IMAGES}, &NUM_SETS={NUM_SETS}, &DIFFICULTY={DIFFICULTY
+var pilot_study_or_not = false;
 
 // store info about the experiment session:
 let expName = 'pilot_study';  // from the Builder filename that created this script
+let pilotInfo = {
+	'number_of_images_shown': query_str.get('NUM_IMAGES'),
+	'number_of_sets_shown': query_str.get('NUM_SETS'),
+	'image_matching_difficulty': query_str.get('DIFFICULTY'),
+}; //difficulty is either EASY MED HARD or IMP
+
+//the below is commented out for debugging: ctrl+f DEBUG to see all comments
+//sets the experimental information equal to the URL parameters in the query string
+/*let expInfo = {
+    'participant_prolific_id': query_str.get('PROLIFIC_PID'),
+    'participant_study_id': query_str.get('STUDY_ID'),
+    'participant_session_id': query_str.get('SESSION_ID'),
+};*/ //replaced the default stuff with the values from the URL parameters
+
 let expInfo = {
     'participant': '',
     'session': '001',
 };
-let PILOTING = util.getUrlParameters().has('__pilotToken');
+
+if (pilotInfo.image_matching_difficulty != null || pilotInfo.number_of_sets_shown != null
+	|| pilotInfo.number_of_images_shown != null) {
+	//the url search parameters for the pilot aren't empty
+	pilot_study_or_not = true;
+
+    pilotInfo.number_of_images_shown = Number(pilotInfo.number_of_images_shown);
+    pilotInfo.number_of_sets_shown = Number(pilotInfo.number_of_sets_shown);
+
+	Object.assign(expInfo, pilotInfo);
+	console.log(expInfo);
+	//merge the pilot info to the experiment info for logging and print to console
+}
 
 // Start code blocks for 'Before Experiment'
 // init psychoJS:
@@ -57,39 +88,63 @@ flowScheduler.add(taskRoutineBegin());
 flowScheduler.add(taskRoutineEachFrame());
 flowScheduler.add(taskRoutineEnd());
 const trialsEasyLoopScheduler = new Scheduler(psychoJS);
-flowScheduler.add(trialsEasyLoopBegin(trialsEasyLoopScheduler));
-flowScheduler.add(trialsEasyLoopScheduler);
-flowScheduler.add(trialsEasyLoopEnd);
-
-
-
-flowScheduler.add(Next_SetRoutineBegin());
-flowScheduler.add(Next_SetRoutineEachFrame());
-flowScheduler.add(Next_SetRoutineEnd());
 const trialsMedLoopScheduler = new Scheduler(psychoJS);
-flowScheduler.add(trialsMedLoopBegin(trialsMedLoopScheduler));
-flowScheduler.add(trialsMedLoopScheduler);
-flowScheduler.add(trialsMedLoopEnd);
-
-
-
-flowScheduler.add(Next_SetRoutineBegin());
-flowScheduler.add(Next_SetRoutineEachFrame());
-flowScheduler.add(Next_SetRoutineEnd());
 const trialsHardLoopScheduler = new Scheduler(psychoJS);
-flowScheduler.add(trialsHardLoopBegin(trialsHardLoopScheduler));
-flowScheduler.add(trialsHardLoopScheduler);
-flowScheduler.add(trialsHardLoopEnd);
-
-
-
-flowScheduler.add(Next_SetRoutineBegin());
-flowScheduler.add(Next_SetRoutineEachFrame());
-flowScheduler.add(Next_SetRoutineEnd());
 const trialsImpLoopScheduler = new Scheduler(psychoJS);
-flowScheduler.add(trialsImpLoopBegin(trialsImpLoopScheduler));
-flowScheduler.add(trialsImpLoopScheduler);
-flowScheduler.add(trialsImpLoopEnd);
+
+//based on URL parameters, one of the below tasks will run
+if(pilot_study_or_not){
+  //if it is a pilot, check the difficulty
+  let pilot_difficulty = pilotInfo.image_matching_difficulty
+
+  if(pilot_difficulty === "EASY"){
+      flowScheduler.add(trialsEasyLoopBegin(trialsEasyLoopScheduler));
+      flowScheduler.add(trialsEasyLoopScheduler);
+      flowScheduler.add(trialsEasyLoopEnd);
+  }
+  else if(pilot_difficulty === "MED"){
+      flowScheduler.add(trialsMedLoopBegin(trialsMedLoopScheduler));
+      flowScheduler.add(trialsMedLoopScheduler);
+      flowScheduler.add(trialsMedLoopEnd);
+  }
+  else if(pilot_difficulty === "HARD"){
+      flowScheduler.add(trialsHardLoopBegin(trialsHardLoopScheduler));
+      flowScheduler.add(trialsHardLoopScheduler);
+      flowScheduler.add(trialsHardLoopEnd);
+  }
+  else{
+      //impossible
+      flowScheduler.add(trialsImpLoopBegin(trialsImpLoopScheduler));
+      flowScheduler.add(trialsImpLoopScheduler);
+      flowScheduler.add(trialsImpLoopEnd);
+  }
+}
+else{
+  flowScheduler.add(trialsEasyLoopBegin(trialsEasyLoopScheduler));
+  flowScheduler.add(trialsEasyLoopScheduler);
+  flowScheduler.add(trialsEasyLoopEnd);
+
+  flowScheduler.add(Next_SetRoutineBegin());
+  flowScheduler.add(Next_SetRoutineEachFrame());
+  flowScheduler.add(Next_SetRoutineEnd());
+  flowScheduler.add(trialsMedLoopBegin(trialsMedLoopScheduler));
+  flowScheduler.add(trialsMedLoopScheduler);
+  flowScheduler.add(trialsMedLoopEnd);
+
+  flowScheduler.add(Next_SetRoutineBegin());
+  flowScheduler.add(Next_SetRoutineEachFrame());
+  flowScheduler.add(Next_SetRoutineEnd());
+  flowScheduler.add(trialsHardLoopBegin(trialsHardLoopScheduler));
+  flowScheduler.add(trialsHardLoopScheduler);
+  flowScheduler.add(trialsHardLoopEnd);
+
+  flowScheduler.add(Next_SetRoutineBegin());
+  flowScheduler.add(Next_SetRoutineEachFrame());
+  flowScheduler.add(Next_SetRoutineEnd());
+  flowScheduler.add(trialsImpLoopBegin(trialsImpLoopScheduler));
+  flowScheduler.add(trialsImpLoopScheduler);
+  flowScheduler.add(trialsImpLoopEnd);
+}
 
 
 
@@ -156,10 +211,16 @@ async function updateInfo() {
 
   // add info from the URL:
   util.addInfoFromUrl(expInfo);
+  //the below is commented out for debugging: ctrl+f DEBUG to see all comments
+  //upon completion, redirects participants to another site
+  //psychoJS.setRedirectUrls('http://localhost', '');
   
-
-  
-  psychoJS.experiment.dataFileName = (("." + "/") + `data/${expInfo["participant"]}_${expName}_${expInfo["date"]}`);
+  if(pilot_study_or_not){
+    psychoJS.experiment.dataFileName = (("." + "/") + `data/${expName}_${expInfo["date"]}_${pilotInfo["number_of_images_shown"]}_${pilotInfo["number_of_sets_shown"]}_${pilotInfo["image_matching_difficulty"]}`);
+  }
+  else{
+   psychoJS.experiment.dataFileName = (("." + "/") + `data/${expInfo["participant"]}_${expName}_${expInfo["date"]}`);
+  }
   psychoJS.experiment.field_separator = '\t';
 
 
@@ -198,6 +259,9 @@ var globalClock;
 var routineTimer;
 async function experimentInit() {
   // Initialize components for Routine "WelcomeScreen"
+
+  //to see what it would look like w/image amount created by URL params, look at Fixed pilot img creation w/url parameters commit
+  //in Salwa-Modifications
   WelcomeScreenClock = new util.Clock();
   welcome_message = new visual.TextStim({
     win: psychoJS.window,
