@@ -1,4 +1,4 @@
-﻿/******************** 
+﻿/********************
  * Pilot_Study *
  ********************/
 
@@ -105,7 +105,7 @@ psychoJS.start({
   expInfo: expInfo,
   resources: [
     // resources:
-    {'name': 'resources/images/image_1.png', 'path': 'resources/images/image_1.png'},
+	{'name': 'resources/images/image_1.png', 'path': 'resources/images/image_1.png'},
     {'name': 'resources/images/image_2.png', 'path': 'resources/images/image_2.png'},
     {'name': 'resources/images/image_3.png', 'path': 'resources/images/image_3.png'},
     {'name': 'resources/images/image_4.png', 'path': 'resources/images/image_4.png'},
@@ -142,7 +142,7 @@ async function updateInfo() {
   //psychoJS.setRedirectUrls('http://localhost', '');
 
 
-  
+
   psychoJS.experiment.dataFileName = (("." + "/") + `data/${expInfo["participant"]}_${expName}_${expInfo["date"]}`);
   psychoJS.experiment.field_separator = '\t';
 
@@ -156,13 +156,12 @@ var ask_consent;
 var consent_key;
 var image_matching_1Clock;
 var top_left_img;
-var ISI_load_images_2;
 var top_mid_img;
 var top_right_img;
 var bott_right_img;
 var bott_mid_img;
 var bott_left_img;
-var pilot_images_created;
+var imgs_to_create;
 var selecting_img_mouse;
 var ref_img;
 var WelcomeScreenClock;
@@ -209,8 +208,8 @@ async function experimentInit() {
 	image_matching_1Clock = new util.Clock();
 
 	if (pilot_study_or_not) {
-		//if it's a pilot, load all the images into an array, otherwise, use the default arrangement
-		pilot_images_created = load_pilot_images();
+		//if it's a pilot, load all the  into an array, otherwise, use the default arrangement
+		imgs_to_create = load_pilot_images();
 	} else {
 		top_left_img = new visual.ImageStim({
 			win: psychoJS.window,
@@ -650,12 +649,22 @@ function image_matching_1RoutineBegin(snapshot) {
     image_matching_1MaxDuration = null
     // keep track of which components have finished
     image_matching_1Components = [];
-    image_matching_1Components.push(top_left_img);
-    image_matching_1Components.push(top_mid_img);
-    image_matching_1Components.push(top_right_img);
-    image_matching_1Components.push(bott_right_img);
-    image_matching_1Components.push(bott_mid_img);
-    image_matching_1Components.push(bott_left_img);
+
+    if (pilot_study_or_not){
+	//push the stuff from pilot_img_load
+	console.log(imgs_to_create.length);
+	for (let index_to_push = 0; index_to_push < imgs_to_create.length; index_to_push++){
+	    image_matching_1Components.push(imgs_to_create[index_to_push]);
+	}
+    }
+    else{
+	 image_matching_1Components.push(top_left_img);
+   	 image_matching_1Components.push(top_mid_img);
+   	 image_matching_1Components.push(top_right_img);
+   	 image_matching_1Components.push(bott_right_img);
+   	 image_matching_1Components.push(bott_mid_img);
+   	 image_matching_1Components.push(bott_left_img);
+    }
     image_matching_1Components.push(selecting_img_mouse);
     image_matching_1Components.push(ref_img);
 
@@ -665,7 +674,6 @@ function image_matching_1RoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   }
 }
-
 
 var prevButtonState;
 var _mouseButtons;
@@ -682,9 +690,9 @@ function image_matching_1RoutineEachFrame() {
 		// update/draw components on each frame
 
 		if (pilot_study_or_not) {
-			//if it's a pilot, update all the images in it
-			for (let update_pilot_img_num = 0; update_pilot_img_num < pilot_images_created.length(); update_pilot_img_num++) {
-				let curr_img = pilot_images_created[update_pilot_img_num];
+			//if it's a pilot, update all the  in it
+			for (let update_pilot_img_num = 0; update_pilot_img_num < imgs_to_create.length; update_pilot_img_num++) {
+				let curr_img = imgs_to_create[update_pilot_img_num];
 
 				if (t >= 0.5 && curr_img.status === PsychoJS.Status.NOT_STARTED) {
 					// keep track of start time/frame for later
@@ -695,7 +703,7 @@ function image_matching_1RoutineEachFrame() {
 				}
 			}
 		} else {
-			//let the default images update in a default way
+			//let the default  update in a default way
 			// *top_left_img* updates
 			if (t >= 0.5 && top_left_img.status === PsychoJS.Status.NOT_STARTED) {
 				// keep track of start time/frame for later
@@ -764,12 +772,13 @@ function image_matching_1RoutineEachFrame() {
 
 				bott_left_img.setAutoDraw(true);
 			}
-		}
-		// if bott_left_img is active this frame...
-		if (bott_left_img.status === PsychoJS.Status.STARTED) {
+			// if bott_left_img is active this frame...
+               		 if (bott_left_img.status === PsychoJS.Status.STARTED) {
+               		 }
+
 		}
 
-		//the mouse, reference image, and weird ISI load thing will happen regardless of pilot or not
+		//the mouse, reference image will happen regardless of pilot or not
 		// *selecting_img_mouse* updates
 		if (t >= 0.5 && selecting_img_mouse.status === PsychoJS.Status.NOT_STARTED) {
 			// keep track of start time/frame for later
@@ -791,7 +800,7 @@ function image_matching_1RoutineEachFrame() {
 					gotValidClick = false;
 
 					if (pilot_study_or_not){
-						array_to_eval.push(pilot_images_created);
+						array_to_eval.push(imgs_to_create);
 					}
 					else{
 						array_to_eval.push(top_left_img, top_mid_img, top_right_img, bott_right_img, bott_mid_img, bott_left_img);
@@ -817,7 +826,15 @@ function image_matching_1RoutineEachFrame() {
 					//selecting_img_mouse will need to be changed, again.
 					if (gotValidClick) {
 						corr = 0;
-						corrAns = eval(bott_left_img);
+
+						if (pilot_study_or_not){
+						    //temporarily, the correct answer will be the last one
+						    corrAns = eval(imgs_to_create[imgs_to_create.length -1]);
+						}
+						else{
+						    corrAns = eval(bott_left_img);
+						}
+						
 						for (let obj of [corrAns]) {
 							if (obj.contains(selecting_img_mouse)) {
 								corr = 1;
@@ -1002,20 +1019,20 @@ function EndScreenRoutineEachFrame() {
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
     }
-    
+
     // check if the Routine should terminate
     if (!continueRoutine) {  // a component has requested a forced-end of Routine
       routineForceEnded = true;
       return Scheduler.Event.NEXT;
     }
-    
+
     continueRoutine = false;  // reverts to True if at least one component still running
     for (const thisComponent of EndScreenComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
         break;
       }
-    
+
     // refresh the screen if continuing
     if (continueRoutine) {
       return Scheduler.Event.FLIP_REPEAT;
@@ -1036,7 +1053,7 @@ function EndScreenRoutineEnd(snapshot) {
     }
     // the Routine "EndScreen" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
-    
+
     // Routines running outside a loop should always advance the datafile row
     if (currentLoop === psychoJS.experiment) {
       psychoJS.experiment.nextEntry(snapshot);
@@ -1061,37 +1078,45 @@ async function quitPsychoJS(message, isCompleted) {
   }
   psychoJS.window.close();
   psychoJS.quit({message: message, isCompleted: isCompleted});
-  
+
   return Scheduler.Event.QUIT;
 }
 
 function load_pilot_images() {
-	let imgs_to_create = pilotInfo.number_of_images_shown;
-	//assume the number of images shown is [5, 8]
+	let num_to_create = pilotInfo.number_of_shown;
+	//assume the number of  shown is [5, 8]
 	//for 5, 3 above 2 under, for 6 3 and 3, for 7 4 and 3, for 8 4 and 4.
 	//or 2 and 3, 3 and 3, 3 2 2/3 4, and 3 3 2/2 2 3
 	let pilot_imgs = [];
 	//default is rn [.3, -.3] and [-.25, 0] where each image is [.3, .25] apart
 	//will change to .25 since .25*8 is perfectly 2. -1 -> 0 -> 1
-	let leftDist = imgs_to_create * .25; //total amount of space needed for these images
+	let leftDist = num_to_create * .25; //total amount of space needed for these 
 	let centerDist = leftDist / 2;
 	let xPos = 0;
 	let yPos = 0;
+	let topImgs = 0;
+	let botImgs = 0;
 
-
-	for (let num_img_created = 1; num_img_created <= imgs_to_create; num_img_created++) {
+	for (let num_img_created = 1; num_img_created <= num_to_create; num_img_created++) {
 		//create dynamically named variables of image stimuli
-		xPos = centerDist - ((num_img_created-1) * .25);
-		if (num_img_created <= (imgs_to_create / 2)) {
-			//so if it's the first half images, display them above bc when odd, the odd index will be below
-			//like 3 images above and 2 on the second row.
+
+		if (num_img_created <= (num_to_create / 2)) {
+			//so if it's the first half , display them above bc when odd, the odd index will be below
+			//like 3  above and 2 on the second row.
 			yPos = -0.25;
+			botImgs += 1;
+			xPos = centerDist - ((botImgs-1) * .25);
+		}
+		else{
+			yPos = 0;
+			topImgs += 1;
+			xPos = centerDist - ((topImgs-1) * .25);
 		}
 
-		this[`image_created_` + num_img_created] = new visual.ImageStim({
+		const imageStim = new visual.ImageStim({
 			win: psychoJS.window,
-			name: `img_` + num_img_created, units: 'height',
-			image: 'resources/images/image_' + num_img_created + '.png', mask: undefined,
+			name: `image_created_` + num_img_created, units: 'height',
+			image: 'resources/image_' + num_img_created + '.png', mask: undefined,
 			anchor: 'center',
 			ori: 0.0,
 			pos: [xPos, yPos],
@@ -1101,22 +1126,11 @@ function load_pilot_images() {
 			flipHoriz: false, flipVert: false,
 			texRes: 128.0, interpolate: true, depth: -5.0
 		});
-        console.log(this[`image_created_` + num_img_created]);
 
 		//add the dynamically named image stimuli to the array for returning
-		pilot_imgs.push(this['image_created_' + num_img_created]);
+		pilot_imgs.push(imageStim);
 	}
+	console.log(pilot_imgs);
 
 	return pilot_imgs;
 }
-
-
-function testingLoad(numImages) {
-	pilotInfo.number_of_images_shown = numImages;
-
-	let tempArr = load_pilot_images();
-
-	console.log(tempArr);
-}
-
-testingLoad(5);
