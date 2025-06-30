@@ -1808,23 +1808,22 @@ function EndScreenRoutineBegin(snapshot) {
     routineTimer.reset();
     EndScreenMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS._saveResults = false;
+    // Prevent default CSV download
+    // psychoJS._saveResults = false;
     
-    // Get all unique keys from trial data
+    // Collect all keys from trial data
     const allKeys = [...new Set(psychoJS._experiment._trialsData.flatMap(d => Object.keys(d)))];
     
-    // Build CSV rows: header + rows
+    // Convert to CSV rows
     let csvRows = psychoJS._experiment._trialsData.map(row =>
       allKeys.map(k => {
         let val = row[k];
-        if (typeof val === 'string') {
-          val = '"' + val.replace(/"/g, '""') + '"';
-        }
+        if (typeof val === 'string') val = '"' + val.replace(/"/g, '""') + '"';
         return val ?? '';
       }).join(',')
     );
     
-    // Compute accuracy and RT summary
+    // Compute summary stats
     let accKey = allKeys.find(k => k.endsWith('.corr') || k.toLowerCase().includes('corr'));
     let rtKey = allKeys.find(k => k.endsWith('.rt') || k.toLowerCase().includes('rt'));
     
@@ -1834,14 +1833,14 @@ function EndScreenRoutineBegin(snapshot) {
     let meanAcc = accVals.length ? (accVals.reduce((a, b) => a + b, 0) / accVals.length).toFixed(4) : 'NA';
     let meanRT = rtVals.length ? (rtVals.reduce((a, b) => a + b, 0) / rtVals.length).toFixed(4) : 'NA';
     
-    // Add summary rows
+    // Append summary to CSV
     csvRows.push(`"SUMMARY","mean_accuracy",${meanAcc}`);
     csvRows.push(`"SUMMARY","mean_rt",${meanRT}`);
     
-    // Final CSV string
+    // Final CSV
     let csvData = allKeys.join(',') + '\n' + csvRows.join('\n');
     
-    // Generate filename
+    // Create filename
     let filename = psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime + '.csv';
     
     // Send to DataPipe
@@ -1857,7 +1856,10 @@ function EndScreenRoutineBegin(snapshot) {
         data: csvData,
       }),
     }).then(response => response.json()).then(data => {
-      console.log('DataPipe response:', data);
+      console.log('DataPipe uploaded:', data);
+      quitPsychoJS();
+    }).catch(error => {
+      console.error('Upload failed:', error);
       quitPsychoJS();
     });
     EndScreenMaxDuration = null

@@ -225,68 +225,6 @@
         <Param val="code" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
-    <Routine name="EndScreen">
-      <RoutineSettingsComponent name="EndScreen" plugin="None">
-        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
-        <Param val="" valType="str" updates="None" name="backgroundImg"/>
-        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
-        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
-        <Param val="" valType="str" updates="constant" name="desc"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
-        <Param val="EndScreen" valType="code" updates="None" name="name"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="constant" name="skipIf"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
-      </RoutineSettingsComponent>
-      <TextComponent name="end_message" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Arial" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="end_message" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Thank you for completing! &amp;#10;&amp;#10;Please wait while we save your results..." valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
-      <CodeComponent name="DataPipe_Link" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="psychoJS._saveResults = false;&amp;#10;&amp;#10;// Get all unique keys from trial data&amp;#10;const allKeys = [...new Set(psychoJS._experiment._trialsData.flatMap(d =&gt; Object.keys(d)))];&amp;#10;&amp;#10;// Build CSV rows: header + rows&amp;#10;let csvRows = psychoJS._experiment._trialsData.map(row =&gt;&amp;#10;  allKeys.map(k =&gt; {&amp;#10;    let val = row[k];&amp;#10;    if (typeof val === 'string') {&amp;#10;      val = '&quot;' + val.replace(/&quot;/g, '&quot;&quot;') + '&quot;';&amp;#10;    }&amp;#10;    return val ?? '';&amp;#10;  }).join(',')&amp;#10;);&amp;#10;&amp;#10;// Compute accuracy and RT summary&amp;#10;let accKey = allKeys.find(k =&gt; k.endsWith('.corr') || k.toLowerCase().includes('corr'));&amp;#10;let rtKey = allKeys.find(k =&gt; k.endsWith('.rt') || k.toLowerCase().includes('rt'));&amp;#10;&amp;#10;let accVals = psychoJS._experiment._trialsData.map(row =&gt; parseFloat(row[accKey])).filter(v =&gt; !isNaN(v));&amp;#10;let rtVals = psychoJS._experiment._trialsData.map(row =&gt; parseFloat(row[rtKey])).filter(v =&gt; !isNaN(v));&amp;#10;&amp;#10;let meanAcc = accVals.length ? (accVals.reduce((a, b) =&gt; a + b, 0) / accVals.length).toFixed(4) : 'NA';&amp;#10;let meanRT = rtVals.length ? (rtVals.reduce((a, b) =&gt; a + b, 0) / rtVals.length).toFixed(4) : 'NA';&amp;#10;&amp;#10;// Add summary rows&amp;#10;csvRows.push(`&quot;SUMMARY&quot;,&quot;mean_accuracy&quot;,${meanAcc}`);&amp;#10;csvRows.push(`&quot;SUMMARY&quot;,&quot;mean_rt&quot;,${meanRT}`);&amp;#10;&amp;#10;// Final CSV string&amp;#10;let csvData = allKeys.join(',') + '\n' + csvRows.join('\n');&amp;#10;&amp;#10;// Generate filename&amp;#10;let filename = psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime + '.csv';&amp;#10;&amp;#10;// Send to DataPipe&amp;#10;fetch('https://pipe.jspsych.org/api/data', {&amp;#10;  method: 'POST',&amp;#10;  headers: {&amp;#10;    'Content-Type': 'application/json',&amp;#10;    Accept: '*/*',&amp;#10;  },&amp;#10;  body: JSON.stringify({&amp;#10;    experimentID: 'DLFoEuJu8PX1',&amp;#10;    filename: filename,&amp;#10;    data: csvData,&amp;#10;  }),&amp;#10;}).then(response =&gt; response.json()).then(data =&gt; {&amp;#10;  console.log('DataPipe response:', data);&amp;#10;  quitPsychoJS();&amp;#10;});" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="DataPipe_Link" valType="code" updates="None" name="name"/>
-      </CodeComponent>
-    </Routine>
     <Routine name="blank500">
       <RoutineSettingsComponent name="blank500" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
@@ -709,6 +647,68 @@
         <Param val="True" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="False" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
+    </Routine>
+    <Routine name="EndScreen">
+      <RoutineSettingsComponent name="EndScreen" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="EndScreen" valType="code" updates="None" name="name"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="end_message" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="end_message" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Thank you for completing! &amp;#10;&amp;#10;Please wait while we save your results..." valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <CodeComponent name="DataPipe_Link" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="// Prevent default CSV download&amp;#10;// psychoJS._saveResults = false;&amp;#10;&amp;#10;// Collect all keys from trial data&amp;#10;const allKeys = [...new Set(psychoJS._experiment._trialsData.flatMap(d =&gt; Object.keys(d)))];&amp;#10;&amp;#10;// Convert to CSV rows&amp;#10;let csvRows = psychoJS._experiment._trialsData.map(row =&gt;&amp;#10;  allKeys.map(k =&gt; {&amp;#10;    let val = row[k];&amp;#10;    if (typeof val === 'string') val = '&quot;' + val.replace(/&quot;/g, '&quot;&quot;') + '&quot;';&amp;#10;    return val ?? '';&amp;#10;  }).join(',')&amp;#10;);&amp;#10;&amp;#10;// Compute summary stats&amp;#10;let accKey = allKeys.find(k =&gt; k.endsWith('.corr') || k.toLowerCase().includes('corr'));&amp;#10;let rtKey = allKeys.find(k =&gt; k.endsWith('.rt') || k.toLowerCase().includes('rt'));&amp;#10;&amp;#10;let accVals = psychoJS._experiment._trialsData.map(row =&gt; parseFloat(row[accKey])).filter(v =&gt; !isNaN(v));&amp;#10;let rtVals = psychoJS._experiment._trialsData.map(row =&gt; parseFloat(row[rtKey])).filter(v =&gt; !isNaN(v));&amp;#10;&amp;#10;let meanAcc = accVals.length ? (accVals.reduce((a, b) =&gt; a + b, 0) / accVals.length).toFixed(4) : 'NA';&amp;#10;let meanRT = rtVals.length ? (rtVals.reduce((a, b) =&gt; a + b, 0) / rtVals.length).toFixed(4) : 'NA';&amp;#10;&amp;#10;// Append summary to CSV&amp;#10;csvRows.push(`&quot;SUMMARY&quot;,&quot;mean_accuracy&quot;,${meanAcc}`);&amp;#10;csvRows.push(`&quot;SUMMARY&quot;,&quot;mean_rt&quot;,${meanRT}`);&amp;#10;&amp;#10;// Final CSV&amp;#10;let csvData = allKeys.join(',') + '\n' + csvRows.join('\n');&amp;#10;&amp;#10;// Create filename&amp;#10;let filename = psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime + '.csv';&amp;#10;&amp;#10;// Send to DataPipe&amp;#10;fetch('https://pipe.jspsych.org/api/data', {&amp;#10;  method: 'POST',&amp;#10;  headers: {&amp;#10;    'Content-Type': 'application/json',&amp;#10;    Accept: '*/*',&amp;#10;  },&amp;#10;  body: JSON.stringify({&amp;#10;    experimentID: 'DLFoEuJu8PX1',&amp;#10;    filename: filename,&amp;#10;    data: csvData,&amp;#10;  }),&amp;#10;}).then(response =&gt; response.json()).then(data =&gt; {&amp;#10;  console.log('DataPipe uploaded:', data);&amp;#10;  quitPsychoJS();&amp;#10;}).catch(error =&gt; {&amp;#10;  console.error('Upload failed:', error);&amp;#10;  quitPsychoJS();&amp;#10;});" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="DataPipe_Link" valType="code" updates="None" name="name"/>
+      </CodeComponent>
     </Routine>
   </Routines>
   <Flow>
