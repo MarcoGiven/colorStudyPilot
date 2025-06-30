@@ -1,0 +1,20 @@
+17.7593 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+17.9988 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+23.6898 	INFO 	Loaded monitor calibration from ['2025_06_12 14:42']
+23.8298 	INFO 	Using renderer 'Apple M1 Pro' for graphics
+23.8298 	INFO 	OpenGL version supported by driver is 2..
+23.8622 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x1565b8310>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x1565b8370>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x1566111e0>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(260.0), np.float64(224.5)], screen=0, size=array([2560, 1440]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+23.8622 	EXP 	window1: backgroundImage = ''
+23.8622 	EXP 	window1: backgroundFit = 'none'
+24.4382 	INFO 	keyboard.Keyboard is using ptb backend.
+24.6169 	INFO 	keyboard.Keyboard is using ptb backend.
+24.7090 	INFO 	keyboard.Keyboard is using ptb backend.
+24.7090 	EXP 	pilot_study: status = STARTED
+24.7577 	EXP 	Created welcome_message = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='welcome_message', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+24.7773 	EXP 	Created M_query = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='M_query', opacity=1, ori=0.0, pos=array([-0.45,  0.  ]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+24.7808 	EXP 	Created img1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='img1', opacity=1, ori=0.0, pos=array([0. , 0.4]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+24.7892 	INFO 	saved data to /Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/_pilot_study_2025-06-27_10h21.19.035.psydat
+24.7894 	INFO 	saved data to '/Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/_pilot_study_2025-06-27_10h21.19.035.csv'
+24.7905 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+24.7905 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+24.7905 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

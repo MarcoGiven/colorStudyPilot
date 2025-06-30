@@ -1,0 +1,83 @@
+17.3709 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+17.6096 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+20.1162 	INFO 	Loaded monitor calibration from ['2025_06_12 14:42']
+20.2478 	INFO 	Using renderer 'Apple M1 Pro' for graphics
+20.2478 	INFO 	OpenGL version supported by driver is 2..
+20.2806 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x159d74310>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x159d74370>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x159e391e0>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(260.0), np.float64(224.5)], screen=0, size=array([2560, 1440]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+20.2806 	EXP 	window1: backgroundImage = ''
+20.2806 	EXP 	window1: backgroundFit = 'none'
+20.8418 	INFO 	keyboard.Keyboard is using ptb backend.
+21.0108 	INFO 	keyboard.Keyboard is using ptb backend.
+21.0975 	INFO 	keyboard.Keyboard is using ptb backend.
+21.0976 	EXP 	pilot_study: status = STARTED
+21.1447 	EXP 	Created welcome_message = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='welcome_message', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+21.1633 	EXP 	Created M_query = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='M_query', opacity=1, ori=0.0, pos=array([-0.45,  0.  ]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+21.1666 	EXP 	Created img1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='img1', opacity=1, ori=0.0, pos=array([0.  , 0.35]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+21.1697 	EXP 	Created img2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='img2', opacity=1, ori=0.0, pos=array([0.4 , 0.35]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+21.1728 	EXP 	Created img3 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=True, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='img3', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+21.1759 	EXP 	Created img4 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='img4', opacity=1, ori=0.0, pos=array([0.4, 0. ]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+21.1790 	EXP 	Created img5 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='img5', opacity=1, ori=0.0, pos=array([-0.35,  0.  ]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+21.1821 	EXP 	Created img6 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-6.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='img6', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+21.1864 	EXP 	Created end_message = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='end_message', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+0.0534 	EXP 	welcome_message: autoDraw = True
+37.8562 	EXP 	Device response: <KeyPress from None: t=37.66588779099402, value=space, duration=None>
+37.8565 	EXP 	Device response: <KeyPress from None: t=37.66588779099402, value=space, duration=0.12412991700693965>
+37.8630 	EXP 	Imported resources/midLoop.csv as conditions, 5 conditions, 35 params
+37.8637 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'img_query': 'resources/images/medium/med_Q5.jpg', 'img_query_w': np.int64(1024), 'img_query_h': np.int64(768), 'img_query_disp_w': np.float64(0.35), 'img_query_disp_h': np.float64(0.2625), 'sam_1': 'resources/images/medium/med_S1_5.jpg', 'sam_1_w': np.int64(1024), 'sam_1_h': np.int64(768), 'sam_1_disp_w': np.float64(0.35), 'sam_1_disp_h': np.float64(0.2625), 'sam_2': 'resources/images/medium/med_S2_5.jpg', 'sam_2_w': np.int64(1024), 'sam_2_h': np.int64(768), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.2625), 'sam_3': 'resources/images/medium/med_S3_5.jpg', 'sam_3_w': np.int64(3264), 'sam_3_h': np.int64(1840), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.197303922), 'sam_4': 'resources/images/medium/med_S4_5.jpg', 'sam_4_w': np.int64(768), 'sam_4_h': np.int64(1024), 'sam_4_disp_w': np.float64(0.2625), 'sam_4_disp_h': np.float64(0.35), 'sam_5': 'resources/images/medium/med_S5_5.jpg', 'sam_5_w': np.int64(350), 'sam_5_h': np.int64(233), 'sam_5_disp_w': np.float64(0.35), 'sam_5_disp_h': np.float64(0.233), 'img_targ': 'resources/images/medium/med_T5.jpg', 'targ_w': np.int64(768), 'targ_h': np.int64(1024), 'targ_disp_w': np.float64(0.2625), 'targ_disp_h': np.float64(0.35), 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+38.0198 	INFO 	Keyboard events cleared
+38.0197 	EXP 	welcome_message: autoDraw = False
+38.0197 	EXP 	M_query: image = 'resources/images/medium/med_Q5.jpg'
+38.0197 	EXP 	img1: image = 'resources/images/medium/med_S1_5.jpg'
+38.0197 	EXP 	img2: image = 'resources/images/medium/med_S2_5.jpg'
+38.0197 	EXP 	img3: image = 'resources/images/medium/med_S3_5.jpg'
+38.0197 	EXP 	img4: image = 'resources/images/medium/med_S4_5.jpg'
+38.0197 	EXP 	img5: image = 'resources/images/medium/med_S5_5.jpg'
+38.0197 	EXP 	img6: image = 'resources/images/medium/med_T5.jpg'
+38.0197 	EXP 	M_query: autoDraw = True
+38.0197 	EXP 	img1: autoDraw = True
+38.0197 	EXP 	img2: autoDraw = True
+38.0197 	EXP 	img3: autoDraw = True
+38.0197 	EXP 	img4: autoDraw = True
+38.0197 	EXP 	img5: autoDraw = True
+38.0197 	EXP 	img6: autoDraw = True
+44.8330 	EXP 	Device response: <KeyPress from None: t=44.82868612499442, value=space, duration=None>
+44.8336 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'img_query': 'resources/images/medium/med_Q3.jpg', 'img_query_w': np.int64(1024), 'img_query_h': np.int64(768), 'img_query_disp_w': np.float64(0.35), 'img_query_disp_h': np.float64(0.2625), 'sam_1': 'resources/images/medium/med_S1_3.jpg', 'sam_1_w': np.int64(4160), 'sam_1_h': np.int64(2340), 'sam_1_disp_w': np.float64(0.35), 'sam_1_disp_h': np.float64(0.196875), 'sam_2': 'resources/images/medium/med_S2_3.jpg', 'sam_2_w': np.int64(1024), 'sam_2_h': np.int64(768), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.2625), 'sam_3': 'resources/images/medium/med_S3_3.jpg', 'sam_3_w': np.int64(1024), 'sam_3_h': np.int64(768), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.2625), 'sam_4': 'resources/images/medium/med_S4_3.jpg', 'sam_4_w': np.int64(350), 'sam_4_h': np.int64(197), 'sam_4_disp_w': np.float64(0.35), 'sam_4_disp_h': np.float64(0.197), 'sam_5': 'resources/images/medium/med_S5_3.jpg', 'sam_5_w': np.int64(2592), 'sam_5_h': np.int64(4608), 'sam_5_disp_w': np.float64(0.196875), 'sam_5_disp_h': np.float64(0.35), 'img_targ': 'resources/images/medium/med_T3.jpg', 'targ_w': np.int64(1024), 'targ_h': np.int64(768), 'targ_disp_w': np.float64(0.35), 'targ_disp_h': np.float64(0.2625), 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+45.1752 	EXP 	Device response: <KeyPress from None: t=44.82868612499442, value=space, duration=0.1282110830070451>
+45.1839 	INFO 	Keyboard events cleared
+45.1838 	EXP 	M_query: autoDraw = False
+45.1838 	EXP 	img1: autoDraw = False
+45.1838 	EXP 	img2: autoDraw = False
+45.1838 	EXP 	img3: autoDraw = False
+45.1838 	EXP 	img4: autoDraw = False
+45.1838 	EXP 	img5: autoDraw = False
+45.1838 	EXP 	img6: autoDraw = False
+45.1838 	EXP 	M_query: image = 'resources/images/medium/med_Q3.jpg'
+45.1838 	EXP 	img1: image = 'resources/images/medium/med_S1_3.jpg'
+45.1838 	EXP 	img2: image = 'resources/images/medium/med_S2_3.jpg'
+45.1838 	EXP 	img3: image = 'resources/images/medium/med_S3_3.jpg'
+45.1838 	EXP 	img4: image = 'resources/images/medium/med_S4_3.jpg'
+45.1838 	EXP 	img5: image = 'resources/images/medium/med_S5_3.jpg'
+45.1838 	EXP 	img6: image = 'resources/images/medium/med_T3.jpg'
+45.1838 	EXP 	M_query: autoDraw = True
+45.1838 	EXP 	img1: autoDraw = True
+45.1838 	EXP 	img2: autoDraw = True
+45.1838 	EXP 	img3: autoDraw = True
+45.1838 	EXP 	img4: autoDraw = True
+45.1838 	EXP 	img5: autoDraw = True
+45.1838 	EXP 	img6: autoDraw = True
+50.6389 	EXP 	Device response: <KeyPress from None: t=50.63729833299294, value=escape, duration=None>
+50.7074 	EXP 	Device response: <KeyPress from None: t=50.63729833299294, value=escape, duration=0.06802600000810344>
+50.7074 	EXP 	pilot_study: status = STOPPED
+50.7101 	EXP 	M_query: autoDraw = False
+50.7101 	EXP 	img1: autoDraw = False
+50.7101 	EXP 	img2: autoDraw = False
+50.7101 	EXP 	img3: autoDraw = False
+50.7101 	EXP 	img4: autoDraw = False
+50.7101 	EXP 	img5: autoDraw = False
+50.7101 	EXP 	img6: autoDraw = False
+50.7102 	EXP 	pilot_study: status = STOPPED
+50.7127 	INFO 	saved data to '/Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/_pilot_study_2025-06-27_10h37.04.352.csv'
+50.7138 	INFO 	saved data to /Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/_pilot_study_2025-06-27_10h37.04.352.psydat
+50.8392 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+50.8393 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+50.8393 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

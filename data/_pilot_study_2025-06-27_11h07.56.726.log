@@ -1,0 +1,374 @@
+17.4473 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+17.7055 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+19.5698 	INFO 	Loaded monitor calibration from ['2025_06_12 14:42']
+19.7093 	INFO 	Using renderer 'Apple M1 Pro' for graphics
+19.7093 	INFO 	OpenGL version supported by driver is 2..
+19.7426 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x15a751c00>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x15a751c60>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x15a7dd1e0>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(260.0), np.float64(224.5)], screen=0, size=array([2560, 1440]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+19.7426 	EXP 	window1: backgroundImage = ''
+19.7426 	EXP 	window1: backgroundFit = 'none'
+20.3148 	INFO 	keyboard.Keyboard is using ptb backend.
+20.4866 	INFO 	keyboard.Keyboard is using ptb backend.
+20.5762 	INFO 	keyboard.Keyboard is using ptb backend.
+20.5763 	EXP 	pilot_study: status = STARTED
+20.6215 	EXP 	Created welcome_message = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='welcome_message', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+20.6401 	EXP 	Created M_query = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='M_query', opacity=1, ori=0.0, pos=array([-0.45,  0.  ]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+20.6433 	EXP 	Created img1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='img1', opacity=1, ori=0.0, pos=array([0.  , 0.35]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+20.6464 	EXP 	Created img2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='img2', opacity=1, ori=0.0, pos=array([0.45, 0.35]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+20.6494 	EXP 	Created img3 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=True, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='img3', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+20.6524 	EXP 	Created img4 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='img4', opacity=1, ori=0.0, pos=array([0.45, 0.  ]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+20.6555 	EXP 	Created img5 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='img5', opacity=1, ori=0.0, pos=array([ 0.  , -0.35]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+20.6584 	EXP 	Created img6 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-6.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='img6', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+20.6628 	EXP 	Created end_message = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='end_message', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+0.0557 	EXP 	welcome_message: autoDraw = True
+0.7560 	DATA 	Mouse: Left button down, pos=(689,490)
+0.8458 	DATA 	Mouse:  Left button up, pos=(689,490)
+1.2782 	EXP 	Device response: <KeyPress from None: t=1.0883802489988739, value=space, duration=None>
+1.2785 	EXP 	Device response: <KeyPress from None: t=1.0883802489988739, value=space, duration=0.11580650000541937>
+1.2851 	EXP 	Imported resources/midLoop.csv as conditions, 5 conditions, 35 params
+1.2857 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'img_query': 'resources/images/medium/med_Q2.jpg', 'img_query_w': np.int64(1024), 'img_query_h': np.int64(768), 'img_query_disp_w': np.float64(0.35), 'img_query_disp_h': np.float64(0.2625), 'sam_1': 'resources/images/medium/med_S2_1.jpg', 'sam_1_w': np.int64(768), 'sam_1_h': np.int64(1024), 'sam_1_disp_w': np.float64(0.2625), 'sam_1_disp_h': np.float64(0.35), 'sam_2': 'resources/images/medium/med_S2_2.jpg', 'sam_2_w': np.int64(350), 'sam_2_h': np.int64(233), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.233), 'sam_3': 'resources/images/medium/med_S2_3.jpg', 'sam_3_w': np.int64(1024), 'sam_3_h': np.int64(768), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.2625), 'sam_4': 'resources/images/medium/med_S2_4.jpg', 'sam_4_w': np.int64(350), 'sam_4_h': np.int64(234), 'sam_4_disp_w': np.float64(0.35), 'sam_4_disp_h': np.float64(0.234), 'sam_5': 'resources/images/medium/med_S2_5.jpg', 'sam_5_w': np.int64(1024), 'sam_5_h': np.int64(768), 'sam_5_disp_w': np.float64(0.35), 'sam_5_disp_h': np.float64(0.2625), 'img_targ': 'resources/images/medium/med_T2.jpg', 'targ_w': np.int64(4032), 'targ_h': np.int64(2268), 'targ_disp_w': np.float64(0.35), 'targ_disp_h': np.float64(0.196875), 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+1.4674 	DATA 	Keypress: space
+1.4719 	INFO 	Keyboard events cleared
+1.4718 	EXP 	welcome_message: autoDraw = False
+1.4718 	EXP 	M_query: image = 'resources/images/medium/med_Q2.jpg'
+1.4718 	EXP 	img1: image = 'resources/images/medium/med_S2_1.jpg'
+1.4718 	EXP 	img2: image = 'resources/images/medium/med_S2_2.jpg'
+1.4718 	EXP 	img3: image = 'resources/images/medium/med_S2_3.jpg'
+1.4718 	EXP 	img4: image = 'resources/images/medium/med_S2_4.jpg'
+1.4718 	EXP 	img5: image = 'resources/images/medium/med_S2_5.jpg'
+1.4718 	EXP 	img6: image = 'resources/images/medium/med_T2.jpg'
+1.4718 	EXP 	M_query: autoDraw = True
+1.4718 	EXP 	img1: autoDraw = True
+1.4718 	EXP 	img2: autoDraw = True
+1.4718 	EXP 	img3: autoDraw = True
+1.4718 	EXP 	img4: autoDraw = True
+1.4718 	EXP 	img5: autoDraw = True
+1.4718 	EXP 	img6: autoDraw = True
+3.5741 	EXP 	Device response: <KeyPress from None: t=3.567341457994189, value=space, duration=None>
+3.5746 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'img_query': 'resources/images/medium/med_Q5.jpg', 'img_query_w': np.int64(1024), 'img_query_h': np.int64(768), 'img_query_disp_w': np.float64(0.35), 'img_query_disp_h': np.float64(0.2625), 'sam_1': 'resources/images/medium/med_S5_1.jpg', 'sam_1_w': np.int64(768), 'sam_1_h': np.int64(1024), 'sam_1_disp_w': np.float64(0.2625), 'sam_1_disp_h': np.float64(0.35), 'sam_2': 'resources/images/medium/med_S5_2.jpg', 'sam_2_w': np.int64(350), 'sam_2_h': np.int64(233), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.233), 'sam_3': 'resources/images/medium/med_S5_3.jpg', 'sam_3_w': np.int64(3264), 'sam_3_h': np.int64(1840), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.197303922), 'sam_4': 'resources/images/medium/med_S5_4.jpg', 'sam_4_w': np.int64(350), 'sam_4_h': np.int64(208), 'sam_4_disp_w': np.float64(0.35), 'sam_4_disp_h': np.float64(0.208), 'sam_5': 'resources/images/medium/med_S5_5.jpg', 'sam_5_w': np.int64(350), 'sam_5_h': np.int64(233), 'sam_5_disp_w': np.float64(0.35), 'sam_5_disp_h': np.float64(0.233), 'img_targ': 'resources/images/medium/med_T5.jpg', 'targ_w': np.int64(768), 'targ_h': np.int64(1024), 'targ_disp_w': np.float64(0.2625), 'targ_disp_h': np.float64(0.35), 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+3.8061 	EXP 	Device response: <KeyPress from None: t=3.567341457994189, value=space, duration=0.09611008300271351>
+3.8132 	DATA 	Keypress: space
+3.8167 	INFO 	Keyboard events cleared
+3.8166 	EXP 	M_query: autoDraw = False
+3.8166 	EXP 	img1: autoDraw = False
+3.8166 	EXP 	img2: autoDraw = False
+3.8166 	EXP 	img3: autoDraw = False
+3.8166 	EXP 	img4: autoDraw = False
+3.8166 	EXP 	img5: autoDraw = False
+3.8166 	EXP 	img6: autoDraw = False
+3.8166 	EXP 	M_query: image = 'resources/images/medium/med_Q5.jpg'
+3.8166 	EXP 	img1: image = 'resources/images/medium/med_S5_1.jpg'
+3.8166 	EXP 	img2: image = 'resources/images/medium/med_S5_2.jpg'
+3.8166 	EXP 	img3: image = 'resources/images/medium/med_S5_3.jpg'
+3.8166 	EXP 	img4: image = 'resources/images/medium/med_S5_4.jpg'
+3.8166 	EXP 	img5: image = 'resources/images/medium/med_S5_5.jpg'
+3.8166 	EXP 	img6: image = 'resources/images/medium/med_T5.jpg'
+3.8166 	EXP 	M_query: autoDraw = True
+3.8166 	EXP 	img1: autoDraw = True
+3.8166 	EXP 	img2: autoDraw = True
+3.8166 	EXP 	img3: autoDraw = True
+3.8166 	EXP 	img4: autoDraw = True
+3.8166 	EXP 	img5: autoDraw = True
+3.8166 	EXP 	img6: autoDraw = True
+61.9564 	EXP 	Device response: <KeyPress from None: t=61.95463354099775, value=space, duration=None>
+61.9570 	EXP 	New trial (rep=0, index=2): <Trial 2 (2 in rep 0) data={'img_query': 'resources/images/medium/med_Q1.jpg', 'img_query_w': np.int64(4032), 'img_query_h': np.int64(3024), 'img_query_disp_w': np.float64(0.35), 'img_query_disp_h': np.float64(0.2625), 'sam_1': 'resources/images/medium/med_S1_1.jpg', 'sam_1_w': np.int64(768), 'sam_1_h': np.int64(1024), 'sam_1_disp_w': np.float64(0.2625), 'sam_1_disp_h': np.float64(0.35), 'sam_2': 'resources/images/medium/med_S1_2.jpg', 'sam_2_w': np.int64(4032), 'sam_2_h': np.int64(3024), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.2625), 'sam_3': 'resources/images/medium/med_S1_3.jpg', 'sam_3_w': np.int64(4160), 'sam_3_h': np.int64(2340), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.196875), 'sam_4': 'resources/images/medium/med_S1_4.jpg', 'sam_4_w': np.int64(1024), 'sam_4_h': np.int64(768), 'sam_4_disp_w': np.float64(0.35), 'sam_4_disp_h': np.float64(0.2625), 'sam_5': 'resources/images/medium/med_S1_5.jpg', 'sam_5_w': np.int64(1024), 'sam_5_h': np.int64(768), 'sam_5_disp_w': np.float64(0.35), 'sam_5_disp_h': np.float64(0.2625), 'img_targ': 'resources/images/medium/med_T1.jpg', 'targ_w': np.int64(1024), 'targ_h': np.int64(768), 'targ_disp_w': np.float64(0.35), 'targ_disp_h': np.float64(0.2625), 'thisN': 2, 'thisTrialN': 2, 'thisRepN': 0}>
+62.3895 	EXP 	Device response: <KeyPress from None: t=61.95463354099775, value=space, duration=0.10405354200338479>
+62.3915 	DATA 	Keypress: space
+62.3969 	INFO 	Keyboard events cleared
+62.3968 	EXP 	M_query: autoDraw = False
+62.3968 	EXP 	img1: autoDraw = False
+62.3968 	EXP 	img2: autoDraw = False
+62.3968 	EXP 	img3: autoDraw = False
+62.3968 	EXP 	img4: autoDraw = False
+62.3968 	EXP 	img5: autoDraw = False
+62.3968 	EXP 	img6: autoDraw = False
+62.3968 	EXP 	M_query: image = 'resources/images/medium/med_Q1.jpg'
+62.3968 	EXP 	img1: image = 'resources/images/medium/med_S1_1.jpg'
+62.3968 	EXP 	img2: image = 'resources/images/medium/med_S1_2.jpg'
+62.3968 	EXP 	img3: image = 'resources/images/medium/med_S1_3.jpg'
+62.3968 	EXP 	img4: image = 'resources/images/medium/med_S1_4.jpg'
+62.3968 	EXP 	img5: image = 'resources/images/medium/med_S1_5.jpg'
+62.3968 	EXP 	img6: image = 'resources/images/medium/med_T1.jpg'
+62.3968 	EXP 	M_query: autoDraw = True
+62.3968 	EXP 	img1: autoDraw = True
+62.3968 	EXP 	img2: autoDraw = True
+62.3968 	EXP 	img3: autoDraw = True
+62.3968 	EXP 	img4: autoDraw = True
+62.3968 	EXP 	img5: autoDraw = True
+62.3968 	EXP 	img6: autoDraw = True
+65.5951 	EXP 	Device response: <KeyPress from None: t=65.58093520799594, value=space, duration=None>
+65.5964 	EXP 	New trial (rep=0, index=3): <Trial 3 (3 in rep 0) data={'img_query': 'resources/images/medium/med_Q4.jpg', 'img_query_w': np.int64(768), 'img_query_h': np.int64(1024), 'img_query_disp_w': np.float64(0.2625), 'img_query_disp_h': np.float64(0.35), 'sam_1': 'resources/images/medium/med_S4_1.jpg', 'sam_1_w': np.int64(768), 'sam_1_h': np.int64(1024), 'sam_1_disp_w': np.float64(0.2625), 'sam_1_disp_h': np.float64(0.35), 'sam_2': 'resources/images/medium/med_S4_2.jpg', 'sam_2_w': np.int64(350), 'sam_2_h': np.int64(233), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.233), 'sam_3': 'resources/images/medium/med_S4_3.jpg', 'sam_3_w': np.int64(350), 'sam_3_h': np.int64(197), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.197), 'sam_4': 'resources/images/medium/med_S4_4.jpg', 'sam_4_w': np.int64(768), 'sam_4_h': np.int64(1024), 'sam_4_disp_w': np.float64(0.2625), 'sam_4_disp_h': np.float64(0.35), 'sam_5': 'resources/images/medium/med_S4_5.jpg', 'sam_5_w': np.int64(768), 'sam_5_h': np.int64(1024), 'sam_5_disp_w': np.float64(0.2625), 'sam_5_disp_h': np.float64(0.35), 'img_targ': 'resources/images/medium/med_T4.jpg', 'targ_w': np.int64(768), 'targ_h': np.int64(1024), 'targ_disp_w': np.float64(0.2625), 'targ_disp_h': np.float64(0.35), 'thisN': 3, 'thisTrialN': 3, 'thisRepN': 0}>
+65.6925 	DATA 	Keypress: space
+65.6956 	INFO 	Keyboard events cleared
+65.6955 	EXP 	M_query: autoDraw = False
+65.6955 	EXP 	img1: autoDraw = False
+65.6955 	EXP 	img2: autoDraw = False
+65.6955 	EXP 	img3: autoDraw = False
+65.6955 	EXP 	img4: autoDraw = False
+65.6955 	EXP 	img5: autoDraw = False
+65.6955 	EXP 	img6: autoDraw = False
+65.6955 	EXP 	M_query: image = 'resources/images/medium/med_Q4.jpg'
+65.6955 	EXP 	img1: image = 'resources/images/medium/med_S4_1.jpg'
+65.6955 	EXP 	img2: image = 'resources/images/medium/med_S4_2.jpg'
+65.6955 	EXP 	img3: image = 'resources/images/medium/med_S4_3.jpg'
+65.6955 	EXP 	img4: image = 'resources/images/medium/med_S4_4.jpg'
+65.6955 	EXP 	img5: image = 'resources/images/medium/med_S4_5.jpg'
+65.6955 	EXP 	img6: image = 'resources/images/medium/med_T4.jpg'
+65.6955 	EXP 	M_query: autoDraw = True
+65.6955 	EXP 	img1: autoDraw = True
+65.6955 	EXP 	img2: autoDraw = True
+65.6955 	EXP 	img3: autoDraw = True
+65.6955 	EXP 	img4: autoDraw = True
+65.6955 	EXP 	img5: autoDraw = True
+65.6955 	EXP 	img6: autoDraw = True
+65.7437 	EXP 	Device response: <KeyPress from None: t=65.58093520799594, value=space, duration=0.15601037500891834>
+145.8447 	EXP 	Device response: <KeyPress from None: t=145.8399008330016, value=space, duration=None>
+145.8453 	EXP 	New trial (rep=0, index=4): <Trial 4 (4 in rep 0) data={'img_query': 'resources/images/medium/med_Q3.jpg', 'img_query_w': np.int64(1024), 'img_query_h': np.int64(768), 'img_query_disp_w': np.float64(0.35), 'img_query_disp_h': np.float64(0.2625), 'sam_1': 'resources/images/medium/med_S3_1.jpg', 'sam_1_w': np.int64(350), 'sam_1_h': np.int64(233), 'sam_1_disp_w': np.float64(0.35), 'sam_1_disp_h': np.float64(0.233), 'sam_2': 'resources/images/medium/med_S3_2.jpg', 'sam_2_w': np.int64(1024), 'sam_2_h': np.int64(768), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.2625), 'sam_3': 'resources/images/medium/med_S3_3.jpg', 'sam_3_w': np.int64(1024), 'sam_3_h': np.int64(768), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.2625), 'sam_4': 'resources/images/medium/med_S3_4.jpg', 'sam_4_w': np.int64(350), 'sam_4_h': np.int64(341), 'sam_4_disp_w': np.float64(0.35), 'sam_4_disp_h': np.float64(0.341), 'sam_5': 'resources/images/medium/med_S3_5.jpg', 'sam_5_w': np.int64(3264), 'sam_5_h': np.int64(1080), 'sam_5_disp_w': np.float64(0.35), 'sam_5_disp_h': np.float64(0.115808824), 'img_targ': 'resources/images/medium/med_T3.jpg', 'targ_w': np.int64(1024), 'targ_h': np.int64(768), 'targ_disp_w': np.float64(0.35), 'targ_disp_h': np.float64(0.2625), 'thisN': 4, 'thisTrialN': 4, 'thisRepN': 0}>
+145.9714 	DATA 	Keypress: space
+145.9746 	INFO 	Keyboard events cleared
+145.9745 	EXP 	M_query: autoDraw = False
+145.9745 	EXP 	img1: autoDraw = False
+145.9745 	EXP 	img2: autoDraw = False
+145.9745 	EXP 	img3: autoDraw = False
+145.9745 	EXP 	img4: autoDraw = False
+145.9745 	EXP 	img5: autoDraw = False
+145.9745 	EXP 	img6: autoDraw = False
+145.9745 	EXP 	M_query: image = 'resources/images/medium/med_Q3.jpg'
+145.9745 	EXP 	img1: image = 'resources/images/medium/med_S3_1.jpg'
+145.9745 	EXP 	img2: image = 'resources/images/medium/med_S3_2.jpg'
+145.9745 	EXP 	img3: image = 'resources/images/medium/med_S3_3.jpg'
+145.9745 	EXP 	img4: image = 'resources/images/medium/med_S3_4.jpg'
+145.9745 	EXP 	img5: image = 'resources/images/medium/med_S3_5.jpg'
+145.9745 	EXP 	img6: image = 'resources/images/medium/med_T3.jpg'
+145.9745 	EXP 	M_query: autoDraw = True
+145.9745 	EXP 	img1: autoDraw = True
+145.9745 	EXP 	img2: autoDraw = True
+145.9745 	EXP 	img3: autoDraw = True
+145.9745 	EXP 	img4: autoDraw = True
+145.9745 	EXP 	img5: autoDraw = True
+145.9745 	EXP 	img6: autoDraw = True
+145.9793 	EXP 	Device response: <KeyPress from None: t=145.8399008330016, value=space, duration=0.13576424999337178>
+149.8979 	EXP 	Device response: <KeyPress from None: t=149.89404908299912, value=space, duration=None>
+149.8984 	EXP 	New trial (rep=1, index=0): <Trial 5 (0 in rep 1) data={'img_query': 'resources/images/medium/med_Q1.jpg', 'img_query_w': np.int64(4032), 'img_query_h': np.int64(3024), 'img_query_disp_w': np.float64(0.35), 'img_query_disp_h': np.float64(0.2625), 'sam_1': 'resources/images/medium/med_S1_1.jpg', 'sam_1_w': np.int64(768), 'sam_1_h': np.int64(1024), 'sam_1_disp_w': np.float64(0.2625), 'sam_1_disp_h': np.float64(0.35), 'sam_2': 'resources/images/medium/med_S1_2.jpg', 'sam_2_w': np.int64(4032), 'sam_2_h': np.int64(3024), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.2625), 'sam_3': 'resources/images/medium/med_S1_3.jpg', 'sam_3_w': np.int64(4160), 'sam_3_h': np.int64(2340), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.196875), 'sam_4': 'resources/images/medium/med_S1_4.jpg', 'sam_4_w': np.int64(1024), 'sam_4_h': np.int64(768), 'sam_4_disp_w': np.float64(0.35), 'sam_4_disp_h': np.float64(0.2625), 'sam_5': 'resources/images/medium/med_S1_5.jpg', 'sam_5_w': np.int64(1024), 'sam_5_h': np.int64(768), 'sam_5_disp_w': np.float64(0.35), 'sam_5_disp_h': np.float64(0.2625), 'img_targ': 'resources/images/medium/med_T1.jpg', 'targ_w': np.int64(1024), 'targ_h': np.int64(768), 'targ_disp_w': np.float64(0.35), 'targ_disp_h': np.float64(0.2625), 'thisN': 5, 'thisTrialN': 0, 'thisRepN': 1}>
+150.2675 	EXP 	Device response: <KeyPress from None: t=149.89404908299912, value=space, duration=0.16794341600325424>
+150.2694 	DATA 	Keypress: space
+150.2735 	INFO 	Keyboard events cleared
+150.2735 	EXP 	M_query: autoDraw = False
+150.2735 	EXP 	img1: autoDraw = False
+150.2735 	EXP 	img2: autoDraw = False
+150.2735 	EXP 	img3: autoDraw = False
+150.2735 	EXP 	img4: autoDraw = False
+150.2735 	EXP 	img5: autoDraw = False
+150.2735 	EXP 	img6: autoDraw = False
+150.2735 	EXP 	M_query: image = 'resources/images/medium/med_Q1.jpg'
+150.2735 	EXP 	img1: image = 'resources/images/medium/med_S1_1.jpg'
+150.2735 	EXP 	img2: image = 'resources/images/medium/med_S1_2.jpg'
+150.2735 	EXP 	img3: image = 'resources/images/medium/med_S1_3.jpg'
+150.2735 	EXP 	img4: image = 'resources/images/medium/med_S1_4.jpg'
+150.2735 	EXP 	img5: image = 'resources/images/medium/med_S1_5.jpg'
+150.2735 	EXP 	img6: image = 'resources/images/medium/med_T1.jpg'
+150.2735 	EXP 	M_query: autoDraw = True
+150.2735 	EXP 	img1: autoDraw = True
+150.2735 	EXP 	img2: autoDraw = True
+150.2735 	EXP 	img3: autoDraw = True
+150.2735 	EXP 	img4: autoDraw = True
+150.2735 	EXP 	img5: autoDraw = True
+150.2735 	EXP 	img6: autoDraw = True
+150.7198 	EXP 	Device response: <KeyPress from None: t=150.71717137399537, value=space, duration=None>
+150.7203 	EXP 	New trial (rep=1, index=1): <Trial 6 (1 in rep 1) data={'img_query': 'resources/images/medium/med_Q2.jpg', 'img_query_w': np.int64(1024), 'img_query_h': np.int64(768), 'img_query_disp_w': np.float64(0.35), 'img_query_disp_h': np.float64(0.2625), 'sam_1': 'resources/images/medium/med_S2_1.jpg', 'sam_1_w': np.int64(768), 'sam_1_h': np.int64(1024), 'sam_1_disp_w': np.float64(0.2625), 'sam_1_disp_h': np.float64(0.35), 'sam_2': 'resources/images/medium/med_S2_2.jpg', 'sam_2_w': np.int64(350), 'sam_2_h': np.int64(233), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.233), 'sam_3': 'resources/images/medium/med_S2_3.jpg', 'sam_3_w': np.int64(1024), 'sam_3_h': np.int64(768), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.2625), 'sam_4': 'resources/images/medium/med_S2_4.jpg', 'sam_4_w': np.int64(350), 'sam_4_h': np.int64(234), 'sam_4_disp_w': np.float64(0.35), 'sam_4_disp_h': np.float64(0.234), 'sam_5': 'resources/images/medium/med_S2_5.jpg', 'sam_5_w': np.int64(1024), 'sam_5_h': np.int64(768), 'sam_5_disp_w': np.float64(0.35), 'sam_5_disp_h': np.float64(0.2625), 'img_targ': 'resources/images/medium/med_T2.jpg', 'targ_w': np.int64(4032), 'targ_h': np.int64(2268), 'targ_disp_w': np.float64(0.35), 'targ_disp_h': np.float64(0.196875), 'thisN': 6, 'thisTrialN': 1, 'thisRepN': 1}>
+150.8896 	EXP 	Device response: <KeyPress from None: t=150.71717137399537, value=space, duration=0.15987887501250952>
+150.8916 	DATA 	Keypress: space
+150.8950 	INFO 	Keyboard events cleared
+150.8949 	EXP 	M_query: autoDraw = False
+150.8949 	EXP 	img1: autoDraw = False
+150.8949 	EXP 	img2: autoDraw = False
+150.8949 	EXP 	img3: autoDraw = False
+150.8949 	EXP 	img4: autoDraw = False
+150.8949 	EXP 	img5: autoDraw = False
+150.8949 	EXP 	img6: autoDraw = False
+150.8949 	EXP 	M_query: image = 'resources/images/medium/med_Q2.jpg'
+150.8949 	EXP 	img1: image = 'resources/images/medium/med_S2_1.jpg'
+150.8949 	EXP 	img2: image = 'resources/images/medium/med_S2_2.jpg'
+150.8949 	EXP 	img3: image = 'resources/images/medium/med_S2_3.jpg'
+150.8949 	EXP 	img4: image = 'resources/images/medium/med_S2_4.jpg'
+150.8949 	EXP 	img5: image = 'resources/images/medium/med_S2_5.jpg'
+150.8949 	EXP 	img6: image = 'resources/images/medium/med_T2.jpg'
+150.8949 	EXP 	M_query: autoDraw = True
+150.8949 	EXP 	img1: autoDraw = True
+150.8949 	EXP 	img2: autoDraw = True
+150.8949 	EXP 	img3: autoDraw = True
+150.8949 	EXP 	img4: autoDraw = True
+150.8949 	EXP 	img5: autoDraw = True
+150.8949 	EXP 	img6: autoDraw = True
+151.2112 	EXP 	Device response: <KeyPress from None: t=151.20686470800138, value=space, duration=None>
+151.2116 	EXP 	New trial (rep=1, index=2): <Trial 7 (2 in rep 1) data={'img_query': 'resources/images/medium/med_Q3.jpg', 'img_query_w': np.int64(1024), 'img_query_h': np.int64(768), 'img_query_disp_w': np.float64(0.35), 'img_query_disp_h': np.float64(0.2625), 'sam_1': 'resources/images/medium/med_S3_1.jpg', 'sam_1_w': np.int64(350), 'sam_1_h': np.int64(233), 'sam_1_disp_w': np.float64(0.35), 'sam_1_disp_h': np.float64(0.233), 'sam_2': 'resources/images/medium/med_S3_2.jpg', 'sam_2_w': np.int64(1024), 'sam_2_h': np.int64(768), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.2625), 'sam_3': 'resources/images/medium/med_S3_3.jpg', 'sam_3_w': np.int64(1024), 'sam_3_h': np.int64(768), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.2625), 'sam_4': 'resources/images/medium/med_S3_4.jpg', 'sam_4_w': np.int64(350), 'sam_4_h': np.int64(341), 'sam_4_disp_w': np.float64(0.35), 'sam_4_disp_h': np.float64(0.341), 'sam_5': 'resources/images/medium/med_S3_5.jpg', 'sam_5_w': np.int64(3264), 'sam_5_h': np.int64(1080), 'sam_5_disp_w': np.float64(0.35), 'sam_5_disp_h': np.float64(0.115808824), 'img_targ': 'resources/images/medium/med_T3.jpg', 'targ_w': np.int64(1024), 'targ_h': np.int64(768), 'targ_disp_w': np.float64(0.35), 'targ_disp_h': np.float64(0.2625), 'thisN': 7, 'thisTrialN': 2, 'thisRepN': 1}>
+151.3289 	EXP 	Device response: <KeyPress from None: t=151.20686470800138, value=space, duration=0.10397524999279995>
+151.3309 	DATA 	Keypress: space
+151.3351 	INFO 	Keyboard events cleared
+151.3350 	EXP 	M_query: autoDraw = False
+151.3350 	EXP 	img1: autoDraw = False
+151.3350 	EXP 	img2: autoDraw = False
+151.3350 	EXP 	img3: autoDraw = False
+151.3350 	EXP 	img4: autoDraw = False
+151.3350 	EXP 	img5: autoDraw = False
+151.3350 	EXP 	img6: autoDraw = False
+151.3350 	EXP 	M_query: image = 'resources/images/medium/med_Q3.jpg'
+151.3350 	EXP 	img1: image = 'resources/images/medium/med_S3_1.jpg'
+151.3350 	EXP 	img2: image = 'resources/images/medium/med_S3_2.jpg'
+151.3350 	EXP 	img3: image = 'resources/images/medium/med_S3_3.jpg'
+151.3350 	EXP 	img4: image = 'resources/images/medium/med_S3_4.jpg'
+151.3350 	EXP 	img5: image = 'resources/images/medium/med_S3_5.jpg'
+151.3350 	EXP 	img6: image = 'resources/images/medium/med_T3.jpg'
+151.3350 	EXP 	M_query: autoDraw = True
+151.3350 	EXP 	img1: autoDraw = True
+151.3350 	EXP 	img2: autoDraw = True
+151.3350 	EXP 	img3: autoDraw = True
+151.3350 	EXP 	img4: autoDraw = True
+151.3350 	EXP 	img5: autoDraw = True
+151.3350 	EXP 	img6: autoDraw = True
+151.7028 	EXP 	Device response: <KeyPress from None: t=151.69565324900032, value=space, duration=None>
+151.7033 	EXP 	New trial (rep=1, index=3): <Trial 8 (3 in rep 1) data={'img_query': 'resources/images/medium/med_Q5.jpg', 'img_query_w': np.int64(1024), 'img_query_h': np.int64(768), 'img_query_disp_w': np.float64(0.35), 'img_query_disp_h': np.float64(0.2625), 'sam_1': 'resources/images/medium/med_S5_1.jpg', 'sam_1_w': np.int64(768), 'sam_1_h': np.int64(1024), 'sam_1_disp_w': np.float64(0.2625), 'sam_1_disp_h': np.float64(0.35), 'sam_2': 'resources/images/medium/med_S5_2.jpg', 'sam_2_w': np.int64(350), 'sam_2_h': np.int64(233), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.233), 'sam_3': 'resources/images/medium/med_S5_3.jpg', 'sam_3_w': np.int64(3264), 'sam_3_h': np.int64(1840), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.197303922), 'sam_4': 'resources/images/medium/med_S5_4.jpg', 'sam_4_w': np.int64(350), 'sam_4_h': np.int64(208), 'sam_4_disp_w': np.float64(0.35), 'sam_4_disp_h': np.float64(0.208), 'sam_5': 'resources/images/medium/med_S5_5.jpg', 'sam_5_w': np.int64(350), 'sam_5_h': np.int64(233), 'sam_5_disp_w': np.float64(0.35), 'sam_5_disp_h': np.float64(0.233), 'img_targ': 'resources/images/medium/med_T5.jpg', 'targ_w': np.int64(768), 'targ_h': np.int64(1024), 'targ_disp_w': np.float64(0.2625), 'targ_disp_h': np.float64(0.35), 'thisN': 8, 'thisTrialN': 3, 'thisRepN': 1}>
+151.8723 	EXP 	Device response: <KeyPress from None: t=151.69565324900032, value=space, duration=0.13617391699517611>
+151.8742 	DATA 	Keypress: space
+151.8777 	INFO 	Keyboard events cleared
+151.8776 	EXP 	M_query: autoDraw = False
+151.8776 	EXP 	img1: autoDraw = False
+151.8776 	EXP 	img2: autoDraw = False
+151.8776 	EXP 	img3: autoDraw = False
+151.8776 	EXP 	img4: autoDraw = False
+151.8776 	EXP 	img5: autoDraw = False
+151.8776 	EXP 	img6: autoDraw = False
+151.8776 	EXP 	M_query: image = 'resources/images/medium/med_Q5.jpg'
+151.8776 	EXP 	img1: image = 'resources/images/medium/med_S5_1.jpg'
+151.8776 	EXP 	img2: image = 'resources/images/medium/med_S5_2.jpg'
+151.8776 	EXP 	img3: image = 'resources/images/medium/med_S5_3.jpg'
+151.8776 	EXP 	img4: image = 'resources/images/medium/med_S5_4.jpg'
+151.8776 	EXP 	img5: image = 'resources/images/medium/med_S5_5.jpg'
+151.8776 	EXP 	img6: image = 'resources/images/medium/med_T5.jpg'
+151.8776 	EXP 	M_query: autoDraw = True
+151.8776 	EXP 	img1: autoDraw = True
+151.8776 	EXP 	img2: autoDraw = True
+151.8776 	EXP 	img3: autoDraw = True
+151.8776 	EXP 	img4: autoDraw = True
+151.8776 	EXP 	img5: autoDraw = True
+151.8776 	EXP 	img6: autoDraw = True
+152.2308 	EXP 	Device response: <KeyPress from None: t=152.22796916600782, value=space, duration=None>
+152.2312 	EXP 	New trial (rep=1, index=4): <Trial 9 (4 in rep 1) data={'img_query': 'resources/images/medium/med_Q4.jpg', 'img_query_w': np.int64(768), 'img_query_h': np.int64(1024), 'img_query_disp_w': np.float64(0.2625), 'img_query_disp_h': np.float64(0.35), 'sam_1': 'resources/images/medium/med_S4_1.jpg', 'sam_1_w': np.int64(768), 'sam_1_h': np.int64(1024), 'sam_1_disp_w': np.float64(0.2625), 'sam_1_disp_h': np.float64(0.35), 'sam_2': 'resources/images/medium/med_S4_2.jpg', 'sam_2_w': np.int64(350), 'sam_2_h': np.int64(233), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.233), 'sam_3': 'resources/images/medium/med_S4_3.jpg', 'sam_3_w': np.int64(350), 'sam_3_h': np.int64(197), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.197), 'sam_4': 'resources/images/medium/med_S4_4.jpg', 'sam_4_w': np.int64(768), 'sam_4_h': np.int64(1024), 'sam_4_disp_w': np.float64(0.2625), 'sam_4_disp_h': np.float64(0.35), 'sam_5': 'resources/images/medium/med_S4_5.jpg', 'sam_5_w': np.int64(768), 'sam_5_h': np.int64(1024), 'sam_5_disp_w': np.float64(0.2625), 'sam_5_disp_h': np.float64(0.35), 'img_targ': 'resources/images/medium/med_T4.jpg', 'targ_w': np.int64(768), 'targ_h': np.int64(1024), 'targ_disp_w': np.float64(0.2625), 'targ_disp_h': np.float64(0.35), 'thisN': 9, 'thisTrialN': 4, 'thisRepN': 1}>
+152.3036 	DATA 	Keypress: space
+152.3068 	INFO 	Keyboard events cleared
+152.3067 	EXP 	M_query: autoDraw = False
+152.3067 	EXP 	img1: autoDraw = False
+152.3067 	EXP 	img2: autoDraw = False
+152.3067 	EXP 	img3: autoDraw = False
+152.3067 	EXP 	img4: autoDraw = False
+152.3067 	EXP 	img5: autoDraw = False
+152.3067 	EXP 	img6: autoDraw = False
+152.3067 	EXP 	M_query: image = 'resources/images/medium/med_Q4.jpg'
+152.3067 	EXP 	img1: image = 'resources/images/medium/med_S4_1.jpg'
+152.3067 	EXP 	img2: image = 'resources/images/medium/med_S4_2.jpg'
+152.3067 	EXP 	img3: image = 'resources/images/medium/med_S4_3.jpg'
+152.3067 	EXP 	img4: image = 'resources/images/medium/med_S4_4.jpg'
+152.3067 	EXP 	img5: image = 'resources/images/medium/med_S4_5.jpg'
+152.3067 	EXP 	img6: image = 'resources/images/medium/med_T4.jpg'
+152.3067 	EXP 	M_query: autoDraw = True
+152.3067 	EXP 	img1: autoDraw = True
+152.3067 	EXP 	img2: autoDraw = True
+152.3067 	EXP 	img3: autoDraw = True
+152.3067 	EXP 	img4: autoDraw = True
+152.3067 	EXP 	img5: autoDraw = True
+152.3067 	EXP 	img6: autoDraw = True
+152.3437 	EXP 	Device response: <KeyPress from None: t=152.22796916600782, value=space, duration=0.10804295798880048>
+152.5482 	EXP 	Device response: <KeyPress from None: t=152.54472220799653, value=space, duration=None>
+152.5485 	EXP 	New trial (rep=2, index=0): <Trial 10 (0 in rep 2) data={'img_query': 'resources/images/medium/med_Q2.jpg', 'img_query_w': np.int64(1024), 'img_query_h': np.int64(768), 'img_query_disp_w': np.float64(0.35), 'img_query_disp_h': np.float64(0.2625), 'sam_1': 'resources/images/medium/med_S2_1.jpg', 'sam_1_w': np.int64(768), 'sam_1_h': np.int64(1024), 'sam_1_disp_w': np.float64(0.2625), 'sam_1_disp_h': np.float64(0.35), 'sam_2': 'resources/images/medium/med_S2_2.jpg', 'sam_2_w': np.int64(350), 'sam_2_h': np.int64(233), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.233), 'sam_3': 'resources/images/medium/med_S2_3.jpg', 'sam_3_w': np.int64(1024), 'sam_3_h': np.int64(768), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.2625), 'sam_4': 'resources/images/medium/med_S2_4.jpg', 'sam_4_w': np.int64(350), 'sam_4_h': np.int64(234), 'sam_4_disp_w': np.float64(0.35), 'sam_4_disp_h': np.float64(0.234), 'sam_5': 'resources/images/medium/med_S2_5.jpg', 'sam_5_w': np.int64(1024), 'sam_5_h': np.int64(768), 'sam_5_disp_w': np.float64(0.35), 'sam_5_disp_h': np.float64(0.2625), 'img_targ': 'resources/images/medium/med_T2.jpg', 'targ_w': np.int64(4032), 'targ_h': np.int64(2268), 'targ_disp_w': np.float64(0.35), 'targ_disp_h': np.float64(0.196875), 'thisN': 10, 'thisTrialN': 0, 'thisRepN': 2}>
+152.6802 	EXP 	Device response: <KeyPress from None: t=152.54472220799653, value=space, duration=0.10417299999971874>
+152.6822 	DATA 	Keypress: space
+152.6857 	INFO 	Keyboard events cleared
+152.6856 	EXP 	M_query: autoDraw = False
+152.6856 	EXP 	img1: autoDraw = False
+152.6856 	EXP 	img2: autoDraw = False
+152.6856 	EXP 	img3: autoDraw = False
+152.6856 	EXP 	img4: autoDraw = False
+152.6856 	EXP 	img5: autoDraw = False
+152.6856 	EXP 	img6: autoDraw = False
+152.6856 	EXP 	M_query: image = 'resources/images/medium/med_Q2.jpg'
+152.6856 	EXP 	img1: image = 'resources/images/medium/med_S2_1.jpg'
+152.6856 	EXP 	img2: image = 'resources/images/medium/med_S2_2.jpg'
+152.6856 	EXP 	img3: image = 'resources/images/medium/med_S2_3.jpg'
+152.6856 	EXP 	img4: image = 'resources/images/medium/med_S2_4.jpg'
+152.6856 	EXP 	img5: image = 'resources/images/medium/med_S2_5.jpg'
+152.6856 	EXP 	img6: image = 'resources/images/medium/med_T2.jpg'
+152.6856 	EXP 	M_query: autoDraw = True
+152.6856 	EXP 	img1: autoDraw = True
+152.6856 	EXP 	img2: autoDraw = True
+152.6856 	EXP 	img3: autoDraw = True
+152.6856 	EXP 	img4: autoDraw = True
+152.6856 	EXP 	img5: autoDraw = True
+152.6856 	EXP 	img6: autoDraw = True
+152.7527 	EXP 	Device response: <KeyPress from None: t=152.75033420800173, value=space, duration=None>
+152.7530 	EXP 	New trial (rep=2, index=1): <Trial 11 (1 in rep 2) data={'img_query': 'resources/images/medium/med_Q4.jpg', 'img_query_w': np.int64(768), 'img_query_h': np.int64(1024), 'img_query_disp_w': np.float64(0.2625), 'img_query_disp_h': np.float64(0.35), 'sam_1': 'resources/images/medium/med_S4_1.jpg', 'sam_1_w': np.int64(768), 'sam_1_h': np.int64(1024), 'sam_1_disp_w': np.float64(0.2625), 'sam_1_disp_h': np.float64(0.35), 'sam_2': 'resources/images/medium/med_S4_2.jpg', 'sam_2_w': np.int64(350), 'sam_2_h': np.int64(233), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.233), 'sam_3': 'resources/images/medium/med_S4_3.jpg', 'sam_3_w': np.int64(350), 'sam_3_h': np.int64(197), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.197), 'sam_4': 'resources/images/medium/med_S4_4.jpg', 'sam_4_w': np.int64(768), 'sam_4_h': np.int64(1024), 'sam_4_disp_w': np.float64(0.2625), 'sam_4_disp_h': np.float64(0.35), 'sam_5': 'resources/images/medium/med_S4_5.jpg', 'sam_5_w': np.int64(768), 'sam_5_h': np.int64(1024), 'sam_5_disp_w': np.float64(0.2625), 'sam_5_disp_h': np.float64(0.35), 'img_targ': 'resources/images/medium/med_T4.jpg', 'targ_w': np.int64(768), 'targ_h': np.int64(1024), 'targ_disp_w': np.float64(0.2625), 'targ_disp_h': np.float64(0.35), 'thisN': 11, 'thisTrialN': 1, 'thisRepN': 2}>
+152.8086 	DATA 	Keypress: space
+152.8117 	INFO 	Keyboard events cleared
+152.8116 	EXP 	M_query: autoDraw = False
+152.8116 	EXP 	img1: autoDraw = False
+152.8116 	EXP 	img2: autoDraw = False
+152.8116 	EXP 	img3: autoDraw = False
+152.8116 	EXP 	img4: autoDraw = False
+152.8116 	EXP 	img5: autoDraw = False
+152.8116 	EXP 	img6: autoDraw = False
+152.8116 	EXP 	M_query: image = 'resources/images/medium/med_Q4.jpg'
+152.8116 	EXP 	img1: image = 'resources/images/medium/med_S4_1.jpg'
+152.8116 	EXP 	img2: image = 'resources/images/medium/med_S4_2.jpg'
+152.8116 	EXP 	img3: image = 'resources/images/medium/med_S4_3.jpg'
+152.8116 	EXP 	img4: image = 'resources/images/medium/med_S4_4.jpg'
+152.8116 	EXP 	img5: image = 'resources/images/medium/med_S4_5.jpg'
+152.8116 	EXP 	img6: image = 'resources/images/medium/med_T4.jpg'
+152.8116 	EXP 	M_query: autoDraw = True
+152.8116 	EXP 	img1: autoDraw = True
+152.8116 	EXP 	img2: autoDraw = True
+152.8116 	EXP 	img3: autoDraw = True
+152.8116 	EXP 	img4: autoDraw = True
+152.8116 	EXP 	img5: autoDraw = True
+152.8116 	EXP 	img6: autoDraw = True
+152.8604 	EXP 	Device response: <KeyPress from None: t=152.75033420800173, value=space, duration=0.10412945800635498>
+153.0530 	EXP 	Device response: <KeyPress from None: t=153.04604987399944, value=space, duration=None>
+153.0534 	EXP 	New trial (rep=2, index=2): <Trial 12 (2 in rep 2) data={'img_query': 'resources/images/medium/med_Q1.jpg', 'img_query_w': np.int64(4032), 'img_query_h': np.int64(3024), 'img_query_disp_w': np.float64(0.35), 'img_query_disp_h': np.float64(0.2625), 'sam_1': 'resources/images/medium/med_S1_1.jpg', 'sam_1_w': np.int64(768), 'sam_1_h': np.int64(1024), 'sam_1_disp_w': np.float64(0.2625), 'sam_1_disp_h': np.float64(0.35), 'sam_2': 'resources/images/medium/med_S1_2.jpg', 'sam_2_w': np.int64(4032), 'sam_2_h': np.int64(3024), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.2625), 'sam_3': 'resources/images/medium/med_S1_3.jpg', 'sam_3_w': np.int64(4160), 'sam_3_h': np.int64(2340), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.196875), 'sam_4': 'resources/images/medium/med_S1_4.jpg', 'sam_4_w': np.int64(1024), 'sam_4_h': np.int64(768), 'sam_4_disp_w': np.float64(0.35), 'sam_4_disp_h': np.float64(0.2625), 'sam_5': 'resources/images/medium/med_S1_5.jpg', 'sam_5_w': np.int64(1024), 'sam_5_h': np.int64(768), 'sam_5_disp_w': np.float64(0.35), 'sam_5_disp_h': np.float64(0.2625), 'img_targ': 'resources/images/medium/med_T1.jpg', 'targ_w': np.int64(1024), 'targ_h': np.int64(768), 'targ_disp_w': np.float64(0.35), 'targ_disp_h': np.float64(0.2625), 'thisN': 12, 'thisTrialN': 2, 'thisRepN': 2}>
+153.3940 	EXP 	Device response: <KeyPress from None: t=153.04604987399944, value=space, duration=0.15611154200450983>
+153.3959 	DATA 	Keypress: space
+153.4000 	INFO 	Keyboard events cleared
+153.3999 	EXP 	M_query: autoDraw = False
+153.3999 	EXP 	img1: autoDraw = False
+153.3999 	EXP 	img2: autoDraw = False
+153.3999 	EXP 	img3: autoDraw = False
+153.3999 	EXP 	img4: autoDraw = False
+153.3999 	EXP 	img5: autoDraw = False
+153.3999 	EXP 	img6: autoDraw = False
+153.3999 	EXP 	M_query: image = 'resources/images/medium/med_Q1.jpg'
+153.3999 	EXP 	img1: image = 'resources/images/medium/med_S1_1.jpg'
+153.3999 	EXP 	img2: image = 'resources/images/medium/med_S1_2.jpg'
+153.3999 	EXP 	img3: image = 'resources/images/medium/med_S1_3.jpg'
+153.3999 	EXP 	img4: image = 'resources/images/medium/med_S1_4.jpg'
+153.3999 	EXP 	img5: image = 'resources/images/medium/med_S1_5.jpg'
+153.3999 	EXP 	img6: image = 'resources/images/medium/med_T1.jpg'
+153.3999 	EXP 	M_query: autoDraw = True
+153.3999 	EXP 	img1: autoDraw = True
+153.3999 	EXP 	img2: autoDraw = True
+153.3999 	EXP 	img3: autoDraw = True
+153.3999 	EXP 	img4: autoDraw = True
+153.3999 	EXP 	img5: autoDraw = True
+153.3999 	EXP 	img6: autoDraw = True
+153.9272 	EXP 	Device response: <KeyPress from None: t=153.9241442909988, value=escape, duration=None>
+153.9728 	DATA 	Keypress: escape
+154.0524 	EXP 	Device response: <KeyPress from None: t=153.9241442909988, value=escape, duration=0.12010816700058058>
+154.0524 	EXP 	pilot_study: status = STOPPED
+154.0600 	EXP 	M_query: autoDraw = False
+154.0600 	EXP 	img1: autoDraw = False
+154.0600 	EXP 	img2: autoDraw = False
+154.0600 	EXP 	img3: autoDraw = False
+154.0600 	EXP 	img4: autoDraw = False
+154.0600 	EXP 	img5: autoDraw = False
+154.0600 	EXP 	img6: autoDraw = False
+154.0601 	EXP 	pilot_study: status = STOPPED
+154.0660 	INFO 	saved data to '/Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/_pilot_study_2025-06-27_11h07.56.726.csv'
+154.0670 	INFO 	saved data to /Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/_pilot_study_2025-06-27_11h07.56.726.psydat
+154.1931 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+154.1932 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+154.1932 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

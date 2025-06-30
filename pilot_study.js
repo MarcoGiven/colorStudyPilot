@@ -1922,22 +1922,11 @@ function EndScreenRoutineBegin(snapshot) {
     routineTimer.reset();
     EndScreenMaxDurationReached = false;
     // update component parameters for each repeat
-    // Prevent default browser CSV download
     //psychoJS._saveResults = 0;
     
-    // Generate filename for results
     let filename = psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime + '.csv';
+    let csvData = psychoJS.experiment.dataFile; // This uses PsychoJS's built-in CSV formatting
     
-    // Extract data object from experiment
-    let dataObj = psychoJS._experiment._trialsData;
-    
-    // Convert data object to CSV
-    let data = [Object.keys(dataObj[0])].concat(dataObj).map(it => {
-        return Object.values(it).toString()
-    }).join('\n')
-    
-    // Send data to OSF via DataPipe
-    console.log('Saving data...')
     fetch('https://pipe.jspsych.org/api/data', {
         method: 'POST',
         headers: {
@@ -1947,13 +1936,12 @@ function EndScreenRoutineBegin(snapshot) {
         body: JSON.stringify({
             experimentID: 'DLFoEuJu8PX1',
             filename: filename,
-            data: data,
+            data: csvData,
         }),
     }).then(response => response.json()).then(data => {
-        // Log response and force experiment end
         console.log(data);
         quitPsychoJS();
-    })
+    });
     EndScreenMaxDuration = null
     // keep track of which components have finished
     EndScreenComponents = [];

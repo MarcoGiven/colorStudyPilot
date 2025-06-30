@@ -1,0 +1,42 @@
+17.7416 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+18.0013 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+19.7448 	INFO 	Loaded monitor calibration from ['2025_06_12 14:42']
+19.8832 	INFO 	Using renderer 'Apple M1 Pro' for graphics
+19.8833 	INFO 	OpenGL version supported by driver is 2..
+19.9163 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x155e88d60>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x155e88d00>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x155edabf0>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(260.0), np.float64(224.5)], screen=0, size=array([2560, 1440]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+19.9163 	EXP 	window1: backgroundImage = ''
+19.9164 	EXP 	window1: backgroundFit = 'none'
+20.5529 	INFO 	keyboard.Keyboard is using ptb backend.
+20.7268 	INFO 	keyboard.Keyboard is using ptb backend.
+20.7269 	EXP 	pilot_study: status = STARTED
+20.7716 	EXP 	Created welcome_message = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='welcome_message', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+20.7904 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 1.]), texRes=128.0, units='height', win=Window(...))
+20.7913 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+20.7921 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+20.7962 	EXP 	Created end_message = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='end_message', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+0.0613 	EXP 	welcome_message: autoDraw = True
+0.6505 	DATA 	Mouse: Left button down, pos=(636,477)
+0.7804 	DATA 	Mouse:  Left button up, pos=(636,477)
+1.6096 	EXP 	Device response: <KeyPress from None: t=1.4234981670015259, value=space, duration=None>
+1.6099 	EXP 	Device response: <KeyPress from None: t=1.4234981670015259, value=space, duration=0.06809012500161771>
+1.6132 	EXP 	Imported resources/loopTest.csv as conditions, 2 conditions, 1 params
+1.6135 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'set_img': 'resources/images/QUERY1.jpg', 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+1.6510 	DATA 	Keypress: space
+1.6547 	EXP 	welcome_message: autoDraw = False
+1.6547 	EXP 	image: image = 'resources/images/QUERY1.jpg'
+1.6547 	EXP 	image: autoDraw = True
+8.6346 	EXP 	Device response: <KeyPress from None: t=8.626692375008133, value=space, duration=None>
+8.6464 	DATA 	Keypress: space
+8.7294 	EXP 	Device response: <KeyPress from None: t=8.626692375008133, value=space, duration=0.09995233299559914>
+9.7644 	DATA 	Mouse: Left button down, pos=(806,522)
+9.8693 	DATA 	Mouse:  Left button up, pos=(806,522)
+10.2994 	EXP 	Device response: <KeyPress from None: t=10.289190875002532, value=escape, duration=None>
+10.3372 	DATA 	Keypress: escape
+10.3623 	EXP 	Device response: <KeyPress from None: t=10.289190875002532, value=escape, duration=0.0720770000043558>
+10.3624 	EXP 	pilot_study: status = STOPPED
+10.3648 	EXP 	image: autoDraw = False
+10.3648 	EXP 	pilot_study: status = STOPPED
+10.3660 	INFO 	saved data to '/Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/_pilot_study_2025-06-27_12h50.57.709.csv'
+10.3667 	INFO 	saved data to /Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/_pilot_study_2025-06-27_12h50.57.709.psydat
+10.5036 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+10.5036 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

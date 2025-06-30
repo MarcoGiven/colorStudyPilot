@@ -1,0 +1,4 @@
+﻿spreadsheet_to_match,thisN,thisTrialN,thisRepN,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,matching_difficulty.thisRepN,matching_difficulty.thisTrialN,matching_difficulty.thisN,matching_difficulty.thisIndex,thisRow.t,notes,consent_key.keys,consent_key.rt,consent_key.duration,coding_inner_loop.started,coding_inner_loop.stopped,query,corr_ans,match1,participant,session,date,expName,expVersion,psychopyVersion,expStart,
+,,,,,,,,,,,,,,,,,,,,,,,001,2025-06-30_10h07.51.273,pilot_study,,2025.1.1,2025-06-30 10h07.54.475955 -0400,
+,,,,,,,,,,,,,,y,1.111482041014824,None,,,,,,,001,2025-06-30_10h07.51.273,pilot_study,,2025.1.1,2025-06-30 10h07.54.475955 -0400,
+resources/image_match_hard.xlsx,0,0,0,0,0,0,1,0,0,0,0,,,,,,2.517383708007401,2.5174517080013175,resources/images/hard/000037446.jpg,resources/images/hard/000037448.jpg,"=MIN(0.3 / M2, 0.3 / L2) * M2",,,,,,,,

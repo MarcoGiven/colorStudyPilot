@@ -1,0 +1,37 @@
+17.6126 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+17.8681 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+20.0780 	INFO 	Loaded monitor calibration from ['2025_06_12 14:42']
+20.2143 	INFO 	Using renderer 'Apple M1 Pro' for graphics
+20.2143 	INFO 	OpenGL version supported by driver is 2..
+20.2478 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x15a3f5690>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x15a3f5630>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x15a44edd0>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(260.0), np.float64(224.5)], screen=0, size=array([2560, 1440]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+20.2479 	EXP 	window1: backgroundImage = ''
+20.2479 	EXP 	window1: backgroundFit = 'none'
+20.8437 	INFO 	keyboard.Keyboard is using ptb backend.
+21.0151 	INFO 	keyboard.Keyboard is using ptb backend.
+21.0152 	EXP 	pilot_study: status = STARTED
+21.0610 	EXP 	Created welcome_message = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='welcome_message', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+21.0803 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128.0, units='height', win=Window(...))
+21.0812 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+21.0820 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+21.0862 	EXP 	Created end_message = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='end_message', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+0.0562 	EXP 	welcome_message: autoDraw = True
+0.6753 	DATA 	Mouse: Left button down, pos=(630,473)
+0.8071 	DATA 	Mouse:  Left button up, pos=(630,473)
+1.2135 	EXP 	Device response: <KeyPress from None: t=1.0290724999940721, value=space, duration=None>
+1.2137 	EXP 	Device response: <KeyPress from None: t=1.0290724999940721, value=space, duration=0.1282365410006605>
+1.2172 	EXP 	Imported resources/loopTest.csv as conditions, 2 conditions, 1 params
+1.2174 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'set_img': 'resources/images/QUERY1.jpg', 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+1.2522 	DATA 	Keypress: space
+1.2556 	EXP 	welcome_message: autoDraw = False
+1.2556 	EXP 	image: image = 'resources/images/QUERY1.jpg'
+1.2556 	EXP 	image: autoDraw = True
+6.7878 	EXP 	Device response: <KeyPress from None: t=6.781990540999686, value=escape, duration=None>
+6.8290 	DATA 	Keypress: escape
+6.8602 	EXP 	Device response: <KeyPress from None: t=6.781990540999686, value=escape, duration=0.07590887499100063>
+6.8603 	EXP 	pilot_study: status = STOPPED
+6.8681 	EXP 	image: autoDraw = False
+6.8681 	EXP 	pilot_study: status = STOPPED
+6.8694 	INFO 	saved data to '/Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/_pilot_study_2025-06-27_12h48.40.622.csv'
+6.8699 	INFO 	saved data to /Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/_pilot_study_2025-06-27_12h48.40.622.psydat
+6.9971 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+6.9972 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

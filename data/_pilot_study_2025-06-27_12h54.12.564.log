@@ -1,0 +1,148 @@
+18.1158 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+18.4013 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+21.0412 	INFO 	Loaded monitor calibration from ['2025_06_12 14:42']
+21.1761 	INFO 	Using renderer 'Apple M1 Pro' for graphics
+21.1761 	INFO 	OpenGL version supported by driver is 2..
+21.2091 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x155c93be0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x155c93b80>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x155d206d0>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(260.0), np.float64(224.5)], screen=0, size=array([2560, 1440]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+21.2091 	EXP 	window1: backgroundImage = ''
+21.2091 	EXP 	window1: backgroundFit = 'none'
+21.9700 	INFO 	keyboard.Keyboard is using ptb backend.
+22.1594 	INFO 	keyboard.Keyboard is using ptb backend.
+22.2488 	INFO 	keyboard.Keyboard is using ptb backend.
+22.2489 	EXP 	pilot_study: status = STARTED
+22.2933 	EXP 	Created welcome_message = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='welcome_message', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+22.3117 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=np.False_, flipVert=np.False_, image='default.png', interpolate=True, mask=None, maskParams=None, name='image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 1.]), texRes=128.0, units='height', win=Window(...))
+22.3125 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+22.3167 	EXP 	Created end_message = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='end_message', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+0.0531 	EXP 	welcome_message: autoDraw = True
+4.1020 	DATA 	Mouse: Left button down, pos=(722,602)
+4.1847 	DATA 	Mouse:  Left button up, pos=(722,602)
+4.9219 	EXP 	Device response: <KeyPress from None: t=4.7353947079973295, value=space, duration=None>
+4.9221 	EXP 	Device response: <KeyPress from None: t=4.7353947079973295, value=space, duration=0.07198783299827483>
+4.9257 	EXP 	Imported resources/loopTest.csv as conditions, 2 conditions, 2 params
+4.9260 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'set_img': 'resources/images/QUERY.jpg', 'correct': np.int64(5), 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+4.9613 	DATA 	Keypress: space
+4.9651 	EXP 	welcome_message: autoDraw = False
+4.9651 	EXP 	image: image = 'resources/images/QUERY.jpg'
+4.9651 	EXP 	image: autoDraw = True
+12.1697 	EXP 	Device response: <KeyPress from None: t=12.165505498996936, value=5, duration=None>
+12.1755 	DATA 	Keypress: 5
+12.1785 	EXP 	image: autoDraw = False
+12.1785 	EXP 	text: autoDraw = True
+12.2342 	EXP 	Device response: <KeyPress from None: t=12.165505498996936, value=5, duration=0.06352337499265559>
+14.1650 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'set_img': 'resources/images/QUERY1.jpg', 'correct': np.int64(5), 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+14.2168 	EXP 	text: autoDraw = False
+14.2168 	EXP 	text: autoDraw = False
+14.2168 	EXP 	image: image = 'resources/images/QUERY1.jpg'
+14.2168 	EXP 	image: autoDraw = True
+19.0525 	EXP 	Device response: <KeyPress from None: t=19.04785783299303, value=2, duration=None>
+19.0551 	DATA 	Keypress: 2
+19.0642 	EXP 	image: autoDraw = False
+19.0642 	EXP 	text: autoDraw = True
+19.1188 	EXP 	Device response: <KeyPress from None: t=19.04785783299303, value=2, duration=0.06727937499817926>
+21.0489 	EXP 	New trial (rep=1, index=0): <Trial 2 (0 in rep 1) data={'set_img': 'resources/images/QUERY.jpg', 'correct': np.int64(5), 'thisN': 2, 'thisTrialN': 0, 'thisRepN': 1}>
+21.0896 	EXP 	text: autoDraw = False
+21.0896 	EXP 	text: autoDraw = False
+21.0896 	EXP 	image: image = 'resources/images/QUERY.jpg'
+21.0896 	EXP 	image: autoDraw = True
+24.9857 	EXP 	Device response: <KeyPress from None: t=24.974482707999414, value=1, duration=None>
+24.9904 	DATA 	Keypress: 1
+24.9980 	EXP 	image: autoDraw = False
+24.9980 	EXP 	text: autoDraw = True
+25.0680 	EXP 	Device response: <KeyPress from None: t=24.974482707999414, value=1, duration=0.09134266599721741>
+26.9841 	EXP 	New trial (rep=1, index=1): <Trial 3 (1 in rep 1) data={'set_img': 'resources/images/QUERY1.jpg', 'correct': np.int64(5), 'thisN': 3, 'thisTrialN': 1, 'thisRepN': 1}>
+27.0244 	EXP 	text: autoDraw = False
+27.0244 	EXP 	text: autoDraw = False
+27.0244 	EXP 	image: image = 'resources/images/QUERY1.jpg'
+27.0244 	EXP 	image: autoDraw = True
+27.6856 	EXP 	Device response: <KeyPress from None: t=27.680011082993587, value=3, duration=None>
+27.6891 	DATA 	Keypress: 3
+27.6982 	EXP 	image: autoDraw = False
+27.6982 	EXP 	text: autoDraw = True
+27.7522 	EXP 	Device response: <KeyPress from None: t=27.680011082993587, value=3, duration=0.06395358299778309>
+29.6828 	EXP 	New trial (rep=2, index=0): <Trial 4 (0 in rep 2) data={'set_img': 'resources/images/QUERY1.jpg', 'correct': np.int64(5), 'thisN': 4, 'thisTrialN': 0, 'thisRepN': 2}>
+29.7217 	EXP 	text: autoDraw = False
+29.7217 	EXP 	text: autoDraw = False
+29.7217 	EXP 	image: image = 'resources/images/QUERY1.jpg'
+29.7217 	EXP 	image: autoDraw = True
+30.0356 	EXP 	Device response: <KeyPress from None: t=30.0333220409957, value=4, duration=None>
+30.0392 	DATA 	Keypress: 4
+30.0482 	EXP 	image: autoDraw = False
+30.0482 	EXP 	text: autoDraw = True
+30.2519 	EXP 	Device response: <KeyPress from None: t=30.0333220409957, value=4, duration=0.2040793749911245>
+32.0339 	EXP 	New trial (rep=2, index=1): <Trial 5 (1 in rep 2) data={'set_img': 'resources/images/QUERY.jpg', 'correct': np.int64(5), 'thisN': 5, 'thisTrialN': 1, 'thisRepN': 2}>
+32.0731 	EXP 	text: autoDraw = False
+32.0731 	EXP 	text: autoDraw = False
+32.0731 	EXP 	image: image = 'resources/images/QUERY.jpg'
+32.0731 	EXP 	image: autoDraw = True
+32.3883 	EXP 	Device response: <KeyPress from None: t=32.3856981239951, value=5, duration=None>
+32.3920 	DATA 	Keypress: 5
+32.3983 	EXP 	image: autoDraw = False
+32.3983 	EXP 	text: autoDraw = True
+32.5032 	EXP 	Device response: <KeyPress from None: t=32.3856981239951, value=5, duration=0.11205033399164677>
+34.3844 	EXP 	New trial (rep=3, index=0): <Trial 6 (0 in rep 3) data={'set_img': 'resources/images/QUERY.jpg', 'correct': np.int64(5), 'thisN': 6, 'thisTrialN': 0, 'thisRepN': 3}>
+34.4227 	EXP 	text: autoDraw = False
+34.4227 	EXP 	text: autoDraw = False
+34.4227 	EXP 	image: image = 'resources/images/QUERY.jpg'
+34.4227 	EXP 	image: autoDraw = True
+34.8524 	EXP 	Device response: <KeyPress from None: t=34.845590248994995, value=2, duration=None>
+34.8559 	DATA 	Keypress: 2
+34.8651 	EXP 	image: autoDraw = False
+34.8651 	EXP 	text: autoDraw = True
+34.9686 	EXP 	Device response: <KeyPress from None: t=34.845590248994995, value=2, duration=0.11606833399855532>
+36.8507 	EXP 	New trial (rep=3, index=1): <Trial 7 (1 in rep 3) data={'set_img': 'resources/images/QUERY1.jpg', 'correct': np.int64(5), 'thisN': 7, 'thisTrialN': 1, 'thisRepN': 3}>
+36.8920 	EXP 	text: autoDraw = False
+36.8920 	EXP 	text: autoDraw = False
+36.8920 	EXP 	image: image = 'resources/images/QUERY1.jpg'
+36.8920 	EXP 	image: autoDraw = True
+37.4400 	EXP 	Device response: <KeyPress from None: t=37.43554229098663, value=1, duration=None>
+37.4439 	DATA 	Keypress: 1
+37.4482 	EXP 	image: autoDraw = False
+37.4482 	EXP 	text: autoDraw = True
+37.4828 	EXP 	Device response: <KeyPress from None: t=37.43554229098663, value=1, duration=0.04403291700873524>
+39.4333 	EXP 	New trial (rep=4, index=0): <Trial 8 (0 in rep 4) data={'set_img': 'resources/images/QUERY.jpg', 'correct': np.int64(5), 'thisN': 8, 'thisTrialN': 0, 'thisRepN': 4}>
+39.4703 	EXP 	text: autoDraw = False
+39.4703 	EXP 	text: autoDraw = False
+39.4703 	EXP 	image: image = 'resources/images/QUERY.jpg'
+39.4703 	EXP 	image: autoDraw = True
+39.9195 	EXP 	Device response: <KeyPress from None: t=39.91621566598769, value=2, duration=None>
+39.9221 	DATA 	Keypress: 2
+39.9248 	EXP 	image: autoDraw = False
+39.9248 	EXP 	text: autoDraw = True
+40.0217 	EXP 	Device response: <KeyPress from None: t=39.91621566598769, value=2, duration=0.10402920799970161>
+41.9168 	EXP 	New trial (rep=4, index=1): <Trial 9 (1 in rep 4) data={'set_img': 'resources/images/QUERY1.jpg', 'correct': np.int64(5), 'thisN': 9, 'thisTrialN': 1, 'thisRepN': 4}>
+41.9555 	EXP 	text: autoDraw = False
+41.9555 	EXP 	text: autoDraw = False
+41.9555 	EXP 	image: image = 'resources/images/QUERY1.jpg'
+41.9555 	EXP 	image: autoDraw = True
+42.3027 	EXP 	Device response: <KeyPress from None: t=42.29333516598854, value=3, duration=None>
+42.3074 	DATA 	Keypress: 3
+42.3157 	EXP 	image: autoDraw = False
+42.3157 	EXP 	text: autoDraw = True
+42.4543 	EXP 	Device response: <KeyPress from None: t=42.29333516598854, value=3, duration=0.15992708300473168>
+44.3145 	EXP 	Imported resources/midLoop.csv as conditions, 5 conditions, 35 params
+44.3151 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'img_query': 'resources/images/medium/med_Q3.jpg', 'img_query_w': np.int64(1024), 'img_query_h': np.int64(768), 'img_query_disp_w': np.float64(0.4), 'img_query_disp_h': np.float64(0.3), 'sam_1': 'resources/images/medium/med_S3_1.jpg', 'sam_1_w': np.int64(350), 'sam_1_h': np.int64(233), 'sam_1_disp_w': np.float64(0.35), 'sam_1_disp_h': np.float64(0.233), 'sam_2': 'resources/images/medium/med_S3_2.jpg', 'sam_2_w': np.int64(1024), 'sam_2_h': np.int64(768), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.2625), 'sam_3': 'resources/images/medium/med_S3_3.jpg', 'sam_3_w': np.int64(1024), 'sam_3_h': np.int64(768), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.2625), 'sam_4': 'resources/images/medium/med_S3_4.jpg', 'sam_4_w': np.int64(350), 'sam_4_h': np.int64(341), 'sam_4_disp_w': np.float64(0.35), 'sam_4_disp_h': np.float64(0.341), 'sam_5': 'resources/images/medium/med_S3_5.jpg', 'sam_5_w': np.int64(3264), 'sam_5_h': np.int64(1840), 'sam_5_disp_w': np.float64(0.35), 'sam_5_disp_h': np.float64(0.197303922), 'img_targ': 'resources/images/medium/med_T3.jpg', 'targ_w': np.int64(1024), 'targ_h': np.int64(768), 'targ_disp_w': np.float64(0.35), 'targ_disp_h': np.float64(0.2625), 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+44.3154 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'img_query': 'resources/images/medium/med_Q4.jpg', 'img_query_w': np.int64(768), 'img_query_h': np.int64(1024), 'img_query_disp_w': np.float64(0.3), 'img_query_disp_h': np.float64(0.4), 'sam_1': 'resources/images/medium/med_S4_1.jpg', 'sam_1_w': np.int64(768), 'sam_1_h': np.int64(1024), 'sam_1_disp_w': np.float64(0.2625), 'sam_1_disp_h': np.float64(0.35), 'sam_2': 'resources/images/medium/med_S4_2.jpg', 'sam_2_w': np.int64(350), 'sam_2_h': np.int64(233), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.233), 'sam_3': 'resources/images/medium/med_S4_3.jpg', 'sam_3_w': np.int64(350), 'sam_3_h': np.int64(197), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.197), 'sam_4': 'resources/images/medium/med_S4_4.jpg', 'sam_4_w': np.int64(768), 'sam_4_h': np.int64(1024), 'sam_4_disp_w': np.float64(0.2625), 'sam_4_disp_h': np.float64(0.35), 'sam_5': 'resources/images/medium/med_S4_5.jpg', 'sam_5_w': np.int64(768), 'sam_5_h': np.int64(1024), 'sam_5_disp_w': np.float64(0.2625), 'sam_5_disp_h': np.float64(0.35), 'img_targ': 'resources/images/medium/med_T4.jpg', 'targ_w': np.int64(768), 'targ_h': np.int64(1024), 'targ_disp_w': np.float64(0.2625), 'targ_disp_h': np.float64(0.35), 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+44.3156 	EXP 	New trial (rep=0, index=2): <Trial 2 (2 in rep 0) data={'img_query': 'resources/images/medium/med_Q5.jpg', 'img_query_w': np.int64(1024), 'img_query_h': np.int64(768), 'img_query_disp_w': np.float64(0.4), 'img_query_disp_h': np.float64(0.3), 'sam_1': 'resources/images/medium/med_S5_1.jpg', 'sam_1_w': np.int64(768), 'sam_1_h': np.int64(1024), 'sam_1_disp_w': np.float64(0.2625), 'sam_1_disp_h': np.float64(0.35), 'sam_2': 'resources/images/medium/med_S5_2.jpg', 'sam_2_w': np.int64(350), 'sam_2_h': np.int64(233), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.233), 'sam_3': 'resources/images/medium/med_S5_3.jpg', 'sam_3_w': np.int64(2592), 'sam_3_h': np.int64(4608), 'sam_3_disp_w': np.float64(0.196875), 'sam_3_disp_h': np.float64(0.35), 'sam_4': 'resources/images/medium/med_S5_4.jpg', 'sam_4_w': np.int64(350), 'sam_4_h': np.int64(208), 'sam_4_disp_w': np.float64(0.35), 'sam_4_disp_h': np.float64(0.208), 'sam_5': 'resources/images/medium/med_S5_5.jpg', 'sam_5_w': np.int64(350), 'sam_5_h': np.int64(233), 'sam_5_disp_w': np.float64(0.35), 'sam_5_disp_h': np.float64(0.233), 'img_targ': 'resources/images/medium/med_T5.jpg', 'targ_w': np.int64(768), 'targ_h': np.int64(1024), 'targ_disp_w': np.float64(0.2625), 'targ_disp_h': np.float64(0.35), 'thisN': 2, 'thisTrialN': 2, 'thisRepN': 0}>
+44.3158 	EXP 	New trial (rep=0, index=3): <Trial 3 (3 in rep 0) data={'img_query': 'resources/images/medium/med_Q1.jpg', 'img_query_w': np.int64(4032), 'img_query_h': np.int64(3024), 'img_query_disp_w': np.float64(0.4), 'img_query_disp_h': np.float64(0.3), 'sam_1': 'resources/images/medium/med_S1_1.jpg', 'sam_1_w': np.int64(768), 'sam_1_h': np.int64(1024), 'sam_1_disp_w': np.float64(0.2625), 'sam_1_disp_h': np.float64(0.35), 'sam_2': 'resources/images/medium/med_S1_2.jpg', 'sam_2_w': np.int64(4032), 'sam_2_h': np.int64(3024), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.2625), 'sam_3': 'resources/images/medium/med_S1_3.jpg', 'sam_3_w': np.int64(4160), 'sam_3_h': np.int64(2340), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.196875), 'sam_4': 'resources/images/medium/med_S1_4.jpg', 'sam_4_w': np.int64(1024), 'sam_4_h': np.int64(768), 'sam_4_disp_w': np.float64(0.35), 'sam_4_disp_h': np.float64(0.2625), 'sam_5': 'resources/images/medium/med_S1_5.jpg', 'sam_5_w': np.int64(1024), 'sam_5_h': np.int64(768), 'sam_5_disp_w': np.float64(0.35), 'sam_5_disp_h': np.float64(0.2625), 'img_targ': 'resources/images/medium/med_T1.jpg', 'targ_w': np.int64(1024), 'targ_h': np.int64(768), 'targ_disp_w': np.float64(0.35), 'targ_disp_h': np.float64(0.2625), 'thisN': 3, 'thisTrialN': 3, 'thisRepN': 0}>
+44.3161 	EXP 	New trial (rep=0, index=4): <Trial 4 (4 in rep 0) data={'img_query': 'resources/images/medium/med_Q2.jpg', 'img_query_w': np.int64(1024), 'img_query_h': np.int64(768), 'img_query_disp_w': np.float64(0.4), 'img_query_disp_h': np.float64(0.3), 'sam_1': 'resources/images/medium/med_S2_1.jpg', 'sam_1_w': np.int64(768), 'sam_1_h': np.int64(1024), 'sam_1_disp_w': np.float64(0.2625), 'sam_1_disp_h': np.float64(0.35), 'sam_2': 'resources/images/medium/med_S2_2.jpg', 'sam_2_w': np.int64(350), 'sam_2_h': np.int64(233), 'sam_2_disp_w': np.float64(0.35), 'sam_2_disp_h': np.float64(0.233), 'sam_3': 'resources/images/medium/med_S2_3.jpg', 'sam_3_w': np.int64(1024), 'sam_3_h': np.int64(768), 'sam_3_disp_w': np.float64(0.35), 'sam_3_disp_h': np.float64(0.2625), 'sam_4': 'resources/images/medium/med_S2_4.jpg', 'sam_4_w': np.int64(350), 'sam_4_h': np.int64(234), 'sam_4_disp_w': np.float64(0.35), 'sam_4_disp_h': np.float64(0.234), 'sam_5': 'resources/images/medium/med_S2_5.jpg', 'sam_5_w': np.int64(1024), 'sam_5_h': np.int64(768), 'sam_5_disp_w': np.float64(0.35), 'sam_5_disp_h': np.float64(0.2625), 'img_targ': 'resources/images/medium/med_T2.jpg', 'targ_w': np.int64(4032), 'targ_h': np.int64(2268), 'targ_disp_w': np.float64(0.35), 'targ_disp_h': np.float64(0.196875), 'thisN': 4, 'thisTrialN': 4, 'thisRepN': 0}>
+44.3242 	EXP 	Imported resources/impLoop.csv as conditions, 5 conditions, 35 params
+44.3246 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'imp_query': 'resources/images/impossible/imp_Q2.jpg', 'imp_query_w': np.int64(3024), 'imp_query_h': np.int64(4032), 'imp_query_disp_w': np.float64(0.3), 'imp_query_disp_h': np.float64(0.4), 'imp1': 'resources/images/impossible/imp_S2_1.jpg', 'imp1_w': np.int64(350), 'imp1_h': np.int64(224), 'imp1_disp_w': np.float64(0.35), 'imp1_disp_h': np.float64(0.224), 'imp2': 'resources/images/impossible/imp_S2_2.JPEG', 'imp2_w': np.int64(3840), 'imp2_h': np.int64(2160), 'imp2_disp_w': np.float64(0.35), 'imp2_disp_h': np.float64(0.196875), 'imp3': 'resources/images/impossible/imp_S2_3.jpg', 'imp3_w': np.int64(768), 'imp3_h': np.int64(1024), 'imp3_disp_w': np.float64(0.2625), 'imp3_disp_h': np.float64(0.35), 'imp4': 'resources/images/impossible/imp_S2_4.jpg', 'imp4_w': np.int64(350), 'imp4_h': np.int64(233), 'imp4_disp_w': np.float64(0.35), 'imp4_disp_h': np.float64(0.166428571), 'imp5': 'resources/images/impossible/imp_S2_5.jpg', 'imp5_w': np.int64(768), 'imp5_h': np.int64(1024), 'imp5_disp_w': np.float64(0.2625), 'imp5_disp_h': np.float64(0.35), 'imp_targ': 'resources/images/impossible/imp_T2.jpg', 'imp_targ_w': np.int64(4032), 'imp_targ_h': np.int64(3024), 'imp_targ_disp_w': np.float64(0.35), 'imp_targ_disp_h': np.float64(0.2625), 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+44.3249 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'imp_query': 'resources/images/impossible/imp_Q4.jpg', 'imp_query_w': np.int64(4032), 'imp_query_h': np.int64(3024), 'imp_query_disp_w': np.float64(0.4), 'imp_query_disp_h': np.float64(0.3), 'imp1': 'resources/images/impossible/imp_S4_1.jpg', 'imp1_w': np.int64(1024), 'imp1_h': np.int64(768), 'imp1_disp_w': np.float64(0.35), 'imp1_disp_h': np.float64(0.2625), 'imp2': 'resources/images/impossible/imp_S4_2.jpg', 'imp2_w': np.int64(768), 'imp2_h': np.int64(1024), 'imp2_disp_w': np.float64(0.2625), 'imp2_disp_h': np.float64(0.35), 'imp3': 'resources/images/impossible/imp_S4_3.jpg', 'imp3_w': np.int64(1024), 'imp3_h': np.int64(768), 'imp3_disp_w': np.float64(0.35), 'imp3_disp_h': np.float64(0.2625), 'imp4': 'resources/images/impossible/imp_S4_4.jpg', 'imp4_w': np.int64(1024), 'imp4_h': np.int64(768), 'imp4_disp_w': np.float64(0.35), 'imp4_disp_h': np.float64(0.1875), 'imp5': 'resources/images/impossible/imp_S4_5.jpg', 'imp5_w': np.int64(3024), 'imp5_h': np.int64(4032), 'imp5_disp_w': np.float64(0.2625), 'imp5_disp_h': np.float64(0.35), 'imp_targ': 'resources/images/impossible/imp_T4.jpg', 'imp_targ_w': np.int64(4032), 'imp_targ_h': np.int64(3024), 'imp_targ_disp_w': np.float64(0.35), 'imp_targ_disp_h': np.float64(0.2625), 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+44.3252 	EXP 	New trial (rep=0, index=2): <Trial 2 (2 in rep 0) data={'imp_query': 'resources/images/impossible/imp_Q5.jpg', 'imp_query_w': np.int64(1024), 'imp_query_h': np.int64(768), 'imp_query_disp_w': np.float64(0.4), 'imp_query_disp_h': np.float64(0.3), 'imp1': 'resources/images/impossible/imp_S5_1.jpg', 'imp1_w': np.int64(1024), 'imp1_h': np.int64(768), 'imp1_disp_w': np.float64(0.35), 'imp1_disp_h': np.float64(0.2625), 'imp2': 'resources/images/impossible/imp_S5_2.jpg', 'imp2_w': np.int64(764), 'imp2_h': np.int64(1024), 'imp2_disp_w': np.float64(0.261132813), 'imp2_disp_h': np.float64(0.35), 'imp3': 'resources/images/impossible/imp_S5_3.jpg', 'imp3_w': np.int64(350), 'imp3_h': np.int64(233), 'imp3_disp_w': np.float64(0.35), 'imp3_disp_h': np.float64(0.233), 'imp4': 'resources/images/impossible/imp_S5_4.jpg', 'imp4_w': np.int64(1024), 'imp4_h': np.int64(768), 'imp4_disp_w': np.float64(0.35), 'imp4_disp_h': np.float64(0.1875), 'imp5': 'resources/images/impossible/imp_S5_5.jpg', 'imp5_w': np.int64(350), 'imp5_h': np.int64(233), 'imp5_disp_w': np.float64(0.35), 'imp5_disp_h': np.float64(0.233), 'imp_targ': 'resources/images/impossible/imp_T5.jpg', 'imp_targ_w': np.int64(1024), 'imp_targ_h': np.int64(768), 'imp_targ_disp_w': np.float64(0.35), 'imp_targ_disp_h': np.float64(0.2625), 'thisN': 2, 'thisTrialN': 2, 'thisRepN': 0}>
+44.3255 	EXP 	New trial (rep=0, index=3): <Trial 3 (3 in rep 0) data={'imp_query': 'resources/images/impossible/imp_Q1.jpg', 'imp_query_w': np.int64(2160), 'imp_query_h': np.int64(2160), 'imp_query_disp_w': np.float64(0.4), 'imp_query_disp_h': np.float64(0.4), 'imp1': 'resources/images/impossible/imp_S1_1.jpg', 'imp1_w': np.int64(768), 'imp1_h': np.int64(1024), 'imp1_disp_w': np.float64(0.2625), 'imp1_disp_h': np.float64(0.35), 'imp2': 'resources/images/impossible/imp_S1_2.jpg', 'imp2_w': np.int64(768), 'imp2_h': np.int64(1024), 'imp2_disp_w': np.float64(0.2625), 'imp2_disp_h': np.float64(0.35), 'imp3': 'resources/images/impossible/imp_S1_3.jpg', 'imp3_w': np.int64(1024), 'imp3_h': np.int64(768), 'imp3_disp_w': np.float64(0.35), 'imp3_disp_h': np.float64(0.2625), 'imp4': 'resources/images/impossible/imp_S1_4.JPEG', 'imp4_w': np.int64(3840), 'imp4_h': np.int64(2160), 'imp4_disp_w': np.float64(0.35), 'imp4_disp_h': np.float64(0.140625), 'imp5': 'resources/images/impossible/imp_S1_5.jpg', 'imp5_w': np.int64(768), 'imp5_h': np.int64(1024), 'imp5_disp_w': np.float64(0.2625), 'imp5_disp_h': np.float64(0.35), 'imp_targ': 'resources/images/impossible/imp_T1.jpg', 'imp_targ_w': np.int64(2160), 'imp_targ_h': np.int64(2160), 'imp_targ_disp_w': np.float64(0.35), 'imp_targ_disp_h': np.float64(0.35), 'thisN': 3, 'thisTrialN': 3, 'thisRepN': 0}>
+44.3258 	EXP 	New trial (rep=0, index=4): <Trial 4 (4 in rep 0) data={'imp_query': 'resources/images/impossible/imp_Q3.jpg', 'imp_query_w': np.int64(3840), 'imp_query_h': np.int64(2160), 'imp_query_disp_w': np.float64(0.4), 'imp_query_disp_h': np.float64(0.225), 'imp1': 'resources/images/impossible/imp_S3_1.JPEG', 'imp1_w': np.int64(1920), 'imp1_h': np.int64(1080), 'imp1_disp_w': np.float64(0.35), 'imp1_disp_h': np.float64(0.196875), 'imp2': 'resources/images/impossible/imp_S3_2.jpg', 'imp2_w': np.int64(5344), 'imp2_h': np.int64(3006), 'imp2_disp_w': np.float64(0.35), 'imp2_disp_h': np.float64(0.196875), 'imp3': 'resources/images/impossible/imp_S3_3.JPEG', 'imp3_w': np.int64(3840), 'imp3_h': np.int64(2160), 'imp3_disp_w': np.float64(0.35), 'imp3_disp_h': np.float64(0.196875), 'imp4': 'resources/images/impossible/imp_S3_4.JPEG', 'imp4_w': np.int64(3840), 'imp4_h': np.int64(2160), 'imp4_disp_w': np.float64(0.35), 'imp4_disp_h': np.float64(0.140625), 'imp5': 'resources/images/impossible/imp_S3_5.JPEG', 'imp5_w': np.int64(3840), 'imp5_h': np.int64(2160), 'imp5_disp_w': np.float64(0.35), 'imp5_disp_h': np.float64(0.196875), 'imp_targ': 'resources/images/impossible/imp_T3.jpg', 'imp_targ_w': np.int64(2160), 'imp_targ_h': np.int64(3840), 'imp_targ_disp_w': np.float64(0.196875), 'imp_targ_disp_h': np.float64(0.35), 'thisN': 4, 'thisTrialN': 4, 'thisRepN': 0}>
+44.3303 	EXP 	text: autoDraw = False
+44.3303 	EXP 	text: autoDraw = False
+44.3303 	EXP 	end_message: autoDraw = True
+44.7371 	EXP 	Device response: <KeyPress from None: t=44.72916862399143, value=escape, duration=None>
+44.7636 	DATA 	Keypress: escape
+44.8354 	EXP 	Device response: <KeyPress from None: t=44.72916862399143, value=escape, duration=0.10370383400004357>
+44.8355 	EXP 	pilot_study: status = STOPPED
+44.8488 	EXP 	end_message: autoDraw = False
+44.8489 	EXP 	pilot_study: status = STOPPED
+44.8550 	INFO 	saved data to '/Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/_pilot_study_2025-06-27_12h54.12.564.csv'
+44.8564 	INFO 	saved data to /Users/marcogiven/Desktop/projects/S25_SURE/colorStudyPilot/data/_pilot_study_2025-06-27_12h54.12.564.psydat
+44.9867 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+44.9867 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+44.9867 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
