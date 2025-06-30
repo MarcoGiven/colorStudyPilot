@@ -1808,27 +1808,43 @@ function EndScreenRoutineBegin(snapshot) {
     routineTimer.reset();
     EndScreenMaxDurationReached = false;
     // update component parameters for each repeat
-    // Prevent default CSV download
     psychoJS._saveResults = false;
     
-    // Get column headers
+    // Get all unique keys from trial data
     const allKeys = [...new Set(psychoJS._experiment._trialsData.flatMap(d => Object.keys(d)))];
     
-    // Build rows: first the header, then each row of values in consistent order
-    let csvData = allKeys.join(',') + '\n' + psychoJS._experiment._trialsData.map(row =>
+    // Build CSV rows: header + rows
+    let csvRows = psychoJS._experiment._trialsData.map(row =>
       allKeys.map(k => {
         let val = row[k];
         if (typeof val === 'string') {
-          // Escape quotes and commas
           val = '"' + val.replace(/"/g, '""') + '"';
         }
         return val ?? '';
       }).join(',')
-    ).join('\n');
+    );
     
-    // Send to DataPipe
+    // Compute accuracy and RT summary
+    let accKey = allKeys.find(k => k.endsWith('.corr') || k.toLowerCase().includes('corr'));
+    let rtKey = allKeys.find(k => k.endsWith('.rt') || k.toLowerCase().includes('rt'));
+    
+    let accVals = psychoJS._experiment._trialsData.map(row => parseFloat(row[accKey])).filter(v => !isNaN(v));
+    let rtVals = psychoJS._experiment._trialsData.map(row => parseFloat(row[rtKey])).filter(v => !isNaN(v));
+    
+    let meanAcc = accVals.length ? (accVals.reduce((a, b) => a + b, 0) / accVals.length).toFixed(4) : 'NA';
+    let meanRT = rtVals.length ? (rtVals.reduce((a, b) => a + b, 0) / rtVals.length).toFixed(4) : 'NA';
+    
+    // Add summary rows
+    csvRows.push(`"SUMMARY","mean_accuracy",${meanAcc}`);
+    csvRows.push(`"SUMMARY","mean_rt",${meanRT}`);
+    
+    // Final CSV string
+    let csvData = allKeys.join(',') + '\n' + csvRows.join('\n');
+    
+    // Generate filename
     let filename = psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime + '.csv';
     
+    // Send to DataPipe
     fetch('https://pipe.jspsych.org/api/data', {
       method: 'POST',
       headers: {
@@ -1841,7 +1857,7 @@ function EndScreenRoutineBegin(snapshot) {
         data: csvData,
       }),
     }).then(response => response.json()).then(data => {
-      console.log("DataPipe response:", data);
+      console.log('DataPipe response:', data);
       quitPsychoJS();
     });
     EndScreenMaxDuration = null
