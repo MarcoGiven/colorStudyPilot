@@ -1,4 +1,4 @@
-﻿/******************** 
+/******************** 
  * Pilot_Study *
  ********************/
 
@@ -147,7 +147,6 @@ else{
 }
 
 
-
 flowScheduler.add(EndScreenRoutineBegin());
 flowScheduler.add(EndScreenRoutineEachFrame());
 flowScheduler.add(EndScreenRoutineEnd());
@@ -168,11 +167,11 @@ psychoJS.start({
     {'name': 'resources/images/easy/easy_4.png', 'path': 'resources/images/easy/easy_4.png'},
     {'name': 'resources/images/easy/easy_5.png', 'path': 'resources/images/easy/easy_5.png'},
     {'name': 'resources/loopTest.csv', 'path': 'resources/loopTest.csv'},
-    {'name': 'resources/images/m1.jpg', 'path': 'resources/images/m1.jpg'},
-    {'name': 'resources/images/m2.jpg', 'path': 'resources/images/m2.jpg'},
-    {'name': 'resources/images/m3.jpg', 'path': 'resources/images/m3.jpg'},
-    {'name': 'resources/images/m4.jpg', 'path': 'resources/images/m4.jpg'},
-    {'name': 'resources/images/m5.jpg', 'path': 'resources/images/m5.jpg'},
+    {'name': 'resources/images/m1.png', 'path': 'resources/images/m1.png'},
+    {'name': 'resources/images/m2.png', 'path': 'resources/images/m2.png'},
+    {'name': 'resources/images/m3.png', 'path': 'resources/images/m3.png'},
+    {'name': 'resources/images/m4.png', 'path': 'resources/images/m4.png'},
+    {'name': 'resources/images/m5.png', 'path': 'resources/images/m5.png'},
     {'name': 'resources/hardTest.csv', 'path': 'resources/hardTest.csv'},
     {'name': 'resources/images/hard/hard_1.png', 'path': 'resources/images/hard/hard_1.png'},
     {'name': 'resources/images/hard/hard_2.png', 'path': 'resources/images/hard/hard_2.png'},
@@ -180,11 +179,11 @@ psychoJS.start({
     {'name': 'resources/images/hard/hard_4.png', 'path': 'resources/images/hard/hard_4.png'},
     {'name': 'resources/images/hard/hard_5.png', 'path': 'resources/images/hard/hard_5.png'},
     {'name': 'resources/impTest.csv', 'path': 'resources/impTest.csv'},
-    {'name': 'resources/images/i1.jpg', 'path': 'resources/images/i1.jpg'},
-    {'name': 'resources/images/i2.jpg', 'path': 'resources/images/i2.jpg'},
-    {'name': 'resources/images/i3.jpg', 'path': 'resources/images/i3.jpg'},
-    {'name': 'resources/images/i4.jpg', 'path': 'resources/images/i4.jpg'},
-    {'name': 'resources/images/i5.jpg', 'path': 'resources/images/i5.jpg'},
+    {'name': 'resources/images/i1.png', 'path': 'resources/images/i1.png'},
+    {'name': 'resources/images/i2.png', 'path': 'resources/images/i2.png'},
+    {'name': 'resources/images/i3.png', 'path': 'resources/images/i3.png'},
+    {'name': 'resources/images/i4.png', 'path': 'resources/images/i4.png'},
+    {'name': 'resources/images/i5.png', 'path': 'resources/images/i5.png'},
     {'name': 'default.png', 'path': 'https://pavlovia.org/assets/default/default.png'},
   ]
 });
@@ -211,16 +210,10 @@ async function updateInfo() {
 
   // add info from the URL:
   util.addInfoFromUrl(expInfo);
-  //the below is commented out for debugging: ctrl+f DEBUG to see all comments
-  //upon completion, redirects participants to another site
-  //psychoJS.setRedirectUrls('http://localhost', '');
   
-  if(pilot_study_or_not){
-    psychoJS.experiment.dataFileName = (("." + "/") + `data/${expName}_${expInfo["date"]}_${pilotInfo["number_of_images_shown"]}_${pilotInfo["number_of_sets_shown"]}_${pilotInfo["image_matching_difficulty"]}`);
-  }
-  else{
-   psychoJS.experiment.dataFileName = (("." + "/") + `data/${expInfo["participant"]}_${expName}_${expInfo["date"]}`);
-  }
+
+  
+  psychoJS.experiment.dataFileName = (("." + "/") + `data/${expInfo["participant"]}_${expName}_${expInfo["date"]}`);
   psychoJS.experiment.field_separator = '\t';
 
 
@@ -259,9 +252,6 @@ var globalClock;
 var routineTimer;
 async function experimentInit() {
   // Initialize components for Routine "WelcomeScreen"
-
-  //to see what it would look like w/image amount created by URL params, look at Fixed pilot img creation w/url parameters commit
-  //in Salwa-Modifications
   WelcomeScreenClock = new util.Clock();
   welcome_message = new visual.TextStim({
     win: psychoJS.window,
