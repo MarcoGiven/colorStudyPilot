@@ -68,7 +68,7 @@
     <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
     <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
     <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
-    <Param val="0" valType="code" updates="None" name="runMode"/>
+    <Param val="1" valType="code" updates="None" name="runMode"/>
     <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
@@ -732,7 +732,7 @@
     <Routine name="Next_Set"/>
     <LoopInitiator loopType="TrialHandler" name="trialsMed">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('set_img', 'resources/images/m1.jpg'), ('correct', np.int64(3))]), OrderedDict([('set_img', 'resources/images/m2.jpg'), ('correct', np.int64(1))]), OrderedDict([('set_img', 'resources/images/m3.jpg'), ('correct', np.int64(3))]), OrderedDict([('set_img', 'resources/images/m4.jpg'), ('correct', np.int64(6))]), OrderedDict([('set_img', 'resources/images/m5.jpg'), ('correct', np.int64(4))])]" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('set_img', 'resources/images/m1.png'), ('correct', np.int64(3))]), OrderedDict([('set_img', 'resources/images/m2.png'), ('correct', np.int64(1))]), OrderedDict([('set_img', 'resources/images/m3.png'), ('correct', np.int64(3))]), OrderedDict([('set_img', 'resources/images/m4.png'), ('correct', np.int64(6))]), OrderedDict([('set_img', 'resources/images/m5.png'), ('correct', np.int64(4))])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="resources/loopTest.csv" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
@@ -762,7 +762,7 @@
     <Routine name="Next_Set"/>
     <LoopInitiator loopType="TrialHandler" name="trialsImp">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('set_img2', 'resources/images/i1.jpg'), ('correct2', np.int64(2))]), OrderedDict([('set_img2', 'resources/images/i2.jpg'), ('correct2', np.int64(1))]), OrderedDict([('set_img2', 'resources/images/i3.jpg'), ('correct2', np.int64(4))]), OrderedDict([('set_img2', 'resources/images/i4.jpg'), ('correct2', np.int64(3))]), OrderedDict([('set_img2', 'resources/images/i5.jpg'), ('correct2', np.int64(5))])]" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('set_img2', 'resources/images/i1.png'), ('correct2', np.int64(2))]), OrderedDict([('set_img2', 'resources/images/i2.png'), ('correct2', np.int64(1))]), OrderedDict([('set_img2', 'resources/images/i3.png'), ('correct2', np.int64(4))]), OrderedDict([('set_img2', 'resources/images/i4.png'), ('correct2', np.int64(3))]), OrderedDict([('set_img2', 'resources/images/i5.png'), ('correct2', np.int64(5))])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="resources/impTest.csv" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
