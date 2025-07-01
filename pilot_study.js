@@ -13,7 +13,7 @@ const {round} = util;
 //Prolific's default one is:
 //?PROLIFIC_PID={{%PROLIFIC_PID%}}&STUDY_ID={{%STUDY_ID%}}&SESSION_ID={{%SESSION_ID%}}
 const query_str = new URLSearchParams(window.location.search);
-//we will also expect ?IVal=5&DVal=2.5&GVal=0
+//we will also expect ?IVal=4&DVal=2.5&GVal=0
 var pilot_study_or_not = false;
 
 // store info about the experiment session:
@@ -205,6 +205,7 @@ psychoJS.start({
     {'name': 'resources/loopTest.csv', 'path': 'resources/loopTest.csv'},
     {'name': 'resources/hardTest.csv', 'path': 'resources/hardTest.csv'},
     {'name': 'resources/impTest.csv', 'path': 'resources/impTest.csv'},
+    {'name': "resources/images/6_matches/m1.png", 'path': "resources/images/6_matches/m1.png"},
     {'name': "resources/images/6_matches/m2.png", 'path': "resources/images/6_matches/m2.png"},
     {'name': "resources/images/6_matches/m3.png", 'path': "resources/images/6_matches/m3.png"},
     {'name': "resources/images/6_matches/m4.png", 'path': "resources/images/6_matches/m4.png"},
@@ -224,7 +225,26 @@ psychoJS.start({
     {'name': "resources/images/6_matches/i3.png", 'path': "resources/images/6_matches/i3.png"},
     {'name': "resources/images/6_matches/i4.png", 'path': "resources/images/6_matches/i4.png"},
     {'name': "resources/images/6_matches/i5.png", 'path': "resources/images/6_matches/i5.png"},
-    {'name': "resources/images/6_matches/m1.png", 'path': "resources/images/6_matches/m1.png"},
+    {'name': "resources/images/4_matches/m1.png", 'path': "resources/images/4_matches/m1.png"},
+    {'name': "resources/images/4_matches/m2.png", 'path': "resources/images/4_matches/m2.png"},
+    {'name': "resources/images/4_matches/m3.png", 'path': "resources/images/4_matches/m3.png"},
+    {'name': "resources/images/4_matches/m4.png", 'path': "resources/images/4_matches/m4.png"},
+    {'name': "resources/images/4_matches/m5.png", 'path': "resources/images/4_matches/m5.png"},
+    {'name': "resources/images/4_matches/easy_1.png", 'path': "resources/images/4_matches/easy_1.png"},
+    {'name': "resources/images/4_matches/easy_2.png", 'path': "resources/images/4_matches/easy_2.png"},
+    {'name': "resources/images/4_matches/easy_3.png", 'path': "resources/images/4_matches/easy_3.png"},
+    {'name': "resources/images/4_matches/easy_4.png", 'path': "resources/images/4_matches/easy_4.png"},
+    {'name': "resources/images/4_matches/easy_5.png", 'path': "resources/images/4_matches/hard_1.png"},
+    {'name': "resources/images/4_matches/hard_1.png", 'path': "resources/images/4_matches/hard_1.png"},
+    {'name': "resources/images/4_matches/hard_2.png", 'path': "resources/images/4_matches/hard_2.png"},
+    {'name': "resources/images/4_matches/hard_3.png", 'path': "resources/images/4_matches/hard_3.png"},
+    {'name': "resources/images/4_matches/hard_4.png", 'path': "resources/images/4_matches/hard_4.png"},
+    {'name': "resources/images/4_matches/hard_5.png", 'path': "resources/images/4_matches/hard_5.png"},
+    {'name': "resources/images/4_matches/i1.png", 'path': "resources/images/4_matches/i1.png"},
+    {'name': "resources/images/4_matches/i2.png", 'path': "resources/images/4_matches/i2.png"},
+    {'name': "resources/images/4_matches/i3.png", 'path': "resources/images/4_matches/i3.png"},
+    {'name': "resources/images/4_matches/i4.png", 'path': "resources/images/4_matches/i4.png"},
+    {'name': "resources/images/4_matches/i5.png", 'path': "resources/images/4_matches/i5.png"},
     {'name': 'default.png', 'path': 'https://pavlovia.org/assets/default/default.png'},
   ]
 });
