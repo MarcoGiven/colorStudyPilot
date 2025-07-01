@@ -2,7 +2,7 @@
  * Pilot_Study *
  ********************/
 
-import { core, data, sound, util, visual, hardware } from './lib/psychojs-2024.2.4.js';
+import { core, data, sound, util, visual, hardware } from './lib/psychojs-2025.1.1.js';
 const { PsychoJS } = core;
 const { TrialHandler, MultiStairHandler } = data;
 const { Scheduler } = util;
@@ -10,13 +10,46 @@ const { Scheduler } = util;
 const { abs, sin, cos, PI: pi, sqrt } = Math;
 const { round } = util;
 
+//below gets the query string from the search bar of the current window
+//Prolific's default one is:
+//?PROLIFIC_PID={{%PROLIFIC_PID%}}&STUDY_ID={{%STUDY_ID%}}&SESSION_ID={{%SESSION_ID%}}
+const query_str = new URLSearchParams(window.location.search);
+//we will also expect &NUM_IMAGES={NUM_IMAGES}, &NUM_SETS={NUM_SETS}, &DIFFICULTY={DIFFICULTY
+var pilot_study_or_not = false;
 
 // store info about the experiment session:
 let expName = 'pilot_study';  // from the Builder filename that created this script
+let pilotInfo = {
+	'number_of_images_shown': query_str.get('NUM_IMAGES'),
+	'number_of_sets_shown': query_str.get('NUM_SETS'),
+	'image_matching_difficulty': query_str.get('DIFFICULTY'),
+}; //difficulty is either EASY MED HARD or IMP
+
+//the below is commented out for debugging: ctrl+f DEBUG to see all comments
+//sets the experimental information equal to the URL parameters in the query string
+/*let expInfo = {
+    'participant_prolific_id': query_str.get('PROLIFIC_PID'),
+    'participant_study_id': query_str.get('STUDY_ID'),
+    'participant_session_id': query_str.get('SESSION_ID'),
+};*/ //replaced the default stuff with the values from the URL parameters
+
 let expInfo = {
     'participant': '',
     'session': '001',
 };
+
+if (pilotInfo.image_matching_difficulty != null || pilotInfo.number_of_sets_shown != null
+	|| pilotInfo.number_of_images_shown != null) {
+	//the url search parameters for the pilot aren't empty
+	pilot_study_or_not = true;
+
+    pilotInfo.number_of_images_shown = Number(pilotInfo.number_of_images_shown);
+    pilotInfo.number_of_sets_shown = Number(pilotInfo.number_of_sets_shown);
+
+	Object.assign(expInfo, pilotInfo);
+	console.log(expInfo);
+	//merge the pilot info to the experiment info for logging and print to console
+}
 
 // Start code blocks for 'Before Experiment'
 // init psychoJS:
@@ -56,39 +89,63 @@ flowScheduler.add(taskRoutineBegin());
 flowScheduler.add(taskRoutineEachFrame());
 flowScheduler.add(taskRoutineEnd());
 const trialsEasyLoopScheduler = new Scheduler(psychoJS);
-flowScheduler.add(trialsEasyLoopBegin(trialsEasyLoopScheduler));
-flowScheduler.add(trialsEasyLoopScheduler);
-flowScheduler.add(trialsEasyLoopEnd);
-
-
-
-flowScheduler.add(Next_SetRoutineBegin());
-flowScheduler.add(Next_SetRoutineEachFrame());
-flowScheduler.add(Next_SetRoutineEnd());
 const trialsMedLoopScheduler = new Scheduler(psychoJS);
-flowScheduler.add(trialsMedLoopBegin(trialsMedLoopScheduler));
-flowScheduler.add(trialsMedLoopScheduler);
-flowScheduler.add(trialsMedLoopEnd);
-
-
-
-flowScheduler.add(Next_SetRoutineBegin());
-flowScheduler.add(Next_SetRoutineEachFrame());
-flowScheduler.add(Next_SetRoutineEnd());
 const trialsHardLoopScheduler = new Scheduler(psychoJS);
-flowScheduler.add(trialsHardLoopBegin(trialsHardLoopScheduler));
-flowScheduler.add(trialsHardLoopScheduler);
-flowScheduler.add(trialsHardLoopEnd);
-
-
-
-flowScheduler.add(Next_SetRoutineBegin());
-flowScheduler.add(Next_SetRoutineEachFrame());
-flowScheduler.add(Next_SetRoutineEnd());
 const trialsImpLoopScheduler = new Scheduler(psychoJS);
-flowScheduler.add(trialsImpLoopBegin(trialsImpLoopScheduler));
-flowScheduler.add(trialsImpLoopScheduler);
-flowScheduler.add(trialsImpLoopEnd);
+
+//based on URL parameters, one of the below tasks will run
+if(pilot_study_or_not){
+  //if it is a pilot, check the difficulty
+  let pilot_difficulty = pilotInfo.image_matching_difficulty
+
+  if(pilot_difficulty === "EASY"){
+      flowScheduler.add(trialsEasyLoopBegin(trialsEasyLoopScheduler));
+      flowScheduler.add(trialsEasyLoopScheduler);
+      flowScheduler.add(trialsEasyLoopEnd);
+  }
+  else if(pilot_difficulty === "MED"){
+      flowScheduler.add(trialsMedLoopBegin(trialsMedLoopScheduler));
+      flowScheduler.add(trialsMedLoopScheduler);
+      flowScheduler.add(trialsMedLoopEnd);
+  }
+  else if(pilot_difficulty === "HARD"){
+      flowScheduler.add(trialsHardLoopBegin(trialsHardLoopScheduler));
+      flowScheduler.add(trialsHardLoopScheduler);
+      flowScheduler.add(trialsHardLoopEnd);
+  }
+  else{
+      //impossible
+      flowScheduler.add(trialsImpLoopBegin(trialsImpLoopScheduler));
+      flowScheduler.add(trialsImpLoopScheduler);
+      flowScheduler.add(trialsImpLoopEnd);
+  }
+}
+else{
+  flowScheduler.add(trialsEasyLoopBegin(trialsEasyLoopScheduler));
+  flowScheduler.add(trialsEasyLoopScheduler);
+  flowScheduler.add(trialsEasyLoopEnd);
+
+  flowScheduler.add(Next_SetRoutineBegin());
+  flowScheduler.add(Next_SetRoutineEachFrame());
+  flowScheduler.add(Next_SetRoutineEnd());
+  flowScheduler.add(trialsMedLoopBegin(trialsMedLoopScheduler));
+  flowScheduler.add(trialsMedLoopScheduler);
+  flowScheduler.add(trialsMedLoopEnd);
+
+  flowScheduler.add(Next_SetRoutineBegin());
+  flowScheduler.add(Next_SetRoutineEachFrame());
+  flowScheduler.add(Next_SetRoutineEnd());
+  flowScheduler.add(trialsHardLoopBegin(trialsHardLoopScheduler));
+  flowScheduler.add(trialsHardLoopScheduler);
+  flowScheduler.add(trialsHardLoopEnd);
+
+  flowScheduler.add(Next_SetRoutineBegin());
+  flowScheduler.add(Next_SetRoutineEachFrame());
+  flowScheduler.add(Next_SetRoutineEnd());
+  flowScheduler.add(trialsImpLoopBegin(trialsImpLoopScheduler));
+  flowScheduler.add(trialsImpLoopScheduler);
+  flowScheduler.add(trialsImpLoopEnd);
+}
 
 
 
@@ -105,10 +162,41 @@ psychoJS.start({
   expInfo: expInfo,
   resources: [
     // resources:
+    {'name': "resources/loopTest.csv", 'path': "resources/loopTest.csv"},
+    {"name": "resources/med4Test.csv", "path": "resources/med4Test.csv"},
+    {"name": "resources/med5Test.csv", "path": "resources/med5Test.csv"},
+    {"name": "resources/easy4Test.csv", "path": "resources/easy4Test.csv"},
+    {"name": "resources/easy5Test.csv", "path": "resources/easy5Test.csv"},
+    {"name": "resources/easy8Test.csv", "path": "resources/easy8Test.csv"},
+    {"name": "resources/hard4Test.csv", "path": "resources/hard4Test.csv"},
+    {"name": "resources/hard5Test.csv", "path": "resources/hard5Test.csv"},
+    {"name": "resources/hard8Test.csv", "path": "resources/hard8Test.csv"},
+    {"name": "resources/imp4Test.csv", "path": "resources/imp4Test.csv"},
+    {"name": "resources/imp5Test.csv", "path": "resources/imp5Test.csv"},
     {'name': 'resources/easyTest.csv', 'path': 'resources/easyTest.csv'},
     {'name': 'resources/loopTest.csv', 'path': 'resources/loopTest.csv'},
     {'name': 'resources/hardTest.csv', 'path': 'resources/hardTest.csv'},
     {'name': 'resources/impTest.csv', 'path': 'resources/impTest.csv'},
+    {'name': "resources/images/6_matches/m2.png", 'path': "resources/images/6_matches/m2.png"},
+    {'name': "resources/images/6_matches/m3.png", 'path': "resources/images/6_matches/m3.png"},
+    {'name': "resources/images/6_matches/m4.png", 'path': "resources/images/6_matches/m4.png"},
+    {'name': "resources/images/6_matches/m5.png", 'path': "resources/images/6_matches/m5.png"},
+    {'name': "resources/images/6_matches/easy_1.png", 'path': "resources/images/6_matches/easy_1.png"},
+    {'name': "resources/images/6_matches/easy_2.png", 'path': "resources/images/6_matches/easy_2.png"},
+    {'name': "resources/images/6_matches/easy_3.png", 'path': "resources/images/6_matches/easy_3.png"},
+    {'name': "resources/images/6_matches/easy_4.png", 'path': "resources/images/6_matches/easy_4.png"},
+    {'name': "resources/images/6_matches/easy_5.png", 'path': "resources/images/6_matches/hard_1.png"},
+    {'name': "resources/images/6_matches/hard_1.png", 'path': "resources/images/6_matches/hard_1.png"},
+    {'name': "resources/images/6_matches/hard_2.png", 'path': "resources/images/6_matches/hard_2.png"},
+    {'name': "resources/images/6_matches/hard_3.png", 'path': "resources/images/6_matches/hard_3.png"},
+    {'name': "resources/images/6_matches/hard_4.png", 'path': "resources/images/6_matches/hard_4.png"},
+    {'name': "resources/images/6_matches/hard_5.png", 'path': "resources/images/6_matches/hard_5.png"},
+    {'name': "resources/images/6_matches/i1.png", 'path': "resources/images/6_matches/i1.png"},
+    {'name': "resources/images/6_matches/i2.png", 'path': "resources/images/6_matches/i2.png"},
+    {'name': "resources/images/6_matches/i3.png", 'path': "resources/images/6_matches/i3.png"},
+    {'name': "resources/images/6_matches/i4.png", 'path': "resources/images/6_matches/i4.png"},
+    {'name': "resources/images/6_matches/i5.png", 'path': "resources/images/6_matches/i5.png"},
+    {'name': "resources/images/6_matches/m1.png", 'path': "resources/images/6_matches/m1.png"},
     {'name': 'default.png', 'path': 'https://pavlovia.org/assets/default/default.png'},
   ]
 });
@@ -122,7 +210,7 @@ async function updateInfo() {
   currentLoop = psychoJS.experiment;  // right now there are no loops
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
-  expInfo['psychopyVersion'] = '2024.2.4';
+  expInfo['psychopyVersion'] = '2025.1.1';
   expInfo['OS'] = window.navigator.platform;
 
 
@@ -133,12 +221,22 @@ async function updateInfo() {
   else
     frameDur = 1.0 / 60.0; // couldn't get a reliable measure so guess
 
+  //the below is commented out for debugging: ctrl+f DEBUG to see all commentsAdd commentMore actions
+  //upon completion, redirects participants to another site
+  //psychoJS.setRedirectUrls('http://localhost', '');
+
   // add info from the URL:
   util.addInfoFromUrl(expInfo);
   
 
   
-  psychoJS.experiment.dataFileName = (("." + "/") + `data/${expInfo["participant"]}_${expName}_${expInfo["date"]}`);
+  if(pilot_study_or_not){
+    psychoJS.experiment.dataFileName = (("." + "/") +
+        `data/${expName}_${expInfo["date"]}_${pilotInfo["number_of_images_shown"]}_${pilotInfo["number_of_sets_shown"]}_${pilotInfo["image_matching_difficulty"]}`);
+  }
+  else{
+   psychoJS.experiment.dataFileName = (("." + "/") + `data/${expInfo["participant"]}_${expName}_${expInfo["date"]}`);
+  }
   psychoJS.experiment.field_separator = '\t';
 
 
