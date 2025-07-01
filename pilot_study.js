@@ -16,6 +16,12 @@ const query_str = new URLSearchParams(window.location.search);
 //we will also expect ?IVal=4&DVal=2.5&GVal=0
 var pilot_study_or_not = false;
 
+if(query_str.get("GVal") === "1"){
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.style.filter = "grayscale(100%)";
+  });
+}
+
 // store info about the experiment session:
 let expName = 'pilot_study';  // from the Builder filename that created this script
 let pilotInfo = {
