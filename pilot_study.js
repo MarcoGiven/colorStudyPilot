@@ -18,7 +18,14 @@ var pilot_study_or_not = false;
 
 if(query_str.get("GVal") === "1"){
   document.addEventListener("DOMContentLoaded", () => {
-    document.body.style.filter = "grayscale(100%)";
+    const observer = new MutationObserver(() => {
+      const canvas = document.querySelector("canvas");
+      if(canvas) {
+        canvas.style.filter = "grayscale(100%)";
+        observer.disconnect();
+      }
+    });  
+    observer.observe(document.body, { childList: true, subtree: true });  
   });
 }
 
