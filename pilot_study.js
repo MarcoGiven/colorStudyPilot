@@ -13,16 +13,16 @@ const {round} = util;
 //Prolific's default one is:
 //?PROLIFIC_PID={{%PROLIFIC_PID%}}&STUDY_ID={{%STUDY_ID%}}&SESSION_ID={{%SESSION_ID%}}
 const query_str = new URLSearchParams(window.location.search);
-//we will also expect &NUM_IMAGES={NUM_IMAGES}, &NUM_SETS={NUM_SETS}, &DIFFICULTY={DIFFICULTY
+//we will also expect ?IVal=5&DVal=1&GVal=0
 var pilot_study_or_not = false;
 
 // store info about the experiment session:
 let expName = 'pilot_study';  // from the Builder filename that created this script
 let pilotInfo = {
-	'number_of_images_shown': query_str.get('NUM_IMAGES'),
-	'number_of_sets_shown': query_str.get('NUM_SETS'),
-	'image_matching_difficulty': query_str.get('DIFFICULTY'),
-}; //difficulty is either EASY MED HARD or IMP, images are either 4, 5, 6, or 8
+	'number_of_images_shown': query_str.get('IVal'),
+    'grayscale_or_not': query_str.get('GVal'),
+	'image_matching_difficulty': query_str.get('DVal'),
+}; //images are either 4 or 6, difficulty is either 2.5, 5, 7.5, 10, grayscale is 0 for no and 1 for yes
 
 //the below is commented out for debugging: ctrl+f DEBUG to see all comments
 //sets the experimental information equal to the URL parameters in the query string
@@ -113,44 +113,35 @@ if(pilot_study_or_not){
     hardCsv = "resources/hard4Test.csv"
     impCsv = "resources/imp4Test.csv"
   }
-  else if(pilot_num === 5){
-    easyCsv = "resources/easy5Test.csv"
-    medCsv = "resources/med5Test.csv"
-    hardCsv = "resources/hard5Test.csv"
-    impCsv = "resources/imp5Test.csv"
-  }
-  else if(pilot_num === 6){
+  else{
+    //6 by default
     easyCsv = "resources/easyTest.csv"
     medCsv = "resources/loopTest.csv"
     hardCsv = "resources/hardTest.csv"
     impCsv = "resources/impTest.csv"
   }
-  else{
-    //8 by default
-    easyCsv = "resources/easy8Test.csv"
-    medCsv = "resources/med8Test.csv"
-    hardCsv = "resources/hard8Test.csv"
-    impCsv = "resources/imp8Test.csv"
-  }
 
 
-  if(pilot_difficulty === "EASY"){
+  if(pilot_difficulty === 2.5){
+    //easy mode
       flowScheduler.add(trialsEasyLoopBegin(trialsEasyLoopScheduler));
       flowScheduler.add(trialsEasyLoopScheduler);
       flowScheduler.add(trialsEasyLoopEnd);
   }
-  else if(pilot_difficulty === "MED"){
+  else if(pilot_difficulty === 5){
+    //medium mode
       flowScheduler.add(trialsMedLoopBegin(trialsMedLoopScheduler));
       flowScheduler.add(trialsMedLoopScheduler);
       flowScheduler.add(trialsMedLoopEnd);
   }
-  else if(pilot_difficulty === "HARD"){
+  else if(pilot_difficulty === 7.5){
+    //hard mode
       flowScheduler.add(trialsHardLoopBegin(trialsHardLoopScheduler));
       flowScheduler.add(trialsHardLoopScheduler);
       flowScheduler.add(trialsHardLoopEnd);
   }
   else{
-      //impossible
+      //impossible mode, pilot_difficulty = 10
       flowScheduler.add(trialsImpLoopBegin(trialsImpLoopScheduler));
       flowScheduler.add(trialsImpLoopScheduler);
       flowScheduler.add(trialsImpLoopEnd);
