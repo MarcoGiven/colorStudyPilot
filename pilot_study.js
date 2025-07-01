@@ -13,16 +13,17 @@ const {round} = util;
 //Prolific's default one is:
 //?PROLIFIC_PID={{%PROLIFIC_PID%}}&STUDY_ID={{%STUDY_ID%}}&SESSION_ID={{%SESSION_ID%}}
 const query_str = new URLSearchParams(window.location.search);
-//we will also expect ?IVal=5&DVal=1&GVal=0
+//we will also expect ?IVal=5&DVal=2.5&GVal=0
 var pilot_study_or_not = false;
 
 // store info about the experiment session:
 let expName = 'pilot_study';  // from the Builder filename that created this script
 let pilotInfo = {
-	'number_of_images_shown': query_str.get('IVal'),
-    'grayscale_or_not': query_str.get('GVal'),
-	'image_matching_difficulty': query_str.get('DVal'),
+	'IVal': query_str.get('IVal'),
+    'GVal': query_str.get('GVal'),
+	'DVal': query_str.get('DVal'),
 }; //images are either 4 or 6, difficulty is either 2.5, 5, 7.5, 10, grayscale is 0 for no and 1 for yes
+//where DVal is difficulty value, IVal is number of images and GVal is grayscale or not
 
 //the below is commented out for debugging: ctrl+f DEBUG to see all comments
 //sets the experimental information equal to the URL parameters in the query string
@@ -37,13 +38,13 @@ let expInfo = {
     'session': '001',
 };
 
-if (pilotInfo.image_matching_difficulty != null || pilotInfo.number_of_sets_shown != null
-	|| pilotInfo.number_of_images_shown != null) {
+if (pilotInfo.DVal != null || pilotInfo.GVal != null
+	|| pilotInfo.DVal != null) {
 	//the url search parameters for the pilot aren't empty
 	pilot_study_or_not = true;
 
-    pilotInfo.number_of_images_shown = Number(pilotInfo.number_of_images_shown);
-    pilotInfo.number_of_sets_shown = Number(pilotInfo.number_of_sets_shown);
+    pilotInfo.IVal = Number(pilotInfo.IVal);
+    pilotInfo.DVal = Number(pilotInfo.DVal);
 
 	Object.assign(expInfo, pilotInfo);
 	console.log(expInfo);
@@ -104,8 +105,8 @@ var impCsv
 //based on URL parameters, one of the below tasks will run
 if(pilot_study_or_not){
   //if it is a pilot, check the difficulty, and the number of images
-  let pilot_difficulty = pilotInfo.image_matching_difficulty
-  let pilot_num = pilotInfo.number_of_images_shown
+  let pilot_difficulty = pilotInfo.DVal
+  let pilot_num = pilotInfo.IVal
 
   if(pilot_num === 4){
     easyCsv = "resources/easy4Test.csv"
