@@ -2106,16 +2106,16 @@ function EndScreenRoutineBegin(snapshot) {
     );
 
     let meanAcc = accVals.length
-      ? (accVals.reduce((a, b) => a + b, 0) / accVals.length).toFixed(4)
-      : 'NA';
+      ? (accVals.reduce((a, b) => a + b, 0) / accVals.length).toFixed(4) : 'NA';
 
     let meanRT = rtVals.length
-      ? ((rtVals.reduce((a, b) => a + b, 0) / rtVals.length) * 1000).toFixed(2)
-      : 'NA';
+      ? ((rtVals.reduce((a, b) => a + b, 0) / rtVals.length) * 1000).toFixed(2) : 'NA';
 
     // Append summary rows at the end of csvRows
     csvRows.push(`"SUMMARY","avg_accuracy",${meanAcc}`);
     csvRows.push(`"SUMMARY","avg_rt_ms",${meanRT}`);
+    console.log("meanAcc:", meanAcc);
+    console.log("meanRT:", meanRT);
 
     // Final CSV
     let csvData = allKeys.join(',') + '\n' + csvRows.join('\n');
