@@ -238,31 +238,31 @@ else{
     easyCsv = "resources/easyTest.csv"
     medCsv = "resources/loopTest.csv"
     hardCsv = "resources/hardTest.csv"
-    impCsv = "resources/impTest.csv"
+    impCsv = "resources/impTesit.csv"
   }
   
 
   const difficultyBlocks = [
     {
-      name: "easy",
+      name: "1",
       loopBegin: trialsEasyLoopBegin,
       loopScheduler: trialsEasyLoopScheduler,
       loopEnd: trialsEasyLoopEnd
     },
     {
-      name: "medium",
+      name: "3",
       loopBegin: trialsMedLoopBegin,
       loopScheduler: trialsMedLoopScheduler,
       loopEnd: trialsMedLoopEnd
     },
     {
-      name: "hard",
+      name: "3",
       loopBegin: trialsHardLoopBegin,
       loopScheduler: trialsHardLoopScheduler,
       loopEnd: trialsHardLoopEnd
     },
     {
-      name: "impossible",
+      name: "4",
       loopBegin: trialsImpLoopBegin,
       loopScheduler: trialsImpLoopScheduler,
       loopEnd: trialsImpLoopEnd
