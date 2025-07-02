@@ -238,7 +238,7 @@ else{
     easyCsv = "resources/easyTest.csv"
     medCsv = "resources/loopTest.csv"
     hardCsv = "resources/hardTest.csv"
-    impCsv = "resources/impTesit.csv"
+    impCsv = "resources/impTest.csv"
   }
   
 
