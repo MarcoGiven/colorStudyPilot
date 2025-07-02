@@ -49,7 +49,7 @@ let pilotInfo = {
 };
 
 let expInfo = {
-    'participant': '',
+    'participant': Math.floor(1000 + Math.random() * 9000).toString(),
     'session': '001',
 };
 
@@ -2084,7 +2084,7 @@ function EndScreenRoutineBegin(snapshot) {
     EndScreenMaxDurationReached = false;
     // update component parameters for each repeat
     // Prevent default CSV download
-    // psychoJS._saveResults = false;
+    psychoJS._saveResults = false;
 
     // Collect all keys from trial data
     const allKeys = [...new Set(psychoJS._experiment._trialsData.flatMap(d => Object.keys(d)))];
