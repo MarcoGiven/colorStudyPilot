@@ -2103,17 +2103,17 @@ function EndScreenRoutineBegin(snapshot) {
     const accKey = allKeys.find(k => k.endsWith('.corr') || k.toLowerCase().includes('corr'));
     const rtKey = allKeys.find(k => k.endsWith('.rt') || k.toLowerCase().includes('rt'));
 
-    const accVals = psychoJS._experiment._trialsData.map(row => parseFloat(row[accKey])).filter(v => !isNaN(v));
+    const accVals = accKeys.flatMap(k => psychoJS._experiment._trialsData.map(row => parseFloat(row[k])).filter(v => !isNaN(v)));
 
-    const rtVals = psychoJS._experiment._trialsData.map(row => parseFloat(row[rtKey])).filter(v => !isNaN(v));
+    const rtVals = rtKeys.flatMap(k => psychoJS._experiment._trialsData.map(row => parseFloat(row[k])).filter(v => !isNaN(v)));
 
-    const meanAcc = accVals.length ? (accVals.reduce((a, b) => a + b, 0) / accVals.length).toFixed(4) : 'NA';
+    const avgAcc = accVals.length ? (accVals.reduce((a, b) => a + b, 0) / accVals.length).toFixed(4) : 'NA';
 
-    const meanRT = rtVals.length ? (rtVals.reduce((a, b) => a + b, 0) / rtVals.length).toFixed(4) : 'NA';
+    const avgRT = rtVals.length ? (rtVals.reduce((a, b) => a + b, 0) / rtVals.length).toFixed(4) : 'NA';
 
     // Append summary rows
-    csvRows.push(`"SUMMARY","mean_accuracy",${meanAcc}`);
-    csvRows.push(`"SUMMARY","mean_rt",${meanRT}`);
+    csvRows.push(`"SUMMARY","avg_accuracy",${avgAcc}`);
+    csvRows.push(`"SUMMARY","avg_rt",${avgRT}`);
 
     // Final CSV
     let csvData = allKeys.join(',') + '\n' + csvRows.join('\n');
