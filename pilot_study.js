@@ -125,7 +125,6 @@ psychoJS.openWindow({
 
 // schedule the experiment:
 psychoJS.schedule(psychoJS.gui.DlgFromDict({
-  dictionary: expInfo,
   title: expName
 }));
 
