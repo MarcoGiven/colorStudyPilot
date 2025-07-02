@@ -2103,13 +2103,13 @@ function EndScreenRoutineBegin(snapshot) {
       psychoJS._experiment._trialsData.map(row => parseFloat(row[k])).filter(v => !isNaN(v))
     );
 
-    // Compute means
-    let meanAcc = accVals.length ? (accVals.reduce((a, b) => a + b, 0) / accVals.length).toFixed(4) : 'NA';
-    let meanRT = rtVals.length ? (rtVals.reduce((a, b) => a + b, 0) / rtVals.length).toFixed(4) : 'NA';
+    // Compute avgs
+    let avgAcc = accVals.length ? (accVals.reduce((a, b) => a + b, 0) / accVals.length).toFixed(4) : 'NA';
+    let avgRT = rtVals.length   ? ((rtVals.reduce((a, b) => a + b, 0) / rtVals.length) * 1000).toFixed(2) : 'NA';
 
     // Append summary to CSV
-    csvRows.push(`"SUMMARY","mean_accuracy",${meanAcc}`);
-    csvRows.push(`"SUMMARY","mean_rt",${meanRT}`);
+    csvRows.push(`"SUMMARY","avg_accuracy",${avgAcc}`);
+    csvRows.push(`"SUMMARY","avg_rt_ms",${avgRT}`);
 
     // Final CSV
     let csvData = allKeys.join(',') + '\n' + csvRows.join('\n');
