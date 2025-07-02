@@ -53,8 +53,13 @@ let expInfo = {
     'session': '001',
 };
 
+let expInfoCpy = {};
+
 var pilot_study_or_not = query_str.has('DVal');
+
+Object.assign(expInfoCpy, expInfo)
 Object.assign(expInfo, pilotInfo);
+
 console.log("Final experiment settings:", expInfo);
 
 
@@ -124,17 +129,15 @@ psychoJS.openWindow({
 //the scheduleCondition() can also be removed. psychoJS.schedule(flowScheduler) is sufficient
 
 // schedule the experiment:
-/*psychoJS.schedule(psychoJS.gui.DlgFromDict({
-  dictionary: expInfo,
+psychoJS.schedule(psychoJS.gui.DlgFromDict({
+  dictionary: expInfoCpy,
   title: expName
-}));*/
+}));
 
 const flowScheduler = new Scheduler(psychoJS);
-/*
 const dialogCancelScheduler = new Scheduler(psychoJS);
 psychoJS.scheduleCondition(function() { return (psychoJS.gui.dialogComponent.button === 'OK'); },flowScheduler, dialogCancelScheduler);
-*/
-psychoJS.schedule(flowScheduler);
+//psychoJS.schedule(flowScheduler);
 
 // flowScheduler gets run if the participants presses OK
 flowScheduler.add(updateInfo); // add timeStamp
