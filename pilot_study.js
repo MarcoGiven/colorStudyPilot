@@ -250,7 +250,7 @@ else{
       loopEnd: trialsEasyLoopEnd
     },
     {
-      name: "3",
+      name: "2",
       loopBegin: trialsMedLoopBegin,
       loopScheduler: trialsMedLoopScheduler,
       loopEnd: trialsMedLoopEnd
