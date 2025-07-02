@@ -2089,8 +2089,14 @@ function EndScreenRoutineBegin(snapshot) {
 
     // 2. Extract keys and values
     let allKeys = Object.keys(psychoJS._experiment._trialsData[0]);
+
+    let csvRows = psychoJS._experiment._trialsData.map(row =>
+      allKeys.map(k => JSON.stringify(row[k] ?? '')).join(',')
+    );
+
     let accKeys = allKeys.filter(k => k.toLowerCase().includes('correct'));
     let rtKeys = allKeys.filter(k => k.toLowerCase().includes('rt'));
+
 
     let accVals = accKeys.flatMap(k =>
       psychoJS._experiment._trialsData.map(row => parseFloat(row[k])).filter(v => !isNaN(v))
@@ -2103,10 +2109,6 @@ function EndScreenRoutineBegin(snapshot) {
 
     let meanRT = rtVals.length ? ((rtVals.reduce((a, b) => a + b, 0) / rtVals.length) * 1000).toFixed(2) : 'NA';
 
-    // 3. Build rows from original data
-    let csvRows = psychoJS._experiment._trialsData.map(row =>
-      allKeys.map(k => JSON.stringify(row[k] ?? '')).join(',')
-    );
 
     // 4. Append summary
     csvRows.push(`"SUMMARY","avg_accuracy",${meanAcc}`);
