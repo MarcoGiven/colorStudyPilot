@@ -229,10 +229,18 @@ else{
   // medCsv = "resources/loopTest.csv"
   // hardCsv = "resources/hardTest.csv"
   // impCsv = "resources/impTest.csv"
-  easyCsv = "resources/easyTest.csv"
-  medCsv = "resources/loopTest.csv"
-  hardCsv = "resources/hardTest.csv"
-  impCsv = "resources/impTest.csv"
+  if(IVal === 4){
+    easyCsv = "resources/easy4Test.csv"
+    medCsv = "resources/med4Test.csv"
+    hardCsv = "resources/hard4Test.csv"
+    impCsv = "resources/imp4Test.csv"
+  } else {
+    easyCsv = "resources/easyTest.csv"
+    medCsv = "resources/loopTest.csv"
+    hardCsv = "resources/hardTest.csv"
+    impCsv = "resources/impTest.csv"
+  }
+  
 
   const difficultyBlocks = [
     {
