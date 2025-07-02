@@ -2083,17 +2083,14 @@ function EndScreenRoutineBegin(snapshot) {
     routineTimer.reset();
     EndScreenMaxDurationReached = false;
     // update component parameters for each repeat
+
     // Prevent default CSV download
     psychoJS._saveResults = false;
 
+    // Extract all column keys
     let allKeys = Object.keys(psychoJS._experiment._trialsData[0]);
 
-    // Build the full trial rows first
-    let csvRows = psychoJS._experiment._trialsData.map(row =>
-      allKeys.map(k => JSON.stringify(row[k] ?? '')).join(',')
-    );
-
-    // Now compute accuracy and RT
+    // Compute accuracy and RT
     let accKeys = allKeys.filter(k => k.toLowerCase().includes('correct'));
     let rtKeys = allKeys.filter(k => k.toLowerCase().includes('rt'));
 
@@ -2106,16 +2103,21 @@ function EndScreenRoutineBegin(snapshot) {
     );
 
     let meanAcc = accVals.length
-      ? (accVals.reduce((a, b) => a + b, 0) / accVals.length).toFixed(4) : 'NA';
+      ? (accVals.reduce((a, b) => a + b, 0) / accVals.length).toFixed(4)
+      : 'NA';
 
     let meanRT = rtVals.length
-      ? ((rtVals.reduce((a, b) => a + b, 0) / rtVals.length) * 1000).toFixed(2) : 'NA';
+      ? ((rtVals.reduce((a, b) => a + b, 0) / rtVals.length) * 1000).toFixed(2)
+      : 'NA';
 
-    // Append summary rows at the end of csvRows
+    // Build CSV
+    let csvRows = psychoJS._experiment._trialsData.map(row =>
+      allKeys.map(k => JSON.stringify(row[k] ?? '')).join(',')
+    );
+
+    // Add summary rows
     csvRows.push(`"SUMMARY","avg_accuracy",${meanAcc}`);
     csvRows.push(`"SUMMARY","avg_rt_ms",${meanRT}`);
-    console.log("meanAcc:", meanAcc);
-    console.log("meanRT:", meanRT);
 
     // Final CSV
     let csvData = allKeys.join(',') + '\n' + csvRows.join('\n');
@@ -2140,21 +2142,7 @@ function EndScreenRoutineBegin(snapshot) {
       quitPsychoJS();
     }).catch(error => {
       console.error('Upload failed:', error);
-      quitPsychoJS();let allKeys = Object.keys(psychoJS._experiment._trialsData[0]);
-
-    
-    // Collect all .correct and .rt keys
-    let accKeys = allKeys.filter(k => k.toLowerCase().includes('correct'));
-    let rtKeys = allKeys.filter(k => k.toLowerCase().includes('rt'));
-
-    // Get accuracy values from all matching keys
-    let accVals = accKeys.flatMap(k =>
-      psychoJS._experiment._trialsData.map(row => parseFloat(row[k])).filter(v => !isNaN(v))
-    );
-
-    // Get RT values from all matching keys
-    let rtVals = rtKeys.flatMap(k =>
-      psychoJS._experiment._trialsDa
+      quitPsychoJS();
     });
     EndScreenMaxDuration = null
     // keep track of which components have finished
