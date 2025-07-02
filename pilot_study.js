@@ -14,11 +14,14 @@ const {round} = util;
 //?PROLIFIC_PID={{%PROLIFIC_PID%}}&STUDY_ID={{%STUDY_ID%}}&SESSION_ID={{%SESSION_ID%}}
 const query_str = new URLSearchParams(window.location.search);
 //we will also expect ?IVal=4&DVal=2.5&GVal=0
+//we can also expect ?Cval=1, CVal 1 is 4colorimages, 2 is 4grayimages, 3 is 6colorimages, etc.
 // var pilot_study_or_not = false; -- OLD LOGIC
 
 const possibleIVals = [4, 6];
 const possibleDVals = [2.5, 5, 7.5, 10];
 const possibleGVals = [0, 1];
+
+var condition_grouping = false
 
 function getRandomElement(arr){
   return arr[Math.floor(Math.random() * arr.length)];
@@ -27,6 +30,30 @@ function getRandomElement(arr){
 let IVal = query_str.has('IVal') ? parseInt(query_str.get('IVal')) : getRandomElement(possibleIVals);
 let DVal = query_str.has('DVal') ? parseFloat(query_str.get('DVal')) : getRandomElement(possibleDVals);
 let GVal = query_str.has('GVal') ? parseInt(query_str.get('GVal')) : getRandomElement(possibleGVals);
+var CVal
+
+if(query_str.has('CVal')){
+  CVal = parseInt(query_str.get('CVal'));
+  condition_grouping = true;
+
+  //CVal 1 is 4colorimages, 2 is 4grayimages, 3 is 6colorimages
+  if (CVal === 1){
+    IVal = 4;
+    GVal = 0;
+  }
+  else if (CVal === 2){
+    IVal = 4;
+    GVal = 1;
+  }
+  else if (CVal === 3){
+    IVal = 6;
+    GVal = 0;
+  }
+  else{
+    IVal = 6;
+    GVal = 1;
+  }
+}
 
 if(GVal === 1) {
   document.addEventListener("DOMContentLoaded", () => {
