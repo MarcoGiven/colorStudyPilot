@@ -201,34 +201,81 @@ if(pilot_study_or_not){
   }
 }
 else{
-  flowScheduler.add(trialsEasyLoopBegin(trialsEasyLoopScheduler));
-  flowScheduler.add(trialsEasyLoopScheduler);
-  flowScheduler.add(trialsEasyLoopEnd);
+  // flowScheduler.add(trialsEasyLoopBegin(trialsEasyLoopScheduler));
+  // flowScheduler.add(trialsEasyLoopScheduler);
+  // flowScheduler.add(trialsEasyLoopEnd);
 
-  flowScheduler.add(Next_SetRoutineBegin());
-  flowScheduler.add(Next_SetRoutineEachFrame());
-  flowScheduler.add(Next_SetRoutineEnd());
-  flowScheduler.add(trialsMedLoopBegin(trialsMedLoopScheduler));
-  flowScheduler.add(trialsMedLoopScheduler);
-  flowScheduler.add(trialsMedLoopEnd);
+  // flowScheduler.add(Next_SetRoutineBegin());
+  // flowScheduler.add(Next_SetRoutineEachFrame());
+  // flowScheduler.add(Next_SetRoutineEnd());
+  // flowScheduler.add(trialsMedLoopBegin(trialsMedLoopScheduler));
+  // flowScheduler.add(trialsMedLoopScheduler);
+  // flowScheduler.add(trialsMedLoopEnd);
 
-  flowScheduler.add(Next_SetRoutineBegin());
-  flowScheduler.add(Next_SetRoutineEachFrame());
-  flowScheduler.add(Next_SetRoutineEnd());
-  flowScheduler.add(trialsHardLoopBegin(trialsHardLoopScheduler));
-  flowScheduler.add(trialsHardLoopScheduler);
-  flowScheduler.add(trialsHardLoopEnd);
+  // flowScheduler.add(Next_SetRoutineBegin());
+  // flowScheduler.add(Next_SetRoutineEachFrame());
+  // flowScheduler.add(Next_SetRoutineEnd());
+  // flowScheduler.add(trialsHardLoopBegin(trialsHardLoopScheduler));
+  // flowScheduler.add(trialsHardLoopScheduler);
+  // flowScheduler.add(trialsHardLoopEnd);
 
-  flowScheduler.add(Next_SetRoutineBegin());
-  flowScheduler.add(Next_SetRoutineEachFrame());
-  flowScheduler.add(Next_SetRoutineEnd());
-  flowScheduler.add(trialsImpLoopBegin(trialsImpLoopScheduler));
-  flowScheduler.add(trialsImpLoopScheduler);
-  flowScheduler.add(trialsImpLoopEnd);
+  // flowScheduler.add(Next_SetRoutineBegin());
+  // flowScheduler.add(Next_SetRoutineEachFrame());
+  // flowScheduler.add(Next_SetRoutineEnd());
+  // flowScheduler.add(trialsImpLoopBegin(trialsImpLoopScheduler));
+  // flowScheduler.add(trialsImpLoopScheduler);
+  // flowScheduler.add(trialsImpLoopEnd);
+  // easyCsv = "resources/easyTest.csv"
+  // medCsv = "resources/loopTest.csv"
+  // hardCsv = "resources/hardTest.csv"
+  // impCsv = "resources/impTest.csv"
   easyCsv = "resources/easyTest.csv"
   medCsv = "resources/loopTest.csv"
   hardCsv = "resources/hardTest.csv"
   impCsv = "resources/impTest.csv"
+
+  const difficultyBlocks = [
+    {
+      name: "easy",
+      loopBegin: trialsEasyLoopBegin,
+      loopScheduler: trialsEasyLoopScheduler,
+      loopEnd: trialsEasyLoopEnd
+    },
+    {
+      name: "medium",
+      loopBegin: trialsMedLoopBegin,
+      loopScheduler: trialsMedLoopScheduler,
+      loopEnd: trialsMedLoopEnd
+    },
+    {
+      name: "hard",
+      loopBegin: trialsHardLoopBegin,
+      loopScheduler: trialsHardLoopScheduler,
+      loopEnd: trialsHardLoopEnd
+    },
+    {
+      name: "impossible",
+      loopBegin: trialsImpLoopBegin,
+      loopScheduler: trialsImpLoopScheduler,
+      loopEnd: trialsImpLoopEnd
+    }
+  ];
+
+  for(let i = difficultyBlocks.length - 1; i >= 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [difficultyBlocks[i], difficultyBlocks[j]] = [difficultyBlocks[j], difficultyBlocks[i]];
+  }
+  let shuffledOrder = difficultyBlocks.map(block => block.name);
+  expInfo['block_order'] = shuffledOrder.join(', ');
+  console.log("Shuffled difficulty block order:", shuffledOrder);
+
+  for(const block of difficultyBlocks) {
+    flowScheduler.add(block.loopBegin(block.loopScheduler));
+    flowScheduler.add(block.loopScheduler);
+    flowScheduler.add(block.loopEnd);
+  }
+
+
 }
 
 
