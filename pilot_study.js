@@ -2087,32 +2087,33 @@ function EndScreenRoutineBegin(snapshot) {
     // Prevent default CSV download
     psychoJS._saveResults = false;
 
-    // 2. Extract keys and values
-    let allKeys = Object.keys(psychoJS._experiment._trialsData[0]);
+    // Collect all unique keys across all trial data
+    const allKeys = [...new Set(psychoJS._experiment._trialsData.flatMap(d => Object.keys(d)))];
 
-    let csvRows = psychoJS._experiment._trialsData.map(row =>
-      allKeys.map(k => JSON.stringify(row[k] ?? '')).join(',')
+    const csvRows = psychoJS._experiment._trialsData.map(row =>
+      allKeys.map(k => {
+        let val = row[k];
+        if (typeof val === 'string') {
+          val = '"' + val.replace(/"/g, '""') + '"';  // escape double quotes
+        }
+        return (val === undefined || val === null) ? '' : val;
+      }).join(',')
     );
 
-    let accKeys = allKeys.filter(k => k.toLowerCase().includes('correct'));
-    let rtKeys = allKeys.filter(k => k.toLowerCase().includes('rt'));
+    const accKey = allKeys.find(k => k.endsWith('.corr') || k.toLowerCase().includes('corr'));
+    const rtKey = allKeys.find(k => k.endsWith('.rt') || k.toLowerCase().includes('rt'));
 
+    const accVals = psychoJS._experiment._trialsData.map(row => parseFloat(row[accKey])).filter(v => !isNaN(v));
 
-    let accVals = accKeys.flatMap(k =>
-      psychoJS._experiment._trialsData.map(row => parseFloat(row[k])).filter(v => !isNaN(v))
-    );
-    let rtVals = rtKeys.flatMap(k =>
-      psychoJS._experiment._trialsData.map(row => parseFloat(row[k])).filter(v => !isNaN(v))
-    );
+    const rtVals = psychoJS._experiment._trialsData.map(row => parseFloat(row[rtKey])).filter(v => !isNaN(v));
 
-    let meanAcc = accVals.length ? (accVals.reduce((a, b) => a + b, 0) / accVals.length).toFixed(4) : 'NA';
+    const meanAcc = accVals.length ? (accVals.reduce((a, b) => a + b, 0) / accVals.length).toFixed(4) : 'NA';
 
-    let meanRT = rtVals.length ? ((rtVals.reduce((a, b) => a + b, 0) / rtVals.length) * 1000).toFixed(2) : 'NA';
+    const meanRT = rtVals.length ? (rtVals.reduce((a, b) => a + b, 0) / rtVals.length).toFixed(4) : 'NA';
 
-
-    // 4. Append summary
-    csvRows.push(`"SUMMARY","avg_accuracy",${meanAcc}`);
-    csvRows.push(`"SUMMARY","avg_rt_ms",${meanRT}`);
+    // Append summary rows
+    csvRows.push(`"SUMMARY","mean_accuracy",${meanAcc}`);
+    csvRows.push(`"SUMMARY","mean_rt",${meanRT}`);
 
     // Final CSV
     let csvData = allKeys.join(',') + '\n' + csvRows.join('\n');
