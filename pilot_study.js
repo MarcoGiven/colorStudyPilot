@@ -296,8 +296,8 @@ flowScheduler.add(EndScreenRoutineEachFrame());
 flowScheduler.add(EndScreenRoutineEnd());
 flowScheduler.add(quitPsychoJS, 'Thank you for your patience.', true);
 
-// quit if user presses Cancel in dialog box:
-dialogCancelScheduler.add(quitPsychoJS, 'Thank you for your patience.', false);
+/*// quit if user presses Cancel in dialog box:
+dialogCancelScheduler.add(quitPsychoJS, 'Thank you for your patience.', false);*/
 
 psychoJS.start({
   expName: expName,
