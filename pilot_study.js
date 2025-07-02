@@ -2100,8 +2100,8 @@ function EndScreenRoutineBegin(snapshot) {
       }).join(',')
     );
 
-    const accKey = allKeys.find(k => k.endsWith('.corr') || k.toLowerCase().includes('corr'));
-    const rtKey = allKeys.find(k => k.endsWith('.rt') || k.toLowerCase().includes('rt'));
+    const accKeys = allKeys.filter(k => k.endsWith('.corr') || k.toLowerCase().includes('corr'));
+    const rtKeys = allKeys.filter(k => k.endsWith('.rt') || k.toLowerCase().includes('rt'));
 
     const accVals = accKeys.flatMap(k => psychoJS._experiment._trialsData.map(row => parseFloat(row[k])).filter(v => !isNaN(v)));
 
