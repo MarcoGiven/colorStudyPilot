@@ -53,7 +53,7 @@ let expInfo = {
     'session': '001',
 };
 
-var pilot_study_or_not = query_str.has('IVal') || query_str.has('DVal') || query_str.has('GVal');
+var pilot_study_or_not = query_str.has('DVal');
 Object.assign(expInfo, pilotInfo);
 console.log("Final experiment settings:", expInfo);
 
