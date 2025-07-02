@@ -438,6 +438,20 @@ var EndScreenClock;
 var end_message;
 var globalClock;
 var routineTimer;
+
+function getFitSize(aspectRatio = 1920 / 1080) {
+  const winAspect = psychoJS.window.size[0] / psychoJS.window.size[1];
+  let width = aspectRatio;
+  let height = 1.0;
+
+  if (width > winAspect) {
+    width = winAspect;
+    height = width / aspectRatio;
+  }
+  return [width, height];
+}
+
+
 async function experimentInit() {
   // Initialize components for Routine "WelcomeScreen"
   WelcomeScreenClock = new util.Clock();
@@ -454,6 +468,8 @@ async function experimentInit() {
   });
 
   next_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+
+
 
   // Initialize components for Routine "consent"
   consentClock = new util.Clock();
@@ -497,12 +513,14 @@ async function experimentInit() {
     ori : 0.0,
     pos : [0, 0],
     draggable: false,
-    size : [1.8, 1],
+    size : getFitSize(),
     color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : 0.0
   });
   key_easy = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  const [w, h] = getAutoScaledSize(1920 / 1080);
+  imageEasy.setSize([w, h]);
 
   // Initialize components for Routine "blank500"
   blank500Clock = new util.Clock();
@@ -542,12 +560,13 @@ async function experimentInit() {
     ori : 0.0,
     pos : [0, 0],
     draggable: false,
-    size : [1.8, 1],
+    size : getFitSize(),
     color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : 0.0
   });
   key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
 
   // Initialize components for Routine "hard_sets"
   hard_setsClock = new util.Clock();
@@ -559,7 +578,7 @@ async function experimentInit() {
     ori : 0.0,
     pos : [0, 0],
     draggable: false,
-    size : [1.8, 1],
+    size : getFitSize(),
     color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : 0.0
@@ -576,7 +595,7 @@ async function experimentInit() {
     ori : 0.0,
     pos : [0, 0],
     draggable: false,
-    size : [1.8, 1],
+    size : getFitSize(),
     color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : 0.0
