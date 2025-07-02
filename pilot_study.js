@@ -186,6 +186,10 @@ else{
   flowScheduler.add(trialsImpLoopBegin(trialsImpLoopScheduler));
   flowScheduler.add(trialsImpLoopScheduler);
   flowScheduler.add(trialsImpLoopEnd);
+  easyCsv = "resources/easyTest.csv"
+  medCsv = "resources/loopTest.csv"
+  hardCsv = "resources/hardTest.csv"
+  impCsv = "resources/impTest.csv"
 }
 
 
@@ -1114,7 +1118,7 @@ function trialsImpLoopBegin(trialsImpLoopScheduler, snapshot) {
       psychoJS: psychoJS,
       nReps: 1, method: TrialHandler.Method.FULLRANDOM,
       extraInfo: expInfo, originPath: undefined,
-      trialList: 'resources/impTest.csv',
+      trialList: impCsv,
       seed: undefined, name: 'trialsImp'
     });
     psychoJS.experiment.addLoop(trialsImp); // add the loop to the experiment
