@@ -110,27 +110,31 @@ const psychoJS = new PsychoJS({
 });
 
 // open window:
-psychoJS.openWindow({
+/*psychoJS.openWindow({
   fullscr: false,
   color: new util.Color([0,0,0]),
   units: 'height',
   waitBlanking: true,
   backgroundImage: '',
   backgroundFit: 'none',
-});
+});*/
 
 //the below is commented out for debugging: ctrl+f DEBUG to see all comments
 //a lot of below can be removed. This schedule() is what calls DlgFromDict() to create a confirmation thing from user
 //the scheduleCondition() can also be removed. psychoJS.schedule(flowScheduler) is sufficient
 
 // schedule the experiment:
-psychoJS.schedule(psychoJS.gui.DlgFromDict({
+/*psychoJS.schedule(psychoJS.gui.DlgFromDict({
+  dictionary: expInfo,
   title: expName
-}));
+}));*/
 
 const flowScheduler = new Scheduler(psychoJS);
+/*
 const dialogCancelScheduler = new Scheduler(psychoJS);
 psychoJS.scheduleCondition(function() { return (psychoJS.gui.dialogComponent.button === 'OK'); },flowScheduler, dialogCancelScheduler);
+*/
+psychoJS.add(flowScheduler);
 
 // flowScheduler gets run if the participants presses OK
 flowScheduler.add(updateInfo); // add timeStamp
