@@ -2087,35 +2087,28 @@ function EndScreenRoutineBegin(snapshot) {
     // Prevent default CSV download
     psychoJS._saveResults = false;
 
-    // Extract all column keys
+    // 2. Extract keys and values
     let allKeys = Object.keys(psychoJS._experiment._trialsData[0]);
-
-    // Compute accuracy and RT
     let accKeys = allKeys.filter(k => k.toLowerCase().includes('correct'));
     let rtKeys = allKeys.filter(k => k.toLowerCase().includes('rt'));
 
     let accVals = accKeys.flatMap(k =>
       psychoJS._experiment._trialsData.map(row => parseFloat(row[k])).filter(v => !isNaN(v))
     );
-
     let rtVals = rtKeys.flatMap(k =>
       psychoJS._experiment._trialsData.map(row => parseFloat(row[k])).filter(v => !isNaN(v))
     );
 
-    let meanAcc = accVals.length
-      ? (accVals.reduce((a, b) => a + b, 0) / accVals.length).toFixed(4)
-      : 'NA';
+    let meanAcc = accVals.length ? (accVals.reduce((a, b) => a + b, 0) / accVals.length).toFixed(4) : 'NA';
 
-    let meanRT = rtVals.length
-      ? ((rtVals.reduce((a, b) => a + b, 0) / rtVals.length) * 1000).toFixed(2)
-      : 'NA';
+    let meanRT = rtVals.length ? ((rtVals.reduce((a, b) => a + b, 0) / rtVals.length) * 1000).toFixed(2) : 'NA';
 
-    // Build CSV
+    // 3. Build rows from original data
     let csvRows = psychoJS._experiment._trialsData.map(row =>
       allKeys.map(k => JSON.stringify(row[k] ?? '')).join(',')
     );
 
-    // Add summary rows
+    // 4. Append summary
     csvRows.push(`"SUMMARY","avg_accuracy",${meanAcc}`);
     csvRows.push(`"SUMMARY","avg_rt_ms",${meanRT}`);
 
