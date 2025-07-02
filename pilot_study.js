@@ -14,28 +14,70 @@ const {round} = util;
 //?PROLIFIC_PID={{%PROLIFIC_PID%}}&STUDY_ID={{%STUDY_ID%}}&SESSION_ID={{%SESSION_ID%}}
 const query_str = new URLSearchParams(window.location.search);
 //we will also expect ?IVal=4&DVal=2.5&GVal=0
-var pilot_study_or_not = false;
+// var pilot_study_or_not = false; -- OLD LOGIC
 
-if(query_str.get("GVal") === "1"){
+const possibleIVals = [4, 6];
+const possibleDVals = [2.5, 5, 7.5, 10];
+const possibleGVals = [0, 1];
+
+function getRandomElement(arr){
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+let IVal = query_str.has('IVal') ? parseInt(query_str.get('IVal')) : getRandomElement(possibleIVals);
+let DVal = query_str.has('DVal') ? parseFloat(query_str.get('DVal')) : getRandomElement(possibleDVals);
+let GVal = query_str.has('GVal') ? parseInt(query_str.get('GVal')) : getRandomElement(possibleGVals);
+
+if(GVal === 1) {
   document.addEventListener("DOMContentLoaded", () => {
     const observer = new MutationObserver(() => {
       const canvas = document.querySelector("canvas");
-      if(canvas) {
+      if (canvas) {
         canvas.style.filter = "grayscale(100%)";
         observer.disconnect();
       }
-    });  
-    observer.observe(document.body, { childList: true, subtree: true });  
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
   });
 }
 
-// store info about the experiment session:
-let expName = 'pilot_study';  // from the Builder filename that created this script
+let expName = 'pilot_study';
 let pilotInfo = {
-	'IVal': query_str.get('IVal'),
-    'GVal': query_str.get('GVal'),
-	'DVal': query_str.get('DVal'),
-}; //images are either 4 or 6, difficulty is either 2.5, 5, 7.5, 10, grayscale is 0 for no and 1 for yes
+  'IVal': IVal,
+  'DVal': DVal,
+  'GVal': GVal
+};
+
+let expInfo = {
+    'participant': '',
+    'session': '001',
+};
+
+var pilot_study_or_not = query_str.has('IVal') || query_str.has('DVal') || query_str.has('GVal');
+Object.assign(expInfo, pilotInfo);
+console.log("Final experiment settings:", expInfo);
+
+
+// if(query_str.get("GVal") === "1"){
+//   document.addEventListener("DOMContentLoaded", () => {
+//     const observer = new MutationObserver(() => {
+//       const canvas = document.querySelector("canvas");
+//       if(canvas) {
+//         canvas.style.filter = "grayscale(100%)";
+//         observer.disconnect();
+//       }
+//     });  
+//     observer.observe(document.body, { childList: true, subtree: true });  
+//   });
+// }
+
+// // store info about the experiment session:
+// let expName = 'pilot_study';  // from the Builder filename that created this script
+// let pilotInfo = {
+// 	'IVal': query_str.get('IVal'),
+//     'GVal': query_str.get('GVal'),
+// 	'DVal': query_str.get('DVal'),
+// }; images are either 4 or 6, difficulty is either 2.5, 5, 7.5, 10, grayscale is 0 for no and 1 for yes
 //where DVal is difficulty value, IVal is number of images and GVal is grayscale or not
 
 //the below is commented out for debugging: ctrl+f DEBUG to see all comments
@@ -46,23 +88,20 @@ let pilotInfo = {
     'participant_session_id': query_str.get('SESSION_ID'),
 };*/ //replaced the default stuff with the values from the URL parameters
 
-let expInfo = {
-    'participant': '',
-    'session': '001',
-};
 
-if (pilotInfo.DVal != null || pilotInfo.GVal != null
-	|| pilotInfo.DVal != null) {
-	//the url search parameters for the pilot aren't empty
-	pilot_study_or_not = true;
 
-    pilotInfo.IVal = Number(pilotInfo.IVal);
-    pilotInfo.DVal = Number(pilotInfo.DVal);
+// if (pilotInfo.DVal != null || pilotInfo.GVal != null
+// 	|| pilotInfo.DVal != null) {
+// 	//the url search parameters for the pilot aren't empty
+// 	pilot_study_or_not = true;
 
-	Object.assign(expInfo, pilotInfo);
-	console.log(expInfo);
-	//merge the pilot info to the experiment info for logging and print to console
-}
+//     pilotInfo.IVal = Number(pilotInfo.IVal);
+//     pilotInfo.DVal = Number(pilotInfo.DVal);
+
+// 	Object.assign(expInfo, pilotInfo);
+// 	console.log(expInfo);
+// 	//merge the pilot info to the experiment info for logging and print to console
+// }
 
 // Start code blocks for 'Before Experiment'
 // init psychoJS:
@@ -186,6 +225,10 @@ else{
   flowScheduler.add(trialsImpLoopBegin(trialsImpLoopScheduler));
   flowScheduler.add(trialsImpLoopScheduler);
   flowScheduler.add(trialsImpLoopEnd);
+  easyCsv = "resources/easyTest.csv"
+  medCsv = "resources/loopTest.csv"
+  hardCsv = "resources/hardTest.csv"
+  impCsv = "resources/impTest.csv"
 }
 
 
@@ -1114,7 +1157,7 @@ function trialsImpLoopBegin(trialsImpLoopScheduler, snapshot) {
       psychoJS: psychoJS,
       nReps: 1, method: TrialHandler.Method.FULLRANDOM,
       extraInfo: expInfo, originPath: undefined,
-      trialList: 'resources/impTest.csv',
+      trialList: impCsv,
       seed: undefined, name: 'trialsImp'
     });
     psychoJS.experiment.addLoop(trialsImp); // add the loop to the experiment
