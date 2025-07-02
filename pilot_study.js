@@ -2086,25 +2086,24 @@ function EndScreenRoutineBegin(snapshot) {
     // Prevent default CSV download
     psychoJS._saveResults = false;
 
-    // Collect all keys from trial data
-    const allKeys = [...new Set(psychoJS._experiment._trialsData.flatMap(d => Object.keys(d)))];
+    // Get all trial data keys
+    let allKeys = Object.keys(psychoJS._experiment._trialsData[0]);
 
-    // Convert to CSV rows
-    let csvRows = psychoJS._experiment._trialsData.map(row =>
-      allKeys.map(k => {
-        let val = row[k];
-        if (typeof val === 'string') val = '"' + val.replace(/"/g, '""') + '"';
-        return (val === undefined || val === null) ? '' : val;
-      }).join(',')
+    // Collect all .correct and .rt keys
+    let accKeys = allKeys.filter(k => k.toLowerCase().includes('correct'));
+    let rtKeys = allKeys.filter(k => k.toLowerCase().includes('rt'));
+
+    // Get accuracy values from all matching keys
+    let accVals = accKeys.flatMap(k =>
+      psychoJS._experiment._trialsData.map(row => parseFloat(row[k])).filter(v => !isNaN(v))
     );
 
-    // Compute summary stats
-    let accKey = allKeys.find(k => k.endsWith('.corr') || k.toLowerCase().includes('corr'));
-    let rtKey = allKeys.find(k => k.endsWith('.rt') || k.toLowerCase().includes('rt'));
+    // Get RT values from all matching keys
+    let rtVals = rtKeys.flatMap(k =>
+      psychoJS._experiment._trialsData.map(row => parseFloat(row[k])).filter(v => !isNaN(v))
+    );
 
-    let accVals = psychoJS._experiment._trialsData.map(row => parseFloat(row[accKey])).filter(v => !isNaN(v));
-    let rtVals = psychoJS._experiment._trialsData.map(row => parseFloat(row[rtKey])).filter(v => !isNaN(v));
-
+    // Compute means
     let meanAcc = accVals.length ? (accVals.reduce((a, b) => a + b, 0) / accVals.length).toFixed(4) : 'NA';
     let meanRT = rtVals.length ? (rtVals.reduce((a, b) => a + b, 0) / rtVals.length).toFixed(4) : 'NA';
 
