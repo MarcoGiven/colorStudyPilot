@@ -519,8 +519,7 @@ async function experimentInit() {
     texRes : 128.0, interpolate : true, depth : 0.0
   });
   key_easy = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
-  const [w, h] = getAutoScaledSize(1920 / 1080);
-  imageEasy.setSize([w, h]);
+
 
   // Initialize components for Routine "blank500"
   blank500Clock = new util.Clock();
