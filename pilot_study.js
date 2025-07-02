@@ -2107,6 +2107,7 @@ function EndScreenRoutineBegin(snapshot) {
     let avgAcc = accVals.length ? (accVals.reduce((a, b) => a + b, 0) / accVals.length).toFixed(4) : 'NA';
     let avgRT = rtVals.length   ? ((rtVals.reduce((a, b) => a + b, 0) / rtVals.length) * 1000).toFixed(2) : 'NA';
 
+    let csvRows = [];
     // Append summary to CSV
     csvRows.push(`"SUMMARY","avg_accuracy",${avgAcc}`);
     csvRows.push(`"SUMMARY","avg_rt_ms",${avgRT}`);
